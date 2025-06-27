@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchForm: Pyetje</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Gidugu&family=Great+Vibes&family=Lobster&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rationale&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Train+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            border: 1px solid rgb(8, 8, 17);
+            width: 80%;
+            height: 80vh;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        main h3{
+            font-family: "poppins",serif;
+            font-weight: 300;
+            font-size: 1.6rem;
+        }
+        main i{
+            font-size: 2rem;
+        }
+        main button{
+            width: 15%;
+            height: 35px;
+            border: 1px solid black;
+            font-family: "poppins",serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        main textarea:focus{
+            border: 2px solid black;
+            outline: none;
+            font-size: 1.1rem;
+            padding: 1% 1%;
+        }
+        main label{
+            text-align: left;
+            font-family: "Poppins", serif;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <main>
+            <h3>Pyetje</h3>
+            <p id="valid"></p>
+            <p id="pass"></p>
+                <label for="Pyetje">Çfarë dëshironi të dini ?</label>
+                <textarea  name="question" id="question"  style="width: 70%; height: 70%;"></textarea>
+                <button id="submitbtn" onclick="Submitbtn()">Submit</button>
+    </main>
+    <script>
+        const valid = document.getElementById('valid');
+        const submitbtn = document.getElementById('submitbtn');
+        const pass = document.getElementById('pass')
+        function Submitbtn(){
+            if(question.value === ""){
+               valid.textContent = "Ju lutemi, parashtroni kërkesën tuaj.";
+               valid.style.color = "red";
+               valid.style.fontFamily = 'sans-serif';
+            }
+        
+            else{
+                pass.textContent = "Kërkesa juaj është pranuar. Ju lutemi prisni deri në një njoftim të ardhshëm.";
+                pass.style.color = "green";
+                pass.style.fontFamily = "sans-serif";
+                valid.textContent = "";
+             
+        }
+    }
+    </script>
+</body>
+</html>
