@@ -346,10 +346,23 @@ section{
      border: 2px solid black;
     transition: 0.1s;
 }
+#CommentIcon{
+    font-size: 1.7rem;
+    color: #2b2b2b;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 8px;
+}
+#CommentIcon:hover{
+    border: 2px solid black;
+    transition: 0.1s;
+}
 .exterior-body{
     width: 100%;
     height: 85vh;
     display: flex;
+    position: relative;
 }
 .exterior-left{
     width: 50%;
@@ -366,6 +379,100 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+}
+.SuggestContainer{
+    background-color: rgba(3, 3, 3, 0.219);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.suggestBox{
+    background-color: #fff;
+    width: 50%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.suggest-header{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.suggest-header h3{
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.suggest-header button{
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 1.1rem;
+}
+.suggest-header button:hover{
+    background-color: rgb(248, 246, 246);
+}
+.suggest-header button:active{
+    background-color: rgba(235, 235, 235);
+}
+.suggestBody{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.suggestBody  textarea{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 5px 5px;
+}
+.suggestBody textarea:focus{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0px;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.suggestBody input{
+    width: 50%;
+    height: 45px;
+    padding-left: 12px;
+    font-family: "Poppins", serif;
+}
+.suggestBody input:focus{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0px;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.suggestBody button{
+    border: 1px solid black;
+    background-color: transparent;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 8px;
+    width: 30%;
+}
+.suggestBody button:hover{
+    background-color: rgb(219, 219, 219);
+}
+.suggestBody button:active{
+    background-color: rgb(201, 201, 201);
 }
 .exterior-right{
     width: 50%;
