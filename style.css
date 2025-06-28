@@ -387,18 +387,21 @@ section{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     opacity: 0;
+    z-index: 11;
 }
 .suggestBox{
     background-color: #fff;
     width: 50%;
-    height: 80%;
+    height: 70%;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    z-index: 12;
+    margin-top: 1%;
 }
 .suggest-header{
     height: 15vh;
@@ -502,6 +505,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 11;
 }
 .exterior-right-btn button{
     width: 100%;
@@ -525,7 +529,6 @@ section{
 /*here ends exterior style*/
 
 /*here starts inerior style*/
-
 .interior{
     width: 100%;
     min-height: 100vh;
@@ -625,6 +628,9 @@ section{
     width: 50%;
     min-height: 100vh;
 }
+/*here ends interior style*/
+
+/*here starts services style*/
 .service{
     margin-top: 3%;
     display: flex;
@@ -698,6 +704,8 @@ section{
     transform: translateX(100px);
     transition: 0.5s;
 }
+/*here ends services style*/
+
 
 /*here ends normal style code and starts responsive design*/
 .menu-btn{
@@ -814,15 +822,26 @@ section{
         justify-content: center;
         align-items: center;
         max-width: 100%;
+        flex-direction: column;
     }
     .exterior-header h2{
         font-size: 1.8rem;
     }
-    .exterior-header ul{
-        display: none;
-    }
     .exterior-body{
         max-width: 100%;
+    }
+    .suggestBox{
+        width: 70%;
+    }
+    .suggest-header h3{
+        font-size: 1.4rem;
+    }
+    .suggestBody input{
+        width: 60%;
+    }
+    .suggestBody textarea{
+        width: 55%;
+        height: 45%;
     }
     .exterior-right{
         position: absolute;
@@ -916,6 +935,13 @@ section{
         width: 100%;
         min-height: 50vh;
     } 
+    .service-header h2{
+        font-size: 1.9rem;
+    }
+    .services .box{
+        width: 90%;
+        min-height: 30vh;
+    }
 }
 @media(max-width:600px){
     body{
