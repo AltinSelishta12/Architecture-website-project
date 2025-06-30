@@ -3,238 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchForm: Architecture Website</title>
+    <!--here are the all the links connected to this file-->
+    <!--connected files-->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Gidugu&family=Great+Vibes&family=Lobster&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rationale&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Train+One&display=swap" rel="stylesheet">
-    <title>Arch Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Animations-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <!--Architecture Website-->
+    <!--here starts the website structure-->
     <header>
-        <nav id="home"><!--id="home" has the role to direct us to the main part of website-->
+        <nav>
             <div class="nav-left">
-                <h1>Arch<span>Form.</span></h1>
-            </div>
-            <div class="nav">
                 <ul>
-                    <li><a href="#main-content">Home</a></li>
-                    <li><a href="#exterior-bookmark">Exterior</a></li>
-                    <li><a href="#interior">Interior</a></li>
-                    <div class="dropdown">
-                        <button class="drop-btn"><a href="#services">Services</a><i class="ri-arrow-drop-down-line"></i></button>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a href="">CONSTRUCTION</a></li>
-                                <li><a href="">COMMERCIAL</a></li>
-                                <li><a href="">PLANS</a></li>
-                                <li><a href="">URBAN</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">PROJECTS</a></li>
                 </ul>
-                <button id="menuBTN" class="menu-btn"><i class="ri-menu-3-fill"></i></button>
             </div>
-            <div class="menu-content" id="menuContent">
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">EXTERIOR</a></li>
-                        <li><a href="">INTERIOR</a></li>
-                        <li><a href="">SERVICES</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                    </ul>
+            <div class="logo">
+                <h1>ArchForm</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">OUR COMPANY</a></li>
+                </ul>
             </div>
         </nav>
-        <!--id="hero-text" has the role of direction like some special arrows when they will be clicked the arrow will direct us to home page-->
-       <section id="hero-text" class="hero-text">
-            <h2>TRANSFORM YOUR IDEAS<br>INTO REAL PROJECTS</h2>
-            <div id="main-btn">
-                <button><a href="">EXPLORE</a></button>
-                <button class="second-btn"><a href="">CONTACT</a></button>
-            </div>
-       </section>
-       <div class="top-arrow">
-            <a href="#hero-text" class="arrow"><i class="ri-arrow-up-wide-line"></i></a>
-            </div>
     </header>
-    <!--here ends the header-->
 
-    <!--here starts exterior section-->
 
-        <section id="exterior-bookmark" class="exterior">
-            <div class="exterior-header">
-                <h2>HOUSE EXTERIOR</h2>
-                <ul>
-                    <li>
-                        <i id="clickicon" onclick="heartClick()" class="ri-heart-fill"></i>
-                        <i id="CommentIcon" onclick="openBox()" class="ri-message-3-line"></i>
-                        <a href=""><i class="ri-instagram-line"></i></a>
-                        <a href=""><i class="ri-facebook-line"></i></a>
-                        <a href=""><i class="ri-feedback-line"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="exterior-body">
-                    <div class="exterior-left">
-                        <div class="exterior-left-content">
-                            <!--this class contains a background-image-->
-                        </div>
-                    </div>
-                    <div id="SuggestBOX" class="SuggestContainer">
-                        <div class="suggestBox">
-                           <div class="suggest-header">
-                                <h3>Feedback Box</h3>
-                                <button><i onclick="closeBox()" id="CloseBox"  class="ri-close-line"></i></button>
-                           </div>
-                           <form class="suggestBody">
-                                <input type="text" id="name" name="name" placeholder="Clients Name..." autocomplete="off">
-                                <textarea name="comment" id="comment" placeholder="Share your concern with us" style="width: 65%; height: 55%;"></textarea>
-                                <button onclick="suggestAlert()">Submit</button>
-                           </form>
-                        </div>
-                    </div>
-                    <div class="exterior-right">
-                        <div class="exterior-right-header">
-                            <h3>Choose your <span class="home">home’s perfect</span><br> outer structure.</h3>
-                        </div>
-                        <div class="exterior-right-prg">
-                            <p>Choosing the perfect outer structure for your home is the first step to making<br> a lasting impression. It sets the tone for style, quality, and character, reflecting<br> your personal taste while enhancing curb appeal. A thoughtfully designed exterior<br> not only elevates your home’s beauty but also ensures durability and timeless charm<br> that welcomes you and your guests every day.</p>
-                        </div>
-                        <div class="exterior-right-btn">
-                            <button><a href="">DISCOVER MORE</a></button>
-                        </div>
-                    </div>
-            </div>
-        </section>
-        <!--here ends exterior section-->
 
-        <!--here starts interior section-->
-        <section class="interior">
-            <div class="interior-left-side">
-                <div data-aos="zoom-in">
-                    <div class="interior-left-header">
-                        <h2>THE <span>HEART</span> OF HOME.</h2>
-                    </div>
-                </div>
-                    <div class="hr-line"></div>
-                    <div data-aos="fade-right">
-                        <div class="interior-left-prg">
-                            <p><span>The interior</span> blends comfort with<br> style, turning every corner into a<br> space of purpose and beauty.</p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-left">
-                        <div class="interior-left-PRG">
-                            <p><span>Inside the home</span>, every detail is<br> thoughtfully crafted to create a<br> balanced and welcoming atmosphere.</p>
-                        </div>
-                    </div>
-                    <div data-aos="flip-up">
-                        <div class="interior-left-btn">
-                            <button><a href="">TOUR THE SPACE</a></button>
-                        </div>
-                    </div>
-            </div>
-                    <div class="interior-right-side">
-                        <img src="interior-image/interior-img.jpeg" alt="interior main img" style="max-width: 100%; height: auto;">
-                    </div>
-        </section>
-        <!--here ends interior section-->
-
-        <!--here starts service section-->
-
-        <section class="service">
-            <div data-aos="fade-left">
-                <div class="service-header">
-                    <h2>WHAT WE OFFER ?</h2>
-                </div>
-            </div>
-            <div data-aos="zoom-in">
-                <div class="services">
-                    <div class="box">
-                        <i class="ri-edit-2-line"></i>
-                        <p>House & Building Design.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                    <div class="box">
-                        <i class="ri-pencil-ruler-2-line"></i>
-                        <p>Plans & Drawings.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                    <div class="box">
-                        <i class="ri-tree-line"></i>
-                        <p>Outdoor Planning.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                    <div class="box">
-                        <i class="ri-building-line"></i>
-                        <p>Commercial Building Design.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                    <div class="box">
-                        <i class="ri-team-line"></i>
-                        <p>Urban Space Designer.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                    <div class="box">
-                        <i class="ri-hammer-line"></i>
-                        <p>Renovation & Remodeling.</p>
-                        <button><a class="btn-icon" href=""><i class="ri-arrow-right-double-line"></i></a></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--here ends service section-->
-
-        <!--here starts about section-->
+    <!--this code inside <script> tags is connected to the AOS-->
     <script>
-        AOS.init();
-       </script>
-       <script>
-            const menuBTN = document.querySelector("#menuBTN");
-            const menuContent = document.querySelector("#menuContent");
-
-             menuBTN.addEventListener("click", function () {
-            menuContent.classList.toggle("active");
-            });
-           function heartClick() {
-            alert("Thank you for the support");
-            }
-
-            const SuggestBOX = document.getElementById("SuggestBOX");
-            const CloseBox = document.getElementById("CloseBox");
-            const CommentIcon = document.getElementById("CommentIcon")
-            const name = document.getElementById("name");
-            const comment = document.getElementById("comment");
-            
-            function openBox() {
-                SuggestBOX.style.opacity = "1";
-            }
-            function closeBox() {
-                SuggestBOX.style.opacity = "0";
-            }
-            function suggestAlert() {
-                event.preventDefault();
-                if (name.value.trim()  === "" || comment.value.trim() === ""){
-                    name.style.border = "1px solid red";
-                    comment.style.border = "1px solid red";
-                    setTimeout (() =>{
-                        name.style.border = "";
-                        comment.style.border = "";
-                    }, 2000);
-
-                }
-                else{
-                    alert("Thank you for your mesage! We appreciate you taking the time to share your feedback with us. Your input helps us improve and serve you better.")
-                }
-                
-            }
-    </script>
+  AOS.init();
+</script>
 </body>
 </html>
