@@ -1,4 +1,6 @@
 /*This is a CSS file*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rationale&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
+
 
 *{
     margin: 0px;
@@ -14,64 +16,103 @@ body{
 }
 header{
     width: 100%;
+    background-color: whitesmoke;
     min-height: 100vh;
-    background-image: url(images/header-images/header-img.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}
+.header-content{
+    width: 95%;
+    height: 90vh;
+    background-image: url(images/header-images/header-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     position: relative;
+    border-radius: 8px;
 }
-header::before{
+.header-content::before{
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url(images/header-images/header-img.jpeg);
+    background-image: url(images/header-images/header-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     z-index: 1;
-    filter: brightness(80%);
+    filter: brightness(70%);
+    border-radius: 8px;
 }
 nav{
+    width: 100%;
     height: 12vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     z-index: 2;
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-delay: 0s;
 }
-.nav-left{
-    width: 30%;
-    height: 12vh;
+@keyframes nav{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.nav-left {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .nav-left ul{
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-.nav-left ul li a{
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #fff;
-}
-.logo{
-    width: 40%;
-    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 25px;
+}
+.nav-left ul li a{
+    font-family: "Convergence", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    position: relative;
+}
+.nav-left a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: #fff;
+}
+.nav-left a:hover::before{
+    width: 100%;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: 0.4s linear;
+
+}
+.logo h1{
+    font-family: "Geostar Fill", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    font-size: 2rem;
 }
 .nav-right{
-    width: 30%;
-    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,11 +121,176 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
 }
 .nav-right ul li a{
-    font-family: "Poppins", serif;
-    font-weight: 500;
+    font-family: "Convergence", sans-serif;
+    font-weight: 400;
     font-style: normal;
     color: #fff;
+    position: relative;
+}
+.nav-right a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: #fff;
+}
+.nav-right a:hover::after{
+    width: 100%;
+    transition: 0.4s linear;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+.hr-line{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    width: 50%;
+    height: 5px;
+    border-radius: 25px;
+    animation-name: hr-line;
+    animation-duration: 2s;
+    animation-delay: 0;
+}
+@keyframes hr-line{
+    0%{
+        width: 0%;
+        margin: auto;
+    }
+    100%{
+        margin: auto;
+        width: 50%;
+    }
+}
+.hero-section{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+.hero-left{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-left-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-top: 7%;
+}
+.hero-left-content h2{
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 3rem;
+    animation-name: hero-header;
+    animation-duration: 2s;
+    animation-delay: 0;
+}
+@keyframes hero-header{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.hero-left-content p{
+    font-family: "Poppins", serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    animation-name: hero-prg;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+@keyframes hero-prg{
+    0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.hero-left-content button{
+    width: 30%;
+    padding: 12px;
+    margin: 6% 4%;
+    background-color: #ffffff50;
+    border: 1px solid white;
+    animation-name: hero-btn;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+@keyframes hero-btn{
+    0%{
+        transform: translateY(300px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.hero-left-content button a{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.header-content button:hover{
+    background-color: #ffffff3a;
+}
+.hero-left-content button:active{
+    background-color: #ffffff00;
+}
+.hero-right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3%;
+}
+.hero-right ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-direction: column;
+}
+.hero-right ul li a{
+    color: #fff;
+    background-color: #ffffff5e;
+    padding: 16px;
+    font-size: 1.2rem;
+    animation-name: hero-icons;
+    animation-duration: 2s;
+}
+@keyframes hero-icons{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.hero-right ul li a:hover{
+    padding: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
