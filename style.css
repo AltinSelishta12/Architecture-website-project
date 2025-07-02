@@ -428,13 +428,122 @@ nav{
 .return-arrow:active{
     background-color: #c21717d7;
 }
+.menu-btn{
+    display: none;
+}
+@media (max-width:480px){
+    *{
+        box-sizing: border-box;
+    }
+    header{
+        width: 100%;
+        max-width: 100%;
+        margin: 0%;
+    }
+    .header-content{
+        overflow-x: hidden;
+        width: 100%;
+        height: 100vh;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-left{
+        display: none;
+    }
+    .logo h1{
+        font-size: 1.7rem;
+    }
+    .nav-right{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .menu-btn button{
+        padding: 10px;
+        border: none;
+        color: #fff;
+        background-color: transparent;
+    }
+    .menu-btn button i{
+        font-size: 1.7rem;
+    }
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    }
+    .hero-left{
+        width: 100%;
+    }
+    .hero-right{
+        width: 100%;
+        
+    }
+    .hero-left-content{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-right: 16%;
+    }
+    .hero-left-content h2{
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .hero-left-content p{
+        display: none;
+    }
+    .hero-left-content button{
+        width: 60%;
+    }
+    .hero-right-content{
+        width: 70%;
+        margin: auto;
+        height: 100%;
+    }
+    .hero-right-content-header h2{
+        font-size: 1.6rem;
+    }
+    .hero-right-content-stats{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-top: 0;
+    }
+    .stat-1 h3{
+        font-size: 1.6rem;
+    }
+    .stat-1 p{
+        position: absolute;
+        top: 53%;
+    }
+    .return-arrow{
+        position: fixed;
+        right: 40%;
+        bottom: 5%;
+        width: 20%;
+        z-index: 99;
+    }
+    .return-arrow button{
+        width: 100%;
+        height: 10vh;
+        padding: 14px;
+        z-index: 99;
+    }
+}
 /*here ends the header style*/
 
 /*Features style*/
 
 .Features{
     width: 95%;
-    min-height: 180vh;
+    min-height: 100vh;
     margin: auto;
     display: flex;
     flex-direction: column;
