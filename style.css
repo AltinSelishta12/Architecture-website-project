@@ -506,6 +506,9 @@ nav{
     .menu-content.active{
         display: block;
     }
+    .hr-line{
+        z-index: 1;
+    }
     .hero-section{
         display: flex;
         flex-direction: column;
@@ -689,6 +692,9 @@ nav{
     .menu-content.active{
         display: block;
     }
+    .hr-line{
+        z-index: 1;
+    }
     .hero-section{
         display: flex;
         flex-direction: column;
@@ -851,6 +857,9 @@ nav{
     }
     .menu-content.active{
         display: block;
+    }
+    .hr-line{
+        z-index: 1;
     }
     .hero-section{
         display: flex;
@@ -1021,6 +1030,9 @@ nav{
     }
     .menu-content.active{
         display: block;
+    }
+    .hr-line{
+        z-index: 1;
     }
     .hero-section{
         display: flex;
