@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rationale&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
 
 
-
 *{
     margin: 0px;
     padding: 0px;
@@ -1270,11 +1269,11 @@ nav{
     .return-arrow{
         position: fixed;
         bottom: 6%;
-        right: 20%;
-        width: 10%;
+        right: 1%;
+        width: 7%;
     }
     .return-arrow button{
-        width: 10%;
+        width: 7%;
     }
      .Features{
         width: 100%;
@@ -1514,3 +1513,114 @@ nav{
     font-size: 0.7rem;
     text-align: justify;
 }
+/*Here ends the Features style*/
+
+/* Here starts Gallery style */
+.Inspiration{
+    margin-top: 3%;
+    width: 100%;
+    min-height: 216vh;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.Inspiration-header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Inspiration-header h2{
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-size: 6rem;
+}
+.row{
+    width: 100%;
+    height: 72vh;
+    display: flex;
+}
+.row-img{
+    width: 60%;
+    height: 100%;
+}
+.row-info{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row-info-header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-info-header h3{
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.row-info-prg{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.row-info-prg p{
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    font-weight: 200;
+    padding-left: 3%;
+}
+.row-info-btn{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-info-btn button{
+    padding: 15px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #fff;
+    transition: 0.3s linear;
+    position: relative;
+}
+.row-info-btn button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.068);
+}
+.row-info-btn button:hover::before{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s linear;
+}
+.row-info-btn button a{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    color: #000;
+    font-size: 1rem;
+}
+#row-2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*Here ends Gallery style*/
