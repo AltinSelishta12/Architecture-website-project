@@ -1704,7 +1704,7 @@ nav{
 }
 /*Here ends the Features style*/
 
-/* Here starts Gallery style */
+/* Here starts Inspiration style */
 .Inspiration{
     margin-top: 3%;
     width: 100%;
@@ -1816,4 +1816,125 @@ nav{
     display: flex;
     flex-direction: row-reverse;
 }
-/*Here ends Gallery style*/
+/*Here ends Inspiration style*/
+
+/*Here starts Projects style*/
+.Projects{
+    margin: 5% auto;
+    width: 95%;
+    min-height: 180vh;
+    display: flex;
+    flex-direction: column;
+}
+.Projects-header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+}
+.Projects-header h2{
+    font-family: "Poppins", serif;
+    font-size: 6.5rem;
+    font-weight: 100;
+}
+.Projects-body{
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: center;
+    flex-direction: none;
+}
+.box{
+    width: 49%;
+    height: 49%;
+    position: relative;
+    display: flex;
+}
+.box:hover{
+    transform: scale(0.98);
+    transition: 0.5s;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+}
+.box-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.box-content h3{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-size: 3.5rem;
+    padding: 3% 4%;
+}
+.box-content button{
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    padding: 12px;
+    width: 30%;
+    background-color: #0000004f;
+    border: 1px solid white;
+}
+.box-content button a{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 1rem;
+}
+.box-content button:hover{
+    transform: translateY(10px);
+    background-color: #00000054;
+    transition: 0.3s;
+}
+.box-content button:active{
+    border-radius: 0px;
+    background-color: transparent;
+}
+.box-stats{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-stats ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+}
+.box-stats ul li{
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+.box-stats ul li::after{
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 1px;
+    height: 25px;
+    background-color: #fff;
+}
+.box-stats ul li:hover::after{
+    height: 30px;
+    transition: 0.2s;
+}
+
+/*Here starts Projects style */
