@@ -581,7 +581,6 @@ nav{
         width: 100%;
         height: 10vh;
         padding: 14px;
-        
     }
     .Features{
         width: 100%;
@@ -684,6 +683,33 @@ nav{
     .Inspiration #row-3 .row-info-prg p{
         padding-left: 2%;
         font-size: 0.8rem;
+    }
+    .Projects{
+        height: 200vh;
+    }
+    .Projects .Project-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Projects .Project-header h2{
+        padding-left: 0%;
+        font-size: 4rem;
+    }
+    .Projects .Project-body{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        height: 100%;
+    }
+    .Project-body .box h3{
+        font-size: 2.1rem;
+    }
+    .Project-body .box button{
+        width: 50%;
+    }
+    .Project-body .box ul{
+        margin-bottom: 1%;
     }
 }
 @media (min-width:481px) and (max-width:600px){
@@ -1453,7 +1479,7 @@ nav{
         margin: 4% auto;
     }
     .hero-right .hero-right-content{
-        height: 75%;
+        height: 85%;
     }
     .return-arrow{
         position: fixed;
@@ -1822,119 +1848,184 @@ nav{
 .Projects{
     margin: 5% auto;
     width: 95%;
-    min-height: 180vh;
     display: flex;
+    height: 200vh;
     flex-direction: column;
 }
-.Projects-header{
+.Project-header{
     width: 100%;
-    height: 20vh;
-    display: flex;
-    padding-left: 5%;
-    align-items: center;
 }
-.Projects-header h2{
+.Project-header h2{
+    color: #000;
     font-family: "Poppins", serif;
-    font-size: 6.5rem;
+    font-size: 6rem;
     font-weight: 100;
+    padding-left: 5%;
 }
-.Projects-body{
-    width: 100%;
-    height: 160vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    align-content: center;
-    flex-direction: none;
+.Project-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    height: 100%;
+    gap: 25px;
 }
 .box{
-    width: 49%;
-    height: 49%;
+    background-image: url(images/project-section-images/school-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.1s ;
 }
 .box:hover{
-    transform: scale(0.98);
-    transition: 0.5s;
+    transform: scale(1.01);
 }
-.box img{
-    width: 100%;
-    height: 100%;
-}
-.box-content{
+.box::before{
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.box-content h3{
-    color: #fff;
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-size: 3.5rem;
-    padding: 3% 4%;
-}
-.box-content button{
-    position: absolute;
-    left: 32%;
-    top: 50%;
-    padding: 12px;
-    width: 30%;
-    background-color: #0000004f;
-    border: 1px solid white;
-}
-.box-content button a{
-    color: #fff;
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-size: 1rem;
-}
-.box-content button:hover{
-    transform: translateY(10px);
-    background-color: #00000054;
-    transition: 0.3s;
-}
-.box-content button:active{
-    border-radius: 0px;
-    background-color: transparent;
-}
-.box-stats{
-    position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.box-stats ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
     height: 100%;
+    background-image: url(images/project-section-images/school-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(80%);
+    transition: 0.3s linear;
 }
-.box-stats ul li{
+.box:hover::before{
+    transform: scale(1.05);
+}
+.box h3{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 3rem;
+    padding: 1% 3%;
+}
+.box button{
+    position: relative;
+    z-index: 2;
+    height: 40px;
+    width: 30%;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.box button a{
+    color: #fff;
     font-family: "Poppins", serif;
     font-weight: 200;
     font-size: 1rem;
-    color: #fff;
-    position: relative;
 }
-.box-stats ul li::after{
+.box button:hover{
+    background-color: #00000033;
+}
+.box button:active{
+    background-color: rgba(0, 0, 0, 0.353);
+}
+.box ul{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.box ul li{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+    font-weight: 200;
+    position: relative;
+    cursor: pointer;
+}
+.box ul li::after{
     content: '';
     position: absolute;
     right: -10px;
-    top: 0;
+    top: -0px;
     width: 1px;
-    height: 25px;
+    height: 0%;
     background-color: #fff;
+    cursor: pointer;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s linear;
 }
-.box-stats ul li:hover::after{
-    height: 30px;
-    transition: 0.2s;
+.box ul li:hover::after{
+    height: 90%;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+.box:nth-child(2){
+    background-image: url(images/project-section-images/building-project.jpeg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/project-section-images/building-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(80%);
+}
+.box:nth-child(3){
+    background-image: url(images/project-section-images/OFFICE-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/project-section-images/OFFICE-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(80%);
+}
+.box:nth-child(4){
+    background-image: url(images/project-section-images/park-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box:nth-child(4)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/project-section-images/park-project.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(80%);
 }
 
 /*Here starts Projects style */
