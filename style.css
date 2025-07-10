@@ -443,8 +443,8 @@ nav{
     display: none;
 }
 @media (max-width:480px){
-    *{
-        box-sizing: border-box;
+    body{
+        overflow-x: hidden;
     }
     header{
         width: 100%;
@@ -533,20 +533,19 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        margin-right: 16%;
     }
     .hero-left-content h2{
         font-size: 2rem;
         width: 100%;
         text-align: center;
-        padding-right: 2%;
+        padding-right: 10%;
     }
     .hero-left-content p{
         display: none;
     }
     .hero-left-content button{
         width: 60%;
-        margin-right: 0%;
+        margin-right: 10%;
     }
     .hero-right-content{
         width: 70%;
@@ -570,17 +569,12 @@ nav{
         position: absolute;
         top: 53%;
     }
-    .return-arrow{
+    .return-arrow {
         position: fixed;
-        right: 40%;
+        left: 50%;
         bottom: 5%;
+        transform: translateX(-50%);
         width: 20%;
-        z-index: 99;
-    }
-    .return-arrow button{
-        width: 100%;
-        height: 10vh;
-        padding: 14px;
     }
     .Features{
         width: 100%;
@@ -660,6 +654,9 @@ nav{
         width: 100%;
         height: 100%;
     }
+    .row-img img{
+        max-width: 100%;
+    }
     .row .row-info{
         width: 100%;
         height: 100%;
@@ -684,9 +681,6 @@ nav{
         padding-left: 2%;
         font-size: 0.8rem;
     }
-    .Projects{
-        height: 200vh;
-    }
     .Projects .Project-header{
         display: flex;
         justify-content: center;
@@ -701,6 +695,7 @@ nav{
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
         height: 100%;
+        gap: 8px;
     }
     .Project-body .box h3{
         font-size: 2.1rem;
@@ -711,6 +706,11 @@ nav{
     .Project-body .box ul{
         margin-bottom: 1%;
     }
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+}
 }
 @media (min-width:481px) and (max-width:600px){
     *{
@@ -803,7 +803,7 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        margin-right: 16%;
+        padding-right: 10%;
     }
     .hero-left-content h2{
         font-size: 2.5rem;
@@ -816,7 +816,7 @@ nav{
     }
     .hero-left-content button{
         width: 60%;
-        margin-right: 0%;
+        margin-right: 10%;
     }
     .hero-right-content{
         width: 70%;
@@ -839,18 +839,6 @@ nav{
     .stat-1 p{
         position: absolute;
         top: 53%;
-    }
-    .return-arrow{
-        position: fixed;
-        right: 40%;
-        bottom: 5%;
-        width: 20%;
-        z-index: 99;
-    }
-    .return-arrow button{
-        width: 100%;
-        height: 10vh;
-        padding: 14px;
     }
     .Features{
         margin: 0;
@@ -915,6 +903,36 @@ nav{
     }
     #row-3 .row-info-prg p{
         padding-left: 5%;
+    }
+    .Projects .Project-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Projects .Project-header h2{
+        padding-left: 0%;
+        font-size: 4rem;
+    }
+    .Projects .Project-body{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        height: 100%;
+        gap: 8px;
+    }
+    .Project-body .box h3{
+        font-size: 2.1rem;
+    }
+    .Project-body .box button{
+        width: 50%;
+    }
+    .Project-body .box ul{
+        margin-bottom: 1%;
+    }
+     [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 }
 @media (min-width:601px) and (max-width:768px){
@@ -1008,7 +1026,7 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        margin-right: 16%;
+        padding-right: 10%;
     }
     .hero-left-content h2{
         font-size: 3rem;
@@ -1021,7 +1039,7 @@ nav{
     }
     .hero-left-content button{
         width: 40%;
-        margin-right: 0%;
+        margin-right: 10%;
     }
     .hero-right-content{
         width: 70%;
@@ -1120,6 +1138,36 @@ nav{
         display: flex;
         flex-direction: column;
     }
+    .Projects .Project-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Projects .Project-header h2{
+        padding-left: 0%;
+        font-size: 4rem;
+    }
+    .Projects .Project-body{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        height: 100%;
+        gap: 8px;
+    }
+    .Project-body .box h3{
+        font-size: 2.1rem;
+    }
+    .Project-body .box button{
+        width: 40%;
+    }
+    .Project-body .box ul{
+        margin-bottom: 1%;
+    }
+     [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
  @media (min-width:769px) and (max-width:920px){
      *{
@@ -1212,10 +1260,10 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        margin-right: 16%;
+        padding-right: 10%;
     }
     .hero-left-content h2{
-        font-size: 4rem;
+        font-size: 3rem;
         width: 100%;
         text-align: center;
         padding-right: 2%;
@@ -1225,7 +1273,7 @@ nav{
     }
     .hero-left-content button{
         width: 40%;
-        margin-right: 0%;
+        margin-right: 10%;
     }
     .hero-right-content{
         width: 70%;
@@ -1251,7 +1299,7 @@ nav{
     }
     .return-arrow{
         position: fixed;
-        right: 40%;
+        right: 20%;
         bottom: 5%;
         width: 15%;
         z-index: 99;
@@ -1345,6 +1393,42 @@ nav{
     #row-3 .row-info-btn{
         margin-top: 0%;
     }
+     [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .Projects .Project-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Projects .Project-header h2{
+        padding-left: 0%;
+        font-size: 4rem;
+    }
+    .Projects .Project-body{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        height: 100%;
+        gap: 8px;
+    }
+    .Project-body .box h3{
+        font-size: 2.1rem;
+    }
+    .Project-body .box button{
+        width: 40%;
+    }
+    .Project-body .box ul{
+        margin-bottom: 1%;
+    }
+    .Project-body .box:nth-child(2){
+        background-image: url(images/project-section-images/building-project.jpeg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
  }
  @media(min-width:921px) and (max-width:1024px){
     header{
@@ -1437,6 +1521,11 @@ nav{
     }
     #row-3 .row-info-header h3 {
         padding-left: 8%;
+    }
+     [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
  }
 @media(min-width:1025px){
@@ -1883,7 +1972,7 @@ nav{
     transition: 0.1s ;
 }
 .box:hover{
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 .box::before{
     content: "";
