@@ -22,7 +22,43 @@
 <body>
     <!--Living spaces structure-->
     <header>
-        sds
+        <nav id="nav">
+           <div class="logo">
+            <h1>ArchForm</h1>
+           </div>
+           <ul>
+                <li><a class="nav-item" href="">FAMILY HOMES</a></li>
+                <li><a class="nav-item" href="">MOUNTAIN CABINS</a></li>
+                <li><a class="nav-item" href="">URBAN APARTMENTS</a></li>
+                <li><a class="nav-item" href="">LUXURY VILLAS</a></li>
+                <li><a class="nav-item" href="">RESIDENTIAL TOWERS</a></li>
+                <li><a class="icon-item" href=""><i class="ri-home-5-line"></i></a></li>
+            </ul>
+        </nav>
+        <div id="headerFooter" class="header-footer">
+            <div class="left-btn">
+                <button><a href="">Contact us</a></button>
+                <button><a href="">Support us</a></button>
+            </div>
+            <div class="problem-link">
+                <p>Contact us for any <a href="">Issue</a></p>
+            </div>
+            <div class="right-btn">
+                <button><a href=""><i class="ri-arrow-up-wide-line"></i></a></button>
+            </div>
+        </div>
     </header>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function(){
+            const nav = document.getElementById("nav");
+            if(window.scrollY > 100){
+                nav.classList.add("active");
+            }
+            else{
+                nav.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 </html>
