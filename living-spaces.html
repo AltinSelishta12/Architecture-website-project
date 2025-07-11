@@ -32,22 +32,49 @@
                 <li><a class="nav-item" href="">URBAN APARTMENTS</a></li>
                 <li><a class="nav-item" href="">LUXURY VILLAS</a></li>
                 <li><a class="nav-item" href="">RESIDENTIAL TOWERS</a></li>
-                <li><a class="icon-item" href=""><i class="ri-home-5-line"></i></a></li>
+                <li><a class="icon-item" href="index.html"><i class="ri-home-5-line"></i></a></li>
             </ul>
         </nav>
         <div id="headerFooter" class="header-footer">
-            <div class="left-btn">
-                <button><a href="">Contact us</a></button>
-                <button><a href="">Support us</a></button>
+            <div id="supportMSG" class="support-msg">
+                <p>Thanks for the support
+                    <i class="ri-checkbox-circle-line"></i>
+                </p>
             </div>
-            <div class="problem-link">
-                <p>Contact us for any <a href="">Issue</a></p>
+            <div class="hero-section-text">
+                <h2>Living Spaces That Inspire Comfort<br> and Creativity</h2>
+                <button><a href="">Explore Living Spaces</a></button>
             </div>
-            <div class="right-btn">
-                <button><a href=""><i class="ri-arrow-up-wide-line"></i></a></button>
+            <div class="hero-footer">
+                <div class="left-btn">
+                    <button><a href="">CONTACT US</a></button>
+                    <button onclick="supportBtn()">SUPPORT US</button>
+                </div>
+                <div class="problem-link">
+                    <p>Share with us any <a href="">Issue</a></p>
+                </div>
+                <div class="right-btn">
+                    <button><a href="#headerFooter"><i class="ri-arrow-up-wide-line"></i></a></button>
+                </div>
             </div>
         </div>
     </header>
+    <!--here ends header of Living spaces page-->
+
+    <!--here starts Family Homes section-->
+
+    <section class="Family-Homes">
+        <div class="family-left-side">
+            <div class="left-side-content">
+                <img src="images/living-spaces-images/family-house-img.jpeg" alt="Family house img">
+            </div>
+        </div>
+        <div class="family-right-side">
+            <h3>FAMILY HOUSE</h3>
+            <p>Family houses are more than just structures—they are spaces built to nurture connection comfort, and lasting memories. Designed with warmth and practicality in mind, these homes provide room for every stage of life, from playful childhood moments to quiet family gatherings. Whether traditional or modern in style, a family house is a reflection of the people who live within it, offering safety, belonging, and the simple joy of being together.</p>
+            <button><a href="">Reach us</a></button>
+        </div>
+    </section>
     <script>
         AOS.init();
         window.addEventListener("scroll", function(){
@@ -59,6 +86,15 @@
                 nav.classList.remove("active");
             }
         });
+       function supportBtn(){
+        const supportMSG = document.getElementById("supportMSG");
+        supportMSG.style.display = "block";
+
+        setTimeout(() => {
+            supportMSG.style.display = "none";
+        }, 1000);
+       };
+
     </script>
 </body>
 </html>
