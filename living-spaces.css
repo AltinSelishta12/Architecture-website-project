@@ -110,7 +110,7 @@ nav ul li:nth-child(6):hover{
     left: 0;
     bottom: -10px;
     width: 0;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     transform-origin: left;
     background-color: var(--secondary-color);
@@ -127,7 +127,7 @@ nav ul li:nth-child(6):hover{
     right: 0;
     top: -10px;
     width: 0;
-    height: 2px;
+    height: 1px;
     transform: scaleX(0);
     transform-origin: right;
     background-color: var(--secondary-color);
@@ -192,6 +192,7 @@ nav ul li:nth-child(6):hover{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    z-index: 999;
 }
 .hero-section-text h2{
     font-family: var(--main-font);
@@ -292,12 +293,12 @@ nav ul li:nth-child(6):hover{
     color: var(--secondary-color);
     font-size: 1.1rem;
 }
-.Family-Homes{
+.living-type{
     height: 100vh;
     margin-top: 2%;
     display: flex;
 }
-.family-left-side{
+.left-side{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -311,45 +312,175 @@ nav ul li:nth-child(6):hover{
     max-width: 100%;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
-.family-right-side{
+.right-side{
     width: 50%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
-.family-right-side h3{
+.right-side h3{
     color: var(--secondary-color);
     font-family: var(--main-font);
     font-weight: 100;
     font-size: 3rem;
 }
-.family-right-side p{
+.right-side p{
     font-family: var(--main-font);
     font-size: 0.7rem;
     color: rgb(77, 77, 77);
+    text-align: justify;
+    width: 70%;
 }
-.family-right-side button{
+.right-side button{
     padding: 15px;
     width: 30%;
     border: 1px solid black;
     background-color: var(--main-color);
 }
-.family-right-side button a{
+.right-side button a{
     color: var(--secondary-color);
     font-family: var(--main-font);
 }
-.family-right-side button:hover{
+.right-side button:hover{
     background-color: #f1f1f1;
 }
-.family-right-side button:active{
+.right-side button:active{
     background-color: rgba(129, 129, 129, 0.418);
 }
-
-
-
-
-
-
-
+#Mountain-cabins{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#luxury-villas{
+    display: flex;
+    flex-direction: row-reverse;
+}
+Footer{
+    background-image: url(images/living-spaces-images/living-spaces-footer-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+Footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/living-spaces-images/living-spaces-footer-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    filter: brightness(20%);
+}
+.footer-header{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.footer-header h1{
+    color: var(--main-color);
+    font-family: "Geostar Fill", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.4rem;
+}
+.footer-nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 3%;
+}
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+.footer-nav ul li a{
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+}
+.footer-nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.footer-nav ul li a:hover::before{
+    width: 30%;
+    transition: 0.3s linear;
+}
+.footer-info{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 3%;
+}
+.footer-info ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}
+.footer-info ul li{
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 1rem;
+}
+.logo-info i{
+    font-size: 1.6rem;
+}
+.security-info{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7%;
+    gap: 10px;
+}
+.security-info p{
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 1rem;
+}
+.security-info span{
+    color: var(--main-color);
+    font-family: "Geostar Fill", serif;
+    font-weight: 600;
+    font-style: normal;
+}
