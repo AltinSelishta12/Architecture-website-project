@@ -34,9 +34,22 @@
                 <li><a class="nav-item" href="#residental-tower">RESIDENTIAL TOWERS</a></li>
                 <li><a class="icon-item" href="index.html"><i class="ri-home-5-line"></i></a></li>
             </ul>
-            <!--responsive design menu-->
-           
+            <div class="menu-btn">
+                <button id="menuBTN"><i class="ri-menu-line"></i></button>
+            </div>
         </nav>
+         <div class="menu-content" id="menuItems">
+                    <ul class="small-menu">
+                        <li><a href="#Family-homes">FAMILY HOMES</a></li>
+                        <li><a href="#Mountain-cabins">MOUNTAIN CABINS</a></li>
+                        <li><a href="#Urban-apartments">URBAN APARTMENTS</a></li>
+                        <li><a href="#luxury-villas">LUXURY VILLAS</a></li>
+                        <li><a href="#residental-tower">RESIDENTIAL TOWERS</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                    </ul>
+                </div>
+         <!--responsive design menu-->
+            <!--here ends responsive menu-->
         <div id="headerFooter" class="header-footer">
             <div id="supportMSG" class="support-msg">
                 <p>Thanks for the support
@@ -50,7 +63,7 @@
             <div class="hero-footer">
                 <div class="left-btn">
                     <button><a href=""><span class="header-contact">CONTACT US</span><i id="contact" class="ri-mail-line"></i></a></button>
-                    <button onclick="supportBtn()"> <span class="support">SUPPORT US</span><i id="support" class="ri-thumb-up-fill"></i></button>
+                    <button onclick="supportBtn()"> <span class="support">SUPPORT US</span><i onclick="supportBTN()" id="support" class="ri-thumb-up-fill"></i></button>
                 </div>
                 <div class="problem-link">
                     <p><span class="problem-text">Share with us any</span><a href="">Issue</a></p>
@@ -210,7 +223,21 @@
             supportMSG.style.display = "none";
         }, 1000);
        };
+       function supportBTN(){
+        const supportMSG = document.getElementById("supportMSG");
+        supportMSG.style.display = "block"
+
+        setTimeout(() =>{
+             supportMSG.style.display = "none";
+        }, 1000);
+       }
        // Responsive menu open close function
+       const menuBTN = document.getElementById("menuBTN");
+       const menuItems = document.getElementById("menuItems");
+
+       menuBTN.addEventListener("click", function(){
+        menuItems.classList.toggle("active");
+       });
     </script>
 </body>
 </html>

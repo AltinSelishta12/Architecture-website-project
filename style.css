@@ -569,12 +569,16 @@ nav{
         position: absolute;
         top: 53%;
     }
-    .return-arrow {
+    .return-arrow{
         position: fixed;
         left: 50%;
         bottom: 5%;
         transform: translateX(-50%);
         width: 20%;
+        z-index: 666;
+    }
+    .return-arrow button{
+        z-index: 99;
     }
     .Features{
         width: 100%;
@@ -696,6 +700,7 @@ nav{
         place-items: center;
         height: 100%;
         gap: 8px;
+        z-index: 1;
     }
     .Project-body .box h3{
         font-size: 2.1rem;
