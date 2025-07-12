@@ -199,6 +199,7 @@ nav ul li:nth-child(6):hover{
     color: var(--main-color);
     font-size: 2.9rem;
     padding-top: 5%;
+    width: 50%;
 }
 .hero-section-text button{
     padding: 12px;
@@ -483,4 +484,101 @@ Footer::before{
     font-family: "Geostar Fill", serif;
     font-weight: 600;
     font-style: normal;
+}
+.menu-btn{
+    display: none;
+}
+#contact{
+    display: none;
+}
+#support{
+    display: none;
+}
+@media(max-width:480px){
+     [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+}
+    body{
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    header{
+        max-width: 1400px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: none;
+    }
+    #nav.active{
+        display: none;
+    }
+    #nav ul{
+        display: none;
+    }
+    .logo{
+        margin-left: -4%;
+        display: block;
+    }
+    .right-side{
+        width: 100%;
+    }
+    .footer-nav{
+        display: none;
+    }
+    .hero-section-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        z-index: 1;
+    }
+    .hero-section-text h2{
+        font-size: 1.7rem;
+        width: 90%;
+        margin-right: 8%;
+        text-align: center;
+        padding-bottom: 4%;
+    }
+    .hero-section-text button{
+        width: 50%;
+        margin-right: 8%;
+        background-color: rgba(0, 0, 0, 0.401);
+    }
+    .hero-footer{
+        z-index: 999;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .right-btn{
+        display: flex;
+        justify-content: center;
+    }
+    .problem-text{
+        display: none;
+    }
+    .header-contact{
+        display: none;
+    }
+    #contact{
+        display: block;
+    }
+    #support{
+        display: block;
+    }
+    .support{
+        display: none;
+    }
+
 }
