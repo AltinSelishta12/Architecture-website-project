@@ -36,6 +36,7 @@
             </ul>
             <div class="menu-btn">
                 <button id="menuBTN"><i class="ri-menu-line"></i></button>
+
             </div>
         </nav>
          <div class="menu-content" id="menuItems">
@@ -64,9 +65,11 @@
                 <div class="left-btn">
                     <button><a href=""><span class="header-contact">CONTACT US</span><i id="contact" class="ri-mail-line"></i></a></button>
                     <button onclick="supportBtn()"> <span class="support">SUPPORT US</span><i onclick="supportBTN()" id="support" class="ri-thumb-up-fill"></i></button>
+                    <li><a href=""><i id="heart" class="ri-heart-fill"></i></a></li>
+                <p id="number">0</p>
                 </div>
                 <div class="problem-link">
-                    <p><span class="problem-text">Share with us any</span><a href="">Issue</a></p>
+                    <p><span class="problem-text">Share with us any </span><a href="">Issue</a></p>
                 </div>
                 <div class="right-btn">
                     <button><a href="#headerFooter"><i class="ri-arrow-up-wide-line"></i></a></button>
@@ -176,7 +179,7 @@
                 <li><a href="#Urban-apartments">URBAN APARTMENTS</a></li>
                 <li><a href="#luxury-villas">LUXURY VILLAS</a></li>
                 <li><a href="#residental-tower">RESIDENTAL TOWER</a></li>
-                <li><a href="#headerFooter">BACK</a></li>
+                <li><a href="#headerFooter"><i class="ri-arrow-up-wide-line"></i></a></li>
             </ul>
         </div>
         <div class="footer-info">
@@ -237,6 +240,23 @@
 
        menuBTN.addEventListener("click", function(){
         menuItems.classList.toggle("active");
+       });
+       let number = 0;
+       const heart = document.getElementById("heart");
+       const numberPRG = document.getElementById("number");
+       heart.addEventListener("click", function(){
+        number++;
+        numberPRG.textContent = number;
+        heart.style.color = "red";
+        heart.style.fontSize = "1.5rem";
+        heart.style.transition = "0.3 ease-in";
+
+        setTimeout(() =>{
+            heart.style.color = "";
+            heart.style.fontSize = "1.3rem";
+            heart.style.transition = "0.3 ease-in";
+        }, 1000);
+        event.preventDefault();
        });
     </script>
 </body>
