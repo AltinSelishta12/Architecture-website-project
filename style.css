@@ -184,7 +184,7 @@ nav{
     display: flex;
 }
 .hero-left{
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -198,8 +198,6 @@ nav{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 15%;
-    padding-top: 7%;
 }
 .hero-left-content h2{
     font-family: "Poppins", serif;
@@ -236,9 +234,7 @@ nav{
     }
 }
 .hero-left-content button{
-    width: 40%;
-    padding: 12px;
-    margin: 6% 4%;
+    width: 20%;
     background-color: #ffffff50;
     border: 1px solid white;
     animation-name: hero-btn;
@@ -267,145 +263,6 @@ nav{
     background-color: #ffffff00;
     transition: 0.3s;
 }
-.hero-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-}
-.hero-right-content{
-    background-color: rgba(255, 255, 255, 0.295);
-    width: 65%;
-    height: 85%;
-    backdrop-filter: blur(3px);
-    border-radius: 8px;
-    border: 1px solid #fff;
-}
-.hero-right-content-header{
-    width: 100%;
-    border-radius: 8px;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hero-right-content-header h2{
-    font-family: "Aboreto", system-ui;
-    font-weight: 500;
-    font-style: normal;
-    color: #fff;
-    font-size: 2rem;
-}
-.hero-right-content-stats{
-    margin-top: 3%;
-    height: 87%;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 4%;
-}
-.stat-1{
-    width: 100%;
-    position: relative;
-}
-.stat-1 h3{
-    font-family: 'Poppins', serif;
-    font-weight: 500;
-    color: #fff;
-    font-size: 2.3rem;
-}
-.stat-1 p{
-    font-family: 'Poppins', serif;
-    font-weight: 500;
-    color: #fff;
-    font-size: 0.7rem;
-    position: absolute;
-    top: 64%;
-}
-.stat-1-line{
-    width: 91%;
-    background-color: #fff;
-    border-radius: 25px;
-    height: 5px;
-    margin-top: 2%;
-    animation-name: line-1;
-    animation-duration: 2s;
-    animation-delay: 2s;
-}
-@keyframes line-1{
-    0%{
-        width: 0%;
-        opacity: 0;
-    }
-    100%{
-        width: 91%;
-        opacity: 1;
-    }
-}
-.stat-2-line{
-    width: 94%;
-    background-color: #fff;
-    border-radius: 25px;
-    height: 5px;
-    margin-top: 2%;
-    animation-name: line-2;
-    animation-duration: 2s;
-    animation-delay: 2s;
-}
-@keyframes line-2{
-     0%{
-        width: 0%;
-        opacity: 0;
-    }
-    100%{
-        width: 94%;
-        opacity: 1;
-    }
-}
-.stat-3-line{
-    width: 92%;
-    background-color: #fff;
-    border-radius: 25px;
-    height: 5px;
-    margin-top: 2%;
-    animation-name: line-3;
-    animation-duration: 2s;
-    animation-delay: 2s;
-}
-@keyframes line-3{
-     0%{
-        width: 0%;
-        opacity: 0;
-    }
-    100%{
-        width: 92%;
-        opacity: 1;
-    }
-}
-.stat-4-line{
-    width: 89%;
-    background-color: #fff;
-    border-radius: 25px;
-    height: 5px;
-    margin-top: 2%;
-    animation-name: line-4;
-    animation-duration: 2s;
-    animation-delay: 2s;
-}
-@keyframes line-4{
-     0%{
-        width: 0%;
-        opacity: 0;
-    }
-    100%{
-        width: 89%;
-        opacity: 1;
-    }
-}
 .return-arrow{
     width: 6%;
     background-color: #0000004b;
@@ -417,20 +274,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.nightBTN{
-    position: fixed;
-    left: 5%;
-    bottom: 9%;
-    width: 6%;
-    height: 10vh;
-    background-color: rgba(0, 0, 0, 0.353);
-    color: #fff;
-    border: 1px solid white;
-}
-#nightBtn.night{
-    transition: 0.3s;
-    background-color: #000000b6;
 }
 .return-arrow a{
     color: #fff;
@@ -448,6 +291,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.753);
     color: #000000;
     border: 1px solid rgb(255, 255, 255);
+    z-index: 996;
 }
 /*here ends the header style*/
 .menu-btn{
@@ -536,12 +380,6 @@ nav{
     .hero-left{
         width: 100%;
     }
-    .hero-right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .hero-left-content{
         display: flex;
         justify-content: space-evenly;
@@ -555,33 +393,13 @@ nav{
         padding-right: 10%;
     }
     .hero-left-content p{
-        display: none;
+        font-size: 0.7rem;
+        width: 80%;
     }
     .hero-left-content button{
         width: 60%;
         margin-right: 10%;
-    }
-    .hero-right-content{
-        width: 70%;
-        margin-right: -2%;
-        height: 100%;
-    }
-    .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content-stats{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        margin-top: 0;
-    }
-    .stat-1 h3{
-        font-size: 1.6rem;
-    }
-    .stat-1 p{
-        position: absolute;
-        top: 53%;
+        padding: 12px;
     }
     .return-arrow{
         position: fixed;
@@ -594,6 +412,13 @@ nav{
     .return-arrow button{
         z-index: 99;
     }
+    #returnarrow.active{
+    background-color: rgba(0, 0, 0, 0.753);
+    color: #000000;
+    border: 1px solid rgb(255, 255, 255);
+    z-index: 996;
+}
+  /*This is design ideas section the section rigt after header*/
     .Features{
         width: 100%;
         margin: 0px !important;
@@ -812,12 +637,6 @@ nav{
     .hero-left{
         width: 100%;
     }
-    .hero-right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .hero-left-content{
         display: flex;
         justify-content: space-evenly;
@@ -842,23 +661,6 @@ nav{
         width: 70%;
         margin-right: -2%;
         height: 100%;
-    }
-    .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content-stats{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        margin-top: 0;
-    }
-    .stat-1 h3{
-        font-size: 1.6rem;
-    }
-    .stat-1 p{
-        position: absolute;
-        top: 53%;
     }
     .return-arrow{
         position: fixed;
@@ -1046,12 +848,6 @@ nav{
     .hero-left{
         width: 100%;
     }
-    .hero-right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .hero-left-content{
         display: flex;
         justify-content: space-evenly;
@@ -1071,28 +867,6 @@ nav{
     .hero-left-content button{
         width: 40%;
         margin-right: 10%;
-    }
-    .hero-right-content{
-        width: 70%;
-        margin-right: -2%;
-        height: 100%;
-    }
-    .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content-stats{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        margin-top: 0;
-    }
-    .stat-1 h3{
-        font-size: 1.6rem;
-    }
-    .stat-1 p{
-        position: absolute;
-        top: 53%;
     }
     .return-arrow{
         position: fixed;
@@ -1279,12 +1053,6 @@ nav{
     .hero-left{
         width: 100%;
     }
-    .hero-right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .hero-left-content{
         display: flex;
         justify-content: space-evenly;
@@ -1304,28 +1072,6 @@ nav{
     .hero-left-content button{
         width: 40%;
         margin-right: 10%;
-    }
-    .hero-right-content{
-        width: 70%;
-        margin-right: -2%;
-        height: 100%;
-    }
-    .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content-stats{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        margin-top: 0;
-    }
-    .stat-1 h3{
-        font-size: 1.6rem;
-    }
-    .stat-1 p{
-        position: absolute;
-        top: 53%;
     }
     .return-arrow{
         position: fixed;
@@ -1487,21 +1233,6 @@ nav{
         padding: 12px;
         width: 60%;
     }
-    .hero-right {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .hero-right-content .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content{
-        width: 90%;
-        margin: 10% auto;
-    }
-    .hero-right .hero-right-content{
-        height: 75%;
-    }
     .return-arrow{
         position: fixed;
         right: 0;
@@ -1571,35 +1302,20 @@ nav{
     }
     .hero-left .hero-left-content h2{
         font-size: 2.5rem;
+        font-weight: 700;
     }
     .hero-left-content{
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        padding-top: 0%;
     }
      .hero-left .hero-left-content p{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .hero-left-content button{
         padding: 12px;
-        width: 60%;
-    }
-    .hero-right {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .hero-right-content .hero-right-content-header h2{
-        font-size: 1.6rem;
-    }
-    .hero-right-content{
-        width: 90%;
-        margin: 4% auto;
-    }
-    .hero-right .hero-right-content{
-        height: 85%;
+        width: 30%;
     }
     .return-arrow{
         position: fixed;
@@ -2243,6 +1959,91 @@ nav{
 }
 .service-link:hover i{
     transform: translateX(25px);
+    transition: 0.3s;
+}
+.service-3{
+    height: 85vh;
+    display: flex;
+}
+.service-3 .service-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-left .service-img-3{
+    width: 50%;
+    height: 75%;
+}
+.service-img-3 img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.service-3 .service-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.service-right h3{
+    font-family: "Red Rose", serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.service-right p{
+    font-family: "Red Rose", serif;
+    text-align: justify;
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    width: 50%;
+}
+/*There is not any code about service-link because all links have the same class so its the same design*/
+
+.other-services{
+    height: 85vh;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.other-services-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.other-services-header h3{
+    font-family: "Red Rose", serif;
+    font-size: 2rem;
+    font-weight: 500; 
+}
+.other-services-body{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.other-service-img{
+    width: 25%;
+    height: 95%;
+}
+.other-service-img{
+    transform: translateY(15px);
+}
+#other-service-2{
+    transform: translateY(-10px);
+}
+#other-services-2:hover{
+    transform: translateY(0px);
+    transition: 0.3s;
+}
+.other-service-img:hover{
+    transform: translateY(0);
     transition: 0.3s;
 }
 /*Here ends services style*/
