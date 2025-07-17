@@ -2038,8 +2038,8 @@ nav{
 #other-service-2{
     transform: translateY(-10px);
 }
-#other-services-2:hover{
-    transform: translateY(0px);
+#other-service-2:hover{
+    transform: translateY(10px);
     transition: 0.3s;
 }
 .other-service-img:hover{
