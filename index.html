@@ -223,8 +223,8 @@
             <div class="service-body-header">
                 <h3>HOUSE & BUILDING DESIGN</h3>
             </div>
-            <div class="service-images">
-                <div class="service-img">
+            <div id="first-service" class="service-images">
+                <div id="hidden-img-1" class="service-img">
                     <img src="images/services-images/service-1-img.jpeg" alt="First service first img">
                 </div>
                 <div class="service-img">
@@ -248,7 +248,8 @@
                 <h3 class="second-service-header">PLANS & DRAWINGS</h3>
             </div>
             <div class="second-service-hr-line"></div>
-            <div class="service-images">
+            <!--id="second-service" is for the responsive design-->
+            <div id="second-service" class="service-images">
                 <div class="service-img">
                     <img src="images/services-images/service-2-1-img.jpeg" alt="Second service first img">
                 </div>
@@ -331,15 +332,11 @@
 
         window.addEventListener('scroll', function(){
             const returnarrow = document.getElementById("returnarrow");
-            const nightBtn = document.getElementById("nightBtn");
             if(window.scrollY > 200){
                 returnarrow.classList.add("active");
             }
         else{
             returnarrow.classList.remove("active");
-        }
-        if(scrollY > 200){
-            nightBtn.classList.add("night")
         }
         });
 </script>

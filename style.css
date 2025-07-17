@@ -474,6 +474,7 @@ nav{
     .box-2-prg p{
         display: none;
     }
+    /*Here starts the responsive design for Inspiration section*/
     .Inspiration{
         display: flex;
         justify-content: space-around;
@@ -550,6 +551,90 @@ nav{
     }
     .Project-body .box ul{
         margin-bottom: 1%;
+    }
+    /*The end of projects responsive design*/
+
+    /*The start of services responsive design*/
+    .services .services-header h2{
+        font-size: 2rem;
+   }
+    .services .services-main-prg{
+        width: 70%;
+    }
+    .service-body-header h3{
+        font-size: 1.8rem;
+        padding-right: 3%;
+        text-align: center;
+    }
+    #hidden-img-1{
+        display: none;
+    }
+    .services .service-body{
+        height: 85vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #first-service{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #first-service .service-img{
+        width: 80%;
+        height: 45%;   
+    }
+    #second-service{
+        display: flex;
+        flex-direction: column;
+    }
+    #second-service{
+        width: 100%;
+    }
+    #second-service .service-img{
+         width: 80%;
+        height: 45%;
+    }
+    .service-3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1%;
+    }
+    
+    .services .service-3 .service-left{
+        width: 100%;
+        height: 50%;
+    }
+     .services .service-3 .service-img-3{
+        width: 100%;
+        height: 100% ;
+    }
+    .service-img-3 img{
+        width: 100%;
+    }
+    .services .service-3 .service-right{
+        width: 100%;
+        height: 100%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services-body{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8%;
+    }
+    .services .other-services-body .other-service-img{
+        width: 70%;
+        height: 35%;
+    }
+    #other-service-2{
+        transform: none;
+        margin-top: 10%;
     }
     [data-aos] {
         opacity: 1 !important;
@@ -648,19 +733,10 @@ nav{
         font-size: 2.5rem;
         width: 100%;
         text-align: center;
-        padding-right: 2%;
-    }
-    .hero-left-content p{
-        display: none;
     }
     .hero-left-content button{
         width: 60%;
-        margin-right: 10%;
-    }
-    .hero-right-content{
-        width: 70%;
-        margin-right: -2%;
-        height: 100%;
+        padding: 12px;
     }
     .return-arrow{
         position: fixed;
@@ -762,6 +838,97 @@ nav{
     .Project-body .box ul{
         margin-bottom: 1%;
     }
+    .services .services-header h2{
+        font-size: 2rem;
+   }
+    .services .services-main-prg{
+        width: 70%;
+        padding-top: 10%;
+    }
+    .service-body-header{
+        display: flex;
+    }
+    .service-body-header h3{
+        font-size: 1.8rem;
+        padding-right: 3%;
+        text-align: center;
+    }
+    #hidden-img-1{
+        display: none;
+    }
+    .services .service-body{
+        height: 85vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #first-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .services #first-service{
+        min-height: 30vh;
+    }
+    #first-service .service-img{
+        width: 45%;
+        height: 100%;   
+    }
+    #second-service{
+        display: flex;
+    }
+    #second-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #second-services{
+        min-height: 30vh;
+    }
+    #second-service .service-img{
+         width: 48%;
+        height: 90%;
+    }
+    .service-3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1%;
+    }
+    .services .service-3 .service-left{
+        width: 100%;
+        height: 50%;
+    }
+     .services .service-3 .service-img-3{
+        width: 90%;
+        height: 90% ;
+    }
+    .service-img-3 img{
+        width: 100%;
+    }
+    .services .service-3 .service-right{
+        width: 100%;
+        height: 100%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services-body{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8%;
+    }
+    .services .other-services-body .other-service-img{
+        width: 70%;
+        height: 35%;
+    }
+    #other-service-2{
+        transform: none;
+        margin-top: 10%;
+    }
      [data-aos] {
         opacity: 1 !important;
         transform: none !important;
@@ -825,7 +992,7 @@ nav{
         align-items: center;
         justify-content: center;
         gap: 30px;
-        padding-top: 35%;
+        padding-top: 30%;
     }
     .menu-content ul li a{
         color: #fff;
@@ -859,14 +1026,17 @@ nav{
         font-size: 3rem;
         width: 100%;
         text-align: center;
-        padding-right: 2%;
+        margin-left: 5%;
     }
     .hero-left-content p{
-        display: none;
+        font-size: 1rem;
+        width: 80%;
+        margin-left: 12%;
     }
     .hero-left-content button{
-        width: 40%;
-        margin-right: 10%;
+        width: 60%;
+        padding: 12px;
+        margin-left: 5%;
     }
     .return-arrow{
         position: fixed;
@@ -966,6 +1136,98 @@ nav{
     }
     .Project-body .box ul{
         margin-bottom: 1%;
+    }
+    .services .services-header h2{
+        font-size: 2rem;
+   }
+    .services .services-main-prg{
+        width: 70%;
+        padding-top: 10%;
+        font-size: 1.3rem;
+    }
+    .service-body-header{
+        display: flex;
+    }
+    .service-body-header h3{
+        font-size: 1.8rem;
+        padding-right: 3%;
+        text-align: center;
+    }
+    #hidden-img-1{
+        display: none;
+    }
+    .services .service-body{
+        height: 85vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #first-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .services #first-service{
+        min-height: 30vh;
+    }
+    #first-service .service-img{
+        width: 45%;
+        height: 100%;   
+    }
+    #second-service{
+        display: flex;
+    }
+    #second-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #second-services{
+        min-height: 30vh;
+    }
+    #second-service .service-img{
+         width: 48%;
+        height: 90%;
+    }
+    .service-3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1%;
+    }
+    .services .service-3 .service-left{
+        width: 100%;
+        height: 50%;
+    }
+     .services .service-3 .service-img-3{
+        width: 90%;
+        height: 90% ;
+    }
+    .service-img-3 img{
+        width: 100%;
+    }
+    .services .service-3 .service-right{
+        width: 100%;
+        height: 100%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services-body{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8%;
+    }
+    .services .other-services-body .other-service-img{
+        width: 60%;
+        height: 35%;
+    }
+    #other-service-2{
+        transform: none;
+        margin-top: 10%;
     }
      [data-aos] {
         opacity: 1 !important;
@@ -1204,6 +1466,35 @@ nav{
         background-repeat: no-repeat;
         background-size: cover;
     }
+     #first-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #first-service .service-img{
+        width: 30%;
+    }
+    #second-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #second-service .service-img{
+        width: 45%;
+    }
+    .services .service-3 .service-left{
+        width: 50%;
+        height: 100%;
+    }
+    .services .service-3 .service-img-3{
+        width: 95%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services .other-service-img{
+        width: 30%;
+    }
  }
  @media(min-width:921px) and (max-width:1024px){
     header{
@@ -1284,6 +1575,35 @@ nav{
     #row-3 .row-info-header h3 {
         padding-left: 8%;
     }
+     #first-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #first-service .service-img{
+        width: 30%;
+    }
+    #second-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #second-service .service-img{
+        width: 45%;
+    }
+    .services .service-3 .service-left{
+        width: 50%;
+        height: 100%;
+    }
+    .services .service-3 .service-img-3{
+        width: 95%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services .other-service-img{
+        width: 30%;
+    }
      [data-aos] {
         opacity: 1 !important;
         transform: none !important;
@@ -1359,7 +1679,30 @@ nav{
     }
     .box-2 .box-2-btn button{
         width: 50%;
-        
+    }
+    #first-service .service-img{
+        width: 30%;
+    }
+    #second-service{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #second-service .service-img{
+        width: 45%;
+    }
+    .services .service-3 .service-left{
+        width: 50%;
+        height: 100%;
+    }
+    .services .service-3 .service-img-3{
+        width: 95%;
+    }
+    .services .service-3 .service-right p{
+        width: 70%;
+    }
+    .other-services .other-service-img{
+        width: 30%;
     }
 }
 
@@ -1872,6 +2215,7 @@ nav{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 1400px;
 }
 .services-header{
@@ -1940,6 +2284,7 @@ nav{
 .service-img img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .service-img img:hover{
     transform: scale(1.05);
@@ -1975,6 +2320,10 @@ nav{
 .service-left .service-img-3{
     width: 50%;
     height: 75%;
+}
+.service-img-3:hover{
+    transform: translateX(10px);
+    transition: 0.3s;
 }
 .service-img-3 img{
     width: 100%;
@@ -2047,3 +2396,5 @@ nav{
     transition: 0.3s;
 }
 /*Here ends services style*/
+
+
