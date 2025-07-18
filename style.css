@@ -2555,6 +2555,7 @@ footer::before{
     height: 60vh;
     display: flex;
     align-items: center;
+    width: 90%;
 }
 .client-satisfaction-header{
     transform: rotate(-90deg);
@@ -2586,9 +2587,10 @@ footer::before{
     width: 70%;
     height: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    margin-left: 2%;
 }
 .stats{
     width: 100%;
@@ -2626,5 +2628,103 @@ footer::before{
  #stat-3{
     width: 94%;
  }
+ .contact-us{
+    position: relative;
+    z-index: 2;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+ }
+.contact-us-header{
+    transform: rotate(-90deg);
+    width: 23%;
+    margin-left: -6%;
+    position: relative;
+}
+.contact-us-header::before{
+    content: '';
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    width: 40%;
+    background-color: #fff;
+    height: 3px;
+}
+.contact-us:hover .contact-us-header::before{
+    width: 20%;
+    transition: 0.3s;
+}
+.contact-us-header h3{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.contact-form{
+    width: 30%;
+    height: 80%;
+    margin-left: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+.contact-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.contact-form form input{
+    width: 60%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding-left: 3%;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    color: #fff;
+}
+.contact-form form input::placeholder{
+    color: #949494;
+}
+.contact-form form input:focus::placeholder{
+    color: #fff;
+}
+.contact-form form input:focus{
+    border: 2px solid #fff;
+}
+.contact-form form textarea{
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    width: 60%;
+    height: 80px;
+    padding: 1% 1%;
+    color: #fff;
+}
+.contact-form form textarea:focus::placeholder{
+    color: #fff;
+}
+.contact-form form button{
+    background-color: transparent;
+    border: 1px solid white;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    color: #fff;
+    padding: 8px;
+    width: 40%;
+}
+.contact-form form button:hover{
+    background-color: rgba(255, 255, 255, 0.199);
+}
 /*Here ends our company section*/
 
