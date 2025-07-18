@@ -1689,14 +1689,14 @@ nav{
         justify-content: space-evenly;
     }
     #second-service .service-img{
-        width: 45%;
+        width: 35%;
     }
     .services .service-3 .service-left{
         width: 50%;
         height: 100%;
     }
     .services .service-3 .service-img-3{
-        width: 95%;
+        width: 75%;
     }
     .services .service-3 .service-right p{
         width: 70%;
@@ -2397,4 +2397,154 @@ nav{
 }
 /*Here ends services style*/
 
+/*Here starts our company section*/
+footer{
+    background-image: url(images/OurCompany-images/footer-background-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 5%;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1400px;
+    position: relative;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+     background-image: url(images/OurCompany-images/footer-background-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    filter: brightness(30%);
+}
+.footer-header{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+}
+.footer-nav-left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.footer-nav-left h2{
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 3rem;
+    padding-left: 5%;
+}
+.footer-nav-right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-nav-right ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 247, 247, 0.288);
+    gap: 15px;
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+}
+.footer-nav-right ul li a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.footer-nav-right ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.486);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.footer-hr-line{
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    height: 2px;
+    width: 40%;
+    margin: auto;
+}
+.about-us{
+    position: relative;
+    z-index: 2;
+    margin-top: 2%;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+}
+.about-us-header{
+    transform: rotate(-90deg);
+    margin-left: -5%;
+    width: 23%; /*width:30%; is vertically for the header of about us "Who are we" because I've used rotate values*/
+}
+.about-us:hover .about-header-VrLine{
+    width: 20%;
+    margin: auto;
+    transition: 0.3s;
+}
+.about-us-header h3{
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.about-header-VrLine{
+    background-color: #fff;
+    width: 40%;
+    height: 3px;
+    margin: auto;
+}
+.our-mission{
+    width: 30%;
+    margin-right: 5%;
+}
+.our-mission h4{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+.our-mission p{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: justify;
+}
+.why-us{
+    width: 40%;
+}
+.why-us h4{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+.why-us p{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: justify;
+}
+/*Here ends our company section*/
 

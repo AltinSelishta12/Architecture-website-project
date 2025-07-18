@@ -258,6 +258,7 @@ nav ul li:nth-child(6):hover{
     left: 25.5%;
     font-family: "Poppins", serif;
     font-weight: 400;
+    color: #000
 }
 .header-footer{
     height: 90vh;
