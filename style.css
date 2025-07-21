@@ -851,6 +851,9 @@ nav{
         width: 100%;
         padding-right: 10%;
     }
+    .hero-left-content p{
+        padding-left: 4%;
+    }
     .hero-left-content h2{
         font-size: 2.5rem;
         width: 100%;
@@ -1271,7 +1274,7 @@ nav{
     }
     .hero-left-content p{
         font-size: 1rem;
-        width: 80%;
+        width: 90%;
         margin-left: 12%;
     }
     .hero-left-content button{
@@ -1683,7 +1686,7 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        padding-right: 10%;
+        padding-right: 0%;
     }
     .hero-left-content h2{
         font-size: 3rem;
@@ -1691,12 +1694,10 @@ nav{
         text-align: center;
         padding-right: 2%;
     }
-    .hero-left-content p{
-        display: none;
-    }
     .hero-left-content button{
         width: 40%;
-        margin-right: 10%;
+        margin-right: 4%;
+        padding: 12px;
     }
     .return-arrow{
         position: fixed;
