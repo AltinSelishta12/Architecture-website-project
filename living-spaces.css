@@ -503,6 +503,12 @@ Footer::before{
 .menu-btn{
     display: none;
 }
+.small-menu ul li a{
+    display: none;
+}
+.menu-content{
+    display: none;
+}
 #contact{
     display: none;
 }
