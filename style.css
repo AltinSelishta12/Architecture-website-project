@@ -3070,7 +3070,7 @@ footer::before{
 }
 .contact-form{
     width: 30%;
-    height: 80%;
+    height: 90%;
     margin-left: 24%;
     display: flex;
     justify-content: center;
@@ -3120,6 +3120,12 @@ footer::before{
 }
 .contact-form form textarea:focus::placeholder{
     color: #fff;
+}
+.contact-form form a{
+    color: #fff;
+    text-decoration: underline;
+    font-family: "Poppins", serif;
+    font-weight: 300;
 }
 .contact-form form button{
     background-color: transparent;
