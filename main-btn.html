@@ -317,6 +317,78 @@
                 height: 15%;
             }
         }
+         @media(min-width: 481px) and (max-width:600px){
+               body{
+                width: 100%;
+                min-height: 100vh;
+               }
+               header{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+               }
+               .header-content{
+                width: 100%;
+                height: 100%;
+                border-radius: 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+            }
+            .header-content::before{
+                border-radius: 0px;
+            }
+            .header-content-title{
+                height: 7vh;
+            }
+            .header-content-title h1{
+                font-size: 1.8rem;
+            }
+            .header-content-slogan{
+                width: 90%;
+                margin-top: 0%;
+            }
+            .header-content-slogan h2{
+                font-size: 1.4rem;
+                line-height: 30px;
+            }
+            .header-content-prg{
+                width: 80%;
+                margin-top: 0%;
+                margin-bottom: 2%;
+            }
+            .header-content-prg p{
+                font-size: 0.8rem;
+            }
+            .header-content-btn{
+                margin-bottom: 3%;
+            }
+            .header-nav{
+                height: 10vh;
+                width: 95%;
+                margin-top: 2%;
+                display: flex;
+                flex-direction: row;
+                border-radius: 40px;
+            }
+            .header-nav-icons ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                gap: 10px;
+            }
+            .header-nav-icons ul a{
+                font-size: 0.9rem;
+            }
+            .header-nav-contact-link a{
+                writing-mode: horizontal-tb;
+                height: 15%;
+            }
+               
+            }
     </style>
 </head>
 <body>
