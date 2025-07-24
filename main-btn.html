@@ -242,6 +242,81 @@
                 opacity: 1;
             }
         }
+        /*Here is the breakpoint of 480px for small phones*/
+
+        @media(max-width:480px){
+            body{
+                width: 100%;
+                min-height: 100vh;
+            }
+            header{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content:space-around;
+                align-items: center;
+                border-radius: none;
+            }
+            .header-content{
+                width: 100%;
+                height: 100%;
+                border-radius: 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+            }
+            .header-content::before{
+                border-radius: 0px;
+            }
+            .header-content-title{
+                height: 7vh;
+            }
+            .header-content-title h1{
+                font-size: 1.8rem;
+            }
+            .header-content-slogan{
+                width: 100%;
+                margin-top: 0%;
+            }
+            .header-content-slogan h2{
+                font-size: 1.4rem;
+                line-height: 30px;
+            }
+            .header-content-prg{
+                width: 80%;
+                margin-top: 0%;
+                margin-bottom: 2%;
+            }
+            .header-content-prg p{
+                font-size: 0.6rem;
+            }
+            .header-content-btn{
+                margin-bottom: 3%;
+            }
+            .header-nav{
+                height: 10vh;
+                width: 95%;
+                margin-top: 4%;
+                display: flex;
+                flex-direction: row;
+                border-radius: 40px;
+            }
+            .header-nav-icons ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                gap: 10px;
+            }
+            .header-nav-icons ul a{
+                font-size: 0.9rem;
+            }
+            .header-nav-contact-link a{
+                writing-mode: horizontal-tb;
+                height: 15%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -263,13 +338,13 @@
         <div class="header-nav">
            <div class="header-nav-icons">
             <ul>
-                <a class="sidebar-item" href=""><i class="ri-home-4-line"></i></a>
-                <a class="sidebar-item" href=""><i class="ri-alarm-warning-fill"></i></a>
+                <a class="sidebar-item" href="index.html"><i class="ri-home-4-line"></i></a>
+                <a class="sidebar-item" href="index.html#support-bookmark"><i class="ri-alarm-warning-fill"></i></a>
                 <a class="sidebar-item" href=""><i class="ri-wallet-fill"></i></a>
             </ul>
            </div>
             <div class="header-nav-contact-link">
-                <a class="sidebar-item" href="">GET IN TOUCH</a>
+                <a class="sidebar-item" href="main-contact-form.html">GET IN TOUCH</a>
             </div>
         </div>
     </header>
