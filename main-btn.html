@@ -488,6 +488,69 @@
             font-weight: 700;
             font-size: 3.5rem;
         }
+        .rate{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 4%;
+            gap: 7px;
+        }
+        .rate i{
+            font-size: 1.2rem;
+        }
+        .starIcon{
+            color: rgba(169, 169, 169, 0.616);
+        }
+        .starIcon.star{
+            color: #ffd700;
+        }
+        .monthly-projects-cards{
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card{
+            width: 20%;
+            height: 60%;
+            box-shadow: 7px 7px 12px darkgray;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            transition: 0.4s;
+        }
+        #card2{
+            height: 70%;
+        }
+        #card3{
+            height: 70%;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+        }
+        .card .monthly-prject-link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 4%;
+        }
+        .card .monthly-prject-link a{
+            color: #000;
+            font-family: "Poppins", serif;
+            font-weight: 200;
+            font-size: 1.4rem;
+        }
+        .card .monthly-prject-link i{
+            font-size: 1.1rem;
+        }
+        .card:hover .monthly-prject-link i{
+            transform: translateX(25px);
+            transition: 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -526,7 +589,53 @@
         <div class="monthly-projects-header">
             <h2>MONTHLY PROJECTS</h2>
         </div>
+        <div id="rate" class="rate">
+                <i class="ri-star-fill starIcon"></i>
+                <i class="ri-star-fill starIcon"></i>
+                <i class="ri-star-fill starIcon"></i>
+                <i class="ri-star-fill starIcon"></i>
+                <i class="ri-star-fill starIcon"></i>
+            </div>
+        <div class="monthly-projects-cards">
+            <div class="card">
+                <img src="images/monthly-projects-images/monthly-project-1.jpeg" alt="Public park project">
+                <div class="monthly-prject-link">
+                    <a href="">PARK</a>
+                    <i class="ri-arrow-right-long-fill"></i>
+                </div>
+            </div>
+            <div id="card2" class="card">
+                <img src="images/monthly-projects-images/monthly-project-2.jpeg" alt="Garage project">
+                <div class="monthly-prject-link">
+                    <a href="">GARAGE</a>
+                    <i class="ri-arrow-right-long-fill"></i>
+                </div>
+            </div>
+            <div id="card3" class="card">
+                <img src="images/monthly-projects-images/monthly-project-3.jpeg" alt="Library project">
+                <div class="monthly-prject-link">
+                    <a href="">LIBRARY</a>
+                    <i class="ri-arrow-right-long-fill"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/monthly-projects-images/monthly-project-4.jpeg" alt="Living Room project">
+                <div class="monthly-prject-link">
+                    <a href="">LIVING ROOM</a>
+                    <i class="ri-arrow-right-long-fill"></i>
+                </div>
+            </div>
+        </div>
     </section>
     <!--Here ends monthly projects section-->
+    <script>
+        const stars = document.querySelectorAll(".starIcon");
+
+        stars.forEach((stars) => {
+            stars.addEventListener("click", function(){
+                stars.classList.toggle("star");
+            })
+        });
+    </script>
 </body>
 </html>
