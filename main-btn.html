@@ -514,6 +514,43 @@
                 writing-mode: horizontal-tb;
                 height: 15%;
             }
+            .monthly-projects{
+                margin: auto;
+                min-height: 150vh;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+            }
+            .monthly-projects .monthly-projects-header{
+                height: 20vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0%;
+            }
+            .monthly-projects .rate{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .monthly-projects .rate i {
+                font-size: 1.5rem;
+            }
+            .monthly-projects .monthly-projects-cards{
+                display: grid;
+                height: 130vh;
+                place-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                align-content: center;
+            }
+            .monthly-projects-cards .card{
+                width: 90%;
+                height: 70%;
+                margin-top: 5%;
+                box-shadow: none !important;
+            }
         }
         @media(min-width:768px) and (max-width:920px){
             .header-content{
