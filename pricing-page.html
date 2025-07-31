@@ -78,7 +78,7 @@
         }
         .header-nav{
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             width: 50%;
         }
@@ -98,6 +98,164 @@
             transform: scale(1.1) translateY(10px);
             transition: 0.4s;
         }
+        .premium-package{
+            margin-top: 7%;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .premium-package-header{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3% 10%;
+            position: relative;
+            height: 20vh;
+            width: 100%;
+        }
+        .premium-package-header::before{
+            content: '';
+            position: absolute;
+            left: 13.5%;
+            bottom: -5%;
+            background-color: #A43DFF;
+            width: 7%;
+            height: 25px;
+        }
+        .premium-package-header h2{
+            font-family: var(--main-font);
+            color: #A43DFF;
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+        .premium-package-info{
+            margin-top: 7%;
+            width: 90%;
+            height: 80vh;
+            border-radius: 25px;
+            background-color: #A43DFF;
+        }
+        .premium-package-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2%;
+        }
+        .premium-package-icon i{
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+        .premium-package-services{
+            height: 60vh;
+            margin-top: 1%;
+            display: flex;
+        }
+        .service-left{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service-left ul{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative;
+        }
+        .service-left ul li{
+            color: var(--sections-text-color);
+            font-family: var(--main-font);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+         .service-left ul li::before{
+            content: '✔';
+            position: absolute;
+            left: -5%;
+            color: #fff;
+        }
+        .service-right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .service-right-info{
+            width: 80%;
+            height: 90%;
+            background-color: #fff;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .service-right-info h3{
+            font-family: var(--main-font);
+            color: #fff;
+            font-weight: 600;
+            background-color: #A43DFF;
+            padding: 8px;
+            border-radius: 25px;
+        }
+        .phone-number{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 40%;
+        }
+        .phone-number h4{
+            font-family: var(--main-font);
+            color: #A43DFF;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 10%;
+        }
+        .phone-number p{
+            font-family: var(--main-font);
+            color: #A43DFF;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .email h4{
+            font-family: var(--main-font);
+            color: #A43DFF;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .email p{
+            font-family: var(--main-font);
+            color: #A43DFF;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .premium-package-btn{
+            width: 90%;
+            margin-left: 5%;
+            background-color: #fff;
+            height: 10vh;
+            border: none;
+            border-radius: 35px;
+            color: #A43DFF;
+        }
+        .premium-package-btn:hover{
+            background-color: #c994f7;
+            border: 2px solid #c994f7;
+            color: #fff;
+        }
+        .premium-package-btn a{
+            font-family: var(--main-font);
+            font-weight: 600;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -111,5 +269,45 @@
             </ul>
         </div>
     </header>
+    <!--here ends the header and starts the pricing packages design-->
+
+    <div class="premium-package">
+        <div class="premium-package-header">
+            <h2>1500$</h2>
+        </div>
+        <div class="premium-package-info">
+            <div class="premium-package-icon">
+                <i class="ri-vip-crown-fill"></i>
+            </div>
+            <div class="premium-package-services">
+                <div class="service-left">
+                    <ul>
+                        <li>Gjithçka nga pako standarde +</li>
+                        <li>Viualizime 3D të plota (deri në pesë kënde + video walkthrough)</li>
+                        <li>Projekt statik bazik</li>
+                        <li>Projekt i ndriçimit me detaje teknike</li>
+                        <li>Konsultim mbi mobilim dhe dizajn të brendshëm</li>
+                        <li>Dokumentacion i plotë për leje ndërtimi</li>
+                        <li>Mbështetje në përgatitje dosjeje për komuna/institucione</li>
+                    </ul>
+                </div>
+                <div class="service-right">
+                    <div class="service-right-info">
+                        <h3>ARCHFORM</h3>
+                        <div class="phone-number">
+                            <h4>PHONE NUMBER</h4>
+                            <p>+383 45 664 243</p>
+                            <p>+383 48 254 134</p>
+                        </div>
+                        <div class="email">
+                            <h4>Email us:</h4>
+                            <p>ArchForm@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="premium-package-btn"><a href="">MAKE AN OFFER</a></button>
+        </div>
+    </div>
 </body>
 </html>
