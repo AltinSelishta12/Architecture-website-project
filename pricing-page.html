@@ -394,6 +394,34 @@
             color: #fff;
         }
         /*Here starts other packages style*/
+        table{
+            margin: 3% auto;
+
+        }
+        table th{
+            border: 1px solid rgb(117, 117, 117);
+            border-collapse: collapse;
+            padding: 8px;
+            font-family: var(--main-font);
+            color: #000000;
+            text-align: center;
+        }
+        table th, td{
+            border: 1px solid rgb(117, 117, 117);
+            border-collapse: collapse;
+            padding: 4px;
+            font-family: var(--main-font);
+            font-weight: 300;
+            text-align: center;
+        }
+        .table-title{
+            background-color: #c4c4c43f;
+        }
+        .second-col{
+
+        }
+       
+        
     </style>
 </head>
 <body>
@@ -474,20 +502,21 @@
             </div>
             <div class="right-package">
                 <div class="package-header">
-                    <h2>700$</h2>
+                    <h2>1000$</h2>
                 </div>
                 <div class="package-list">
                     <ul>
-                        <li>Konsultim fillestar (deri në 2 orë)</li>
-                        <li>Skicat e para (2 variante)</li>
-                        <li>Projekt funksional i hapësirës</li>
-                        <li>Vizualizim 2D</li>
-                        <li>Dokument i përmbledhur për leje ndërtimi</li>
+                        <li>Projekt Konceptual (2D)</li>
+                        <li>Dizajn Interior (deri 2 ambiente)</li>
+                        <li>Dizajn Exterior (Fasada)</li>
+                        <li>3D Vizualizim Render</li>
+                        <li>Konsultim me klientin</li>
+                        <li>Dorëzimi i skedarëve</li>
                     </ul>
                 </div>
                  <div class="offer-time">
                         <i class="ri-timer-line"></i>
-                        <p>Afati: 7 ditë pune</p>
+                        <p>Afati: 14 ditë pune</p>
                  </div>
                  <div id="second-package-btn" class="package-btn">
                     <button class="second-btn"><a href="">MAKE AN OFFER</a></button>
@@ -496,6 +525,67 @@
         </div>
     <!--here ends other-package part-->
     <!--=====================================-->
+        <!--here starts the pricing table-->
 
+        <table>
+            <tr>
+                <th class="table-title" colspan="3">Pricing Table</th>
+            </tr>
+            <tr>
+                <th class="second-col">Services</th>
+                <th class="second-col">Short description</th>
+                <th class="second-col">Starting Price</th>
+            </tr>
+            <tr>
+                <td>Interior Design</td>
+                <td>Projektim i hapësirave të brendshme për shtëpi/zyra</td>
+                <td>From 550$</td>
+            </tr>
+            <tr>
+                <td>Exterior Design</td>
+                <td>Konceptim i fasadave dhe pamjes së jashtme të objektit</td>
+                <td>from 700$</td>
+            </tr>
+            <tr>
+                <td>3D Visualization</td>
+                <td>Pamje realiste në 3D të projekteve arkitektonike</td>
+                <td>from 450$</td>
+            </tr>
+            <tr>
+                <td>Architectural Plan (2D)	</td>
+                <td>Plane teknike dhe funksionale për ndërtim</td>
+                <td>from 600€</td>
+            </tr>
+            <tr>
+                <td>Consulting / Këshillim</td>
+                <td>Konsultime profesionale për zgjidhje arkitektonike</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td>Renovation Concept</td>
+                <td>Ide për transformimin dhe riorganizimin e hapësirave</td>
+                <td>from 400$</td>
+            </tr>
+            <tr>
+                <td>Landscape Design</td>
+                <td>Dizajnim i kopshteve dhe hapësirave të jashtme</td>
+                <td>from 500$</td>
+            </tr>
+            <tr>
+                <td>Project Supervision</td>
+                <td>Mbikëqyrje e zbatimit të projektit në terren</td>
+                <td>from 250€/month</td>
+            </tr>
+            <tr>
+                <td>Office Design</td>
+                <td>Zgjidhje moderne për enterier zyrash</td>
+                <td>from 600$</td>
+            </tr>
+            <tr>
+                <td>Custom Package</td>
+                <td>Pako e personalizuar sipas nevojave të klientit</td>
+                <td>Çmim sipas marrëveshjes</td>
+            </tr>
+        </table>
 </body>
 </html>
