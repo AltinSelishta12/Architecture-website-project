@@ -100,6 +100,7 @@
         }
         .premium-package{
             margin-top: 7%;
+            max-width: 1400px;
             width: 100%;
             min-height: 100vh;
             display: flex;
@@ -256,6 +257,143 @@
             font-weight: 600;
             font-size: 1rem;
         }
+        /*Here ends premium package style*/
+        /*=====================================*/
+        .other-packages{
+            width: 90%;
+            margin: 3% auto;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-radius: 25px;
+        }
+        .left-package{
+            width: 50%;
+            border-radius: 25px;
+            height: 100%;
+            background-color: #ffb121;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        .package-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .package-header h2{
+            font-family: var(--main-font);
+            color: var(--sections-text-color);
+            font-weight: 800;
+            font-size: 4rem;
+        }
+        .package-list ul{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+        }
+        .package-list ul li{
+            font-family: var(--main-font);
+            color: var(--sections-text-color);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+        .package-list ul li::before{
+            content: '✔';
+            position: absolute;
+            left: -10%;
+            color: var(--sections-text-color);
+        }
+        .offer-time{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .offer-time p{
+            font-family: var(--main-font);
+            color: var(--sections-text-color);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .offer-time i{
+            font-family: var(--main-font);
+            color: var(--sections-text-color);
+            font-size: 1.3rem;
+            font-weight: 500;
+            animation-name: timer;
+            animation-duration: 0.9s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes timer{
+            0%{
+                transform: none;
+            }
+            50%{
+                transform: rotate(15deg) rotate(-45deg) scale(1.3);
+            }
+            100%{
+                transform: rotate(0deg) scale(1);
+            }
+        }
+        .package-btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .package-btn button{
+            width: 40%;
+            height: 10vh;
+            border-radius: 35px;
+            border: none;
+            background-color: #fff;
+        }
+        .package-btn button a{
+            color: #ffb121;
+            font-family: var(--main-font);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .package-btn button:hover{
+            background-color: #ffc353;
+            transition: 0.3s;
+            border: 2px solid #fff;
+        }
+        .btn:hover a{
+            color: #fff;
+            transition: 0.3s;
+        }
+        .right-package{
+            width: 50%;
+            height: 100%;
+            border-radius: 25px;
+            background-color: #0bea4a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        #second-package-btn button:hover{
+            background-color: #63fa8e;
+        }
+        #second-package-btn button{
+            background-color: #fff;
+        }
+        #second-package-btn button a{
+            color: #0bea4a;
+        }
+        #second-package-btn .second-btn:hover a{
+            color: #fff;
+        }
+        /*Here starts other packages style*/
     </style>
 </head>
 <body>
@@ -309,5 +447,55 @@
             <button class="premium-package-btn"><a href="">MAKE AN OFFER</a></button>
         </div>
     </div>
+    <!--here ends premium package-->
+    <!--=====================================-->
+    <!--here starts other-packages part-->
+        <div class="other-packages">
+            <div class="left-package">
+                <div class="package-header">
+                    <h2>700$</h2>
+                </div>
+                <div class="package-list">
+                    <ul>
+                        <li>Konsultim fillestar (deri në 2 orë)</li>
+                        <li>Skicat e para (2 variante)</li>
+                        <li>Projekt funksional i hapësirës</li>
+                        <li>Vizualizim 2D</li>
+                        <li>Dokument i përmbledhur për leje ndërtimi</li>
+                    </ul>
+                </div>
+                 <div class="offer-time">
+                        <i class="ri-timer-line"></i>
+                        <p>Afati: 7 ditë pune</p>
+                 </div>
+                 <div class="package-btn">
+                    <button class="btn"><a href="">MAKE AN OFFER</a></button>
+                 </div>
+            </div>
+            <div class="right-package">
+                <div class="package-header">
+                    <h2>700$</h2>
+                </div>
+                <div class="package-list">
+                    <ul>
+                        <li>Konsultim fillestar (deri në 2 orë)</li>
+                        <li>Skicat e para (2 variante)</li>
+                        <li>Projekt funksional i hapësirës</li>
+                        <li>Vizualizim 2D</li>
+                        <li>Dokument i përmbledhur për leje ndërtimi</li>
+                    </ul>
+                </div>
+                 <div class="offer-time">
+                        <i class="ri-timer-line"></i>
+                        <p>Afati: 7 ditë pune</p>
+                 </div>
+                 <div id="second-package-btn" class="package-btn">
+                    <button class="second-btn"><a href="">MAKE AN OFFER</a></button>
+                 </div>
+            </div>
+        </div>
+    <!--here ends other-package part-->
+    <!--=====================================-->
+
 </body>
 </html>
