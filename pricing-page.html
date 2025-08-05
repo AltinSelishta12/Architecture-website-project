@@ -417,10 +417,157 @@
         .table-title{
             background-color: #c4c4c43f;
         }
-        .second-col{
-
+       @media(max-width:480px){
+        header{
+            display: flex;
+            flex-direction: column;
         }
-       
+         header h1{
+            font-size: 2rem;
+            width: 100%;
+         }
+         header span{
+            font-size: 0.7rem;
+         }
+         .header-nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+         }
+         .premium-package{
+            height: 130vh;
+         }
+         .premium-package-info{
+            height: 90vh;
+            width: 95%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+         }
+         .premium-package-info .premium-package-services{
+            display: flex;
+            flex-direction: column;
+            margin-top: 0%;
+            height: 80%;
+         }
+         .service-left{
+            width: 100%;
+            height: 60%;
+            margin-left: 9%;
+         }
+         .service-right{
+            width: 100%;
+            height: 60%;
+         }
+         .service-right-info{
+            height: 80%;
+         }
+         .premium-package-btn{
+            margin-left: 0%;
+         }
+         .other-packages{
+            display: flex;
+            flex-direction: column;
+            height: 130vh;
+            width: 100%;
+            margin: 0% auto;
+         }
+         .left-package{
+            width: 95%;
+         }
+         .right-package{
+            width: 95%;
+         }
+         .package-list{
+            margin-left: 10%;
+         }
+         .package-btn .btn{
+            width: 70%;
+         }
+         #second-package-btn .second-btn{
+            width: 70%;
+         }
+         table{
+            width: 90%;
+         }
+       }
+       @media(min-width:481px) and (max-width:600px){
+            header{
+                display: flex;
+                flex-direction: column;
+            }
+            header h1{
+                font-size: 2.5rem;
+                width: 100%;
+            }
+            header span{
+                font-size: 0.7rem;
+            }
+            .header-nav{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .premium-package-info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                width: 95%;
+            }
+            .premium-package-services{
+                display: flex;
+                flex-direction: column;
+            }
+            .service-left{
+                width: 90%;
+                height: 80%;
+                margin-left: 9%;
+            }
+            .service-left ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .service-right{
+                width: 100%;
+            }
+            .service-right-info{
+                margin-top: 5%;
+                height: 100%;
+            }
+            .premium-package-btn{
+                height: 8%;
+                margin: 0% auto 2%;
+            }
+            .other-packages{
+                display: flex;
+                flex-direction: column;
+                height: 130vh;
+            }
+            .left-package{
+                width: 95%;
+            }
+            .right-package{
+                width: 95%;
+            }
+            .package-btn .btn{
+                width: 80%;
+            }
+            #second-package-btn .second-btn{
+                width: 80%;
+            }
+            .package-list{
+                width: 80%;
+                margin-left: 9%;
+            }
+            table{
+                width: 90%;
+            }
+       }
         
     </style>
 </head>
@@ -429,9 +576,9 @@
         <h1>PRICING PAGE <span>BY ARCHFORM</span></h1>
         <div class="header-nav">
             <ul>
-                <li><a href=""><i class="ri-home-4-line"></i></a></li>
-                <li><a href=""><i class="ri-arrow-go-back-line"></i></a></li>
-                <li><a href=""><i class="ri-chat-2-line"></i></a></li>
+                <li><a href="index.html"><i class="ri-home-4-line"></i></a></li>
+                <li><a href="main-btn.html"><i class="ri-arrow-go-back-line"></i></a></li>
+                <li><a href="index.html#support-bookmark"><i class="ri-chat-2-line"></i></a></li>
             </ul>
         </div>
     </header>
@@ -532,9 +679,9 @@
                 <th class="table-title" colspan="3">Pricing Table</th>
             </tr>
             <tr>
-                <th class="second-col">Services</th>
-                <th class="second-col">Short description</th>
-                <th class="second-col">Starting Price</th>
+                <th>Services</th>
+                <th>Short description</th>
+                <th>Starting Price</th>
             </tr>
             <tr>
                 <td>Interior Design</td>
