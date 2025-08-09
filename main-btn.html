@@ -732,6 +732,59 @@
             transform: translateX(25px);
             transition: 0.3s;
         }
+        /*here ends monthly projects section and starts gallery section*/
+
+        .gallery{
+            width: 100%;
+            max-width: 1400px;
+        }
+        .gallery-header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-header h2{
+            font-family: "Poppins", serif;
+            font-size: 3rem;
+            font-weight: 200;
+            padding-left: 4%;
+        }
+        .gallery-nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+        }
+        .gallery-nav ul{
+            display: flex;
+            width: 100%;
+            justify-content: space-around ;
+            align-items: center;
+        }
+        .gallery-nav ul li button{
+            color: #767676;
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            border: none;
+            position: relative;
+            background-color: transparent;
+        }
+        .gallery-nav ul li button::before{
+            content: '';
+            position: absolute;
+            left: 0%;
+            bottom: -20%;
+            width: 100%;
+            height: 2px;
+            background-color: #767676;
+        }
+        .gallery-nav ul li button:hover::before{
+            position: absolute;
+            bottom: -30%;
+            transition: 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -793,6 +846,22 @@
         </div>
     </section>
     <!--Here ends monthly projects section-->
+    <!--==========================================-->
+    <!--Here starts gallery section-->
+    <section class="gallery">
+        <div class="gallery-header">
+            <h2>FIND YOUR INSPIRATION</h2>
+        </div>
+        <div class="gallery-nav">
+            <ul>
+                <li><button id="Allbtn">SHOW ALL</button></li>
+                <li><button id="interiorbtn">INTERIOR</button></li>
+                <li><button>EXTERIOR</button></li>
+                <li><button>PRESTIGE HOMES</button></li>
+            </ul>
+        </div>
+        <div id="galleryImages"></div>
+    </section>
     <script>
         const stars = document.querySelectorAll(".starIcon");
 
@@ -801,6 +870,7 @@
                 stars.classList.toggle("star");
             })
         });
+
     </script>
 </body>
 </html>
