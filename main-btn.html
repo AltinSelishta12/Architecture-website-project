@@ -350,19 +350,33 @@
                 font-size: 1.4rem;
                 z-index: 3;
             }
-            .monthly-projects-cards{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-direction: column;
+             .monthly-projects .monthly-projects-cards{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
                 width: 100%;
                 height: 100%;
-                margin-top: 2%;
+                place-items: center;
+                margin-top: 0%;
             }
             .monthly-projects-cards .card{
                 width: 90%;
                 height: 70%;
-                margin-top: 19%;
+            }
+            .gallery .gallery-header h2{
+                font-size: 2.1rem;
+            }
+            .gallery .gallery-nav{
+                margin-top: 7%;
+            }
+            .gallery #galleryImages{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery #galleryImages img{
+                width: 85%;
+            }
+            .gallery .gallery-nav ul li button{
+                font-size: 0.8rem;
             }
         }
          @media(min-width: 481px) and (max-width:600px){
@@ -453,12 +467,11 @@
                 font-size: 1.4rem;
                 z-index: 3;
             }
-            .monthly-projects-cards{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-direction: column;
+            .monthly-projects .monthly-projects-cards{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
                 width: 100%;
+                place-items: center;
                 height: 100%;
                 margin-top: 2%;
             }
@@ -466,6 +479,19 @@
                 width: 70%;
                 height: 70%;
                 margin-top: 19%;
+            }
+            .gallery .gallery-header h2{
+                font-size: 1.9rem;
+           }
+            .gallery .gallery-nav{
+                margin-top: 5%;
+            }
+            .gallery #galleryImages {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery #galleryImages img{
+                width: 85%;
             }
         }
         @media(min-width:601px) and (max-width:768px){
@@ -542,17 +568,21 @@
                 font-size: 1.5rem;
             }
             .monthly-projects .monthly-projects-cards{
-                display: grid;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
                 height: 130vh;
-                place-items: center;
-                grid-template-columns: repeat(2, 1fr);
-                align-content: center;
             }
             .monthly-projects-cards .card{
-                width: 90%;
+                width: 0%;
                 height: 70%;
                 margin-top: 5%;
                 box-shadow: none !important;
+            }
+            .gallery #galleryImages img{
+               width: 90%;
+               height: 200px;
             }
         }
         @media(min-width:768px) and (max-width:920px){
