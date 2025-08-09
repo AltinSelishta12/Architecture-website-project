@@ -736,6 +736,7 @@
 
         .gallery{
             width: 100%;
+            min-height: 100vh;
             max-width: 1400px;
         }
         .gallery-header{
@@ -784,6 +785,18 @@
             position: absolute;
             bottom: -30%;
             transition: 0.3s ease;
+        }
+        #galleryImages{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 2%;
+        }
+        #galleryImages img{
+            width: 75%;
+            height: 300px;
+            margin: 4% 4%;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -855,9 +868,9 @@
         <div class="gallery-nav">
             <ul>
                 <li><button id="Allbtn">SHOW ALL</button></li>
-                <li><button id="interiorbtn">INTERIOR</button></li>
-                <li><button>EXTERIOR</button></li>
-                <li><button>PRESTIGE HOMES</button></li>
+                <li><button id="interiorBtn">INTERIOR</button></li>
+                <li><button id="exteriorBtn">EXTERIOR</button></li>
+                <li><button id="prestigeBtn">PRESTIGE HOMES</button></li>
             </ul>
         </div>
         <div id="galleryImages"></div>
@@ -870,6 +883,54 @@
                 stars.classList.toggle("star");
             })
         });
+        
+        const images = [
+        { src:"images/gallery-images/exterior-1.jpeg", category:"exterior", alt:"exterior 1"},
+        { src:"images/gallery-images/exterior-2.jpeg", category:"exterior", alt:"exterior 2"},
+        { src:"images/gallery-images/exterior-3.jpeg", category:"exterior", alt:"exterior 3"},
+        { src:"images/gallery-images/exterior-4.jpeg", category:"exterior", alt:"exterior 4"},
+        { src:"images/gallery-images/interior-1.jpeg", category:"interior", alt:"interior 1"},
+        { src:"images/gallery-images/interior-2.jpeg", category:"interior", alt:"interior 2"},
+        { src:"images/gallery-images/interior-3.jpeg", category:"interior", alt:"interior 3"},
+        { src:"images/gallery-images/prestige-house-1.jpeg", category:"prestige", alt:"prestige house 1"},
+        { src:"images/gallery-images/prestige-house-2.jpeg", category:"prestige", alt:"prestige house 2"},
+        { src:"images/gallery-images/prestige-house-3.jpeg", category:"prestige", alt:"prestige house 3"},
+    ];
+
+        // Here is the All images display function
+    const galleryImages = document.getElementById("galleryImages");
+    const Allbtn = document.getElementById("Allbtn");
+    const interiorBtn = document.getElementById("interiorBtn");
+    const exteriorBtn = document.getElementById("exteriorBtn"); 
+    const prestigeBtn = document.getElementById("prestigeBtn");
+    Allbtn.addEventListener("click", function() {
+        const allimages = images.map(image => `<img src="${image.src}" alt="${image.alt}">`).join("");
+        galleryImages.innerHTML = allimages;
+    });
+    // Here ends All images display function
+
+    //Here starts interior images display function
+    interiorBtn.addEventListener("click", function(){
+        const interiorimg = images.filter( image => image.category === "interior");
+        const interiorimages = interiorimg.map(image => `<img src="${image.src}" alt="${image.alt}">`).join("");
+        galleryImages.innerHTML = interiorimages;
+    });
+    //Here ends interior images display function
+
+    //Here starts exterior images display function
+
+    exteriorBtn.addEventListener("click", function(){
+        const exteriorimg = images.filter(exterior => exterior.category === "exterior");
+        const exteriorIMG = exteriorimg.map(exterior => `<img src="${exterior.src}" alt="${exterior.alt}">`).join("");
+        galleryImages.innerHTML = exteriorIMG
+    });
+    // Here ends exterior images display function
+
+    prestigeBtn.addEventListener("click", function(){
+        const prestigeimg = images.filter(prestige => prestige.category === "prestige");
+        const prestigeIMG = prestigeimg.map(prestige => `<img src="${prestige.src}" alt="${prestige.alt}">`).join("");
+        galleryImages.innerHTML = prestigeIMG;
+    });
 
     </script>
 </body>
