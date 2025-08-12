@@ -155,10 +155,20 @@
             padding: 10px;
             width: 25%;
         }
+        .calculate-inputs input:focus{
+            box-shadow: 4px 4px 4px darkgray;
+            outline: none;
+            border: 1px solid darkgray;
+        }
+        .calculate-inputs input::placeholder{
+            font-family: "Poppins", serif;
+            font-weight: 300;
+        }
         #result{
             border-bottom: 1px solid darkgray;
-            width: 10%;
+            width: 50%;
             text-align: center;
+            font-family: "Poppins";
         }
         .calculator button{
             padding: 10px;
@@ -350,7 +360,7 @@
                 <h2>Calculate a room's size</h2>
             </div>
             <div class="calculate-inputs">
-                <input type="number" id="area" placeholder="Shkruaj madhësinë e dhomës">
+                <input type="number" id="area" placeholder="Shkruaj sipërfaqen e dhomës">
                 <input type="number" id="priceperM2" placeholder="Shkruaj çmimin për m²">
             </div>
              <div id="result"></div>
@@ -358,7 +368,16 @@
         </div>
         <!--Here ends the calculator which calculates room's size-->
         <script>
-
+            function calculate(){
+                const area = parseFloat(document.getElementById("area").value);
+                const priceperM2 = parseFloat(document.getElementById("priceperM2").value);
+                if(isNaN(area) || isNaN(priceperM2) || area <= 0 || priceperM2 <= 0){
+                    document.getElementById("result").innerHTML = "Ju lutem plotësoni të dhëna të vlefshme.";
+                    return; 
+                }
+                 const total = area * priceperM2;
+                    document.getElementById("result").innerHTML = `Kosto totale: ${total.toFixed(2)}€`;
+            }
         </script>
 </body>
 </html>
