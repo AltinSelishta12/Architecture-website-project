@@ -86,7 +86,7 @@
             filter: brightness(70%);
             border-radius: 35px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
        }
@@ -294,13 +294,14 @@
             .header-content-slogan{
                 width: 100%;
                 margin-top: 0%;
+                margin-left: 2%;
             }
             .header-content-slogan h2{
                 font-size: 1.4rem;
                 line-height: 30px;
             }
             .header-content-prg{
-                width: 80%;
+                width: 100%;
                 margin-top: 0%;
                 margin-bottom: 2%;
             }
@@ -413,11 +414,11 @@
                 margin-top: 0%;
             }
             .header-content-slogan h2{
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 30px;
             }
             .header-content-prg{
-                width: 80%;
+                width: 90%;
                 margin-top: 0%;
                 margin-bottom: 2%;
             }
@@ -513,10 +514,11 @@
                 border-radius: 0px;
             }
             .header-content-slogan{
-                width: 100%;
+                width: 80%;
             }
             .header-content-prg{
-                width: 90%;
+                width: 80%;
+                margin-left: 7%;
             }
             .header-content-btn{
                 margin-bottom: 2%;
@@ -568,17 +570,22 @@
                 font-size: 1.5rem;
             }
             .monthly-projects .monthly-projects-cards{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                place-items: center;
                 height: 130vh;
             }
             .monthly-projects-cards .card{
-                width: 0%;
+                width: 90%;
                 height: 70%;
                 margin-top: 5%;
                 box-shadow: none !important;
+            }
+            .monthly-projects-cards #card2{
+                height: 70%;
+            }
+            .monthly-projects-cards #card3{
+                height: 70%;
             }
             .gallery #galleryImages img{
                width: 90%;
@@ -586,6 +593,9 @@
             }
         }
         @media(min-width:768px) and (max-width:920px){
+            header{
+                margin-top: 2%;
+            }
             .header-content{
                 display: flex;
                 justify-content: space-around;
@@ -593,10 +603,10 @@
                 flex-direction: column;
             }
             .header-content-slogan{
-                width: 90%;
+                width: 95%;
             }
             .header-content-prg{
-                width: 80%;
+                width: 90%;
             }
             .header-content-btn{
                 margin-bottom: 2%;
@@ -646,6 +656,12 @@
             }
         }
         @media(min-width:921px) and (max-width:1024px){
+            .header-content-slogan{
+                width: 95%;
+            }
+            .header-content-prg{
+                width: 90%;
+            }
             .monthly-projects .monthly-projects-header{
                 display: flex;
                 justify-content: center;
@@ -824,9 +840,8 @@
         }
         #galleryImages img{
             width: 75%;
-            height: 300px;
+            height: 400px;
             margin: 4% 4%;
-            border-radius: 8px;
         }
     </style>
 </head>
@@ -933,6 +948,7 @@
     const interiorBtn = document.getElementById("interiorBtn");
     const exteriorBtn = document.getElementById("exteriorBtn"); 
     const prestigeBtn = document.getElementById("prestigeBtn");
+
     Allbtn.addEventListener("click", function() {
         const allimages = images.map(image => `<img src="${image.src}" alt="${image.alt}">`).join("");
         galleryImages.innerHTML = allimages;
@@ -940,6 +956,7 @@
     // Here ends All images display function
 
     //Here starts interior images display function
+
     interiorBtn.addEventListener("click", function(){
         const interiorimg = images.filter( image => image.category === "interior");
         const interiorimages = interiorimg.map(image => `<img src="${image.src}" alt="${image.alt}">`).join("");

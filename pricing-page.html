@@ -123,6 +123,53 @@
         .table-title{
             background-color: #c4c4c43f;
         }
+        .calculator{
+            width: 80%;
+            margin: auto;
+            min-height: 80vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1400px;
+        }
+        .calculator-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 3%;
+        }
+        .calculator-header h2{
+            font-family: "Poppins", serif;
+            font-size: 2.5rem;
+            font-weight: 200;
+        }
+        .calculate-inputs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .calculate-inputs input{
+            padding: 10px;
+            width: 25%;
+        }
+        #result{
+            border-bottom: 1px solid darkgray;
+            width: 10%;
+            text-align: center;
+        }
+        .calculator button{
+            padding: 10px;
+            width: 25%;
+            border: 1px solid black;
+            background-color: transparent;
+            font-family: "Poppins", serif;
+        }
+        .calculator button:hover{
+            background-color: #b6b6b63d;
+        }
        @media(max-width:480px){
         header{
             display: flex;
@@ -295,5 +342,23 @@
                 <td>Çmim sipas marrëveshjes</td>
             </tr>
         </table>
+        <!--Here ends the pricing table menu-->
+
+        <!--Here starts the calculator which calculates a room's size-->
+        <div class="calculator">
+            <div class="calculator-header">
+                <h2>Calculate a room's size</h2>
+            </div>
+            <div class="calculate-inputs">
+                <input type="number" id="area" placeholder="Shkruaj madhësinë e dhomës">
+                <input type="number" id="priceperM2" placeholder="Shkruaj çmimin për m²">
+            </div>
+             <div id="result"></div>
+            <button onclick="calculate()">Llogarit</button>
+        </div>
+        <!--Here ends the calculator which calculates room's size-->
+        <script>
+
+        </script>
 </body>
 </html>
