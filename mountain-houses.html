@@ -207,6 +207,91 @@
             background-color: #ffffff;
             color: #000;
         }
+        /*480px breakpoint*/
+        @media(max-width:480px){
+           header{
+            display: flex;
+            flex-direction: column;
+           }
+           .header-nav{
+            display: flex;
+            justify-content: space-around;
+            padding: 0%;
+           }
+           .header-nav h2{
+            font-size: 1.8rem;
+           }
+           .header-nav .middle-nav{
+            display: none;
+           }
+           .header-nav .right-nav{
+            display: none;
+           }
+           #menuBtn{
+            border: none;
+            font-size: 1.2rem;
+             position: relative;
+           }
+           .small-menu-items{
+            width: 0%;
+            background-color: #000000a4;
+            position: absolute;
+            height: 100vh;
+            left: 1%;
+            z-index: 4;
+            top: 15%;
+            display: none;
+           }
+
+           /*#menuContent is the id of small-menu-items which was used for a JS classlist function */
+
+           #menuContent.active{
+            display: block;
+            width: 100%;
+           }
+           .small-menu-items ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 25% 0% 0%;
+           }
+           .small-menu-items ul li a{
+            color: #fff;
+           }
+           .right-small-nav{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-top: 15%;
+           }
+           .right-small-nav a{
+            color: #000000;
+            font-family: "Prosto One", sans-serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 25px;
+           }
+           .right-small-nav button{
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+           }
+           .header-main-content{
+             z-index: 1;
+           }
+           .main-content-header{
+            width: 80%;
+           }
+           .main-content-header h2{
+            font-size: 2rem;
+           }
+        }
     </style>
 </head>
 <body id="night">
@@ -214,7 +299,7 @@
         <header>
             <div class="header-nav">
                 <h2 class="logo">ArchForm</h2>
-                <ul>
+                <ul class="middle-nav">
                     <li><a href="index.html#features-bookmark">HOME</a></li>
                     <li><a href="">COLLECTION</a></li>
                     <li><a href="index.html#support-bookmark">SUPPORT</a></li>
@@ -222,6 +307,20 @@
                 <div class="right-nav">
                     <a href="">Get in Touch</a>
                     <button id="nightBtn"><i class="ri-moon-fill"></i></button>
+                </div>
+                <div class="small-menu">
+                        <button id="menuBtn"><i class="ri-menu-line"></i></button>
+                     <div class="small-menu-items" id="menuContent">
+                        <ul>
+                            <li><a href="">HOME</a></li>
+                            <li><a href="">COLLECTION</a></li>
+                            <li><a href="">SUPPORT</a></li>
+                            <div class="right-small-nav">
+                                <a href="">Get in Touch</a>
+                                <button id="nightMode"><i class="ri-moon-fill"></i></button>
+                            </div>
+                        </ul>
+                     </div>
                 </div>
             </div>
             <div class="header-main-content">
@@ -237,8 +336,20 @@
         </header>
         <script>
             const nightBtn = document.getElementById("nightBtn");
-
+            //Normal design night/light mode function
             nightBtn.addEventListener("click", function(){
+                document.body.classList.toggle("night");
+            })
+            //Hamburger responsive menu function
+            const menuBtn = document.getElementById("menuBtn");
+            const menuContent = document.getElementById("menuContent");
+
+            menuBtn.addEventListener("click", function(){
+                menuContent.classList.toggle("active");
+            })
+            // Responsive design night/light mode function
+            const nightMode = document.getElementById("nightMode");
+            nightMode.addEventListener("click", function(){
                 document.body.classList.toggle("night");
             })
         </script>
