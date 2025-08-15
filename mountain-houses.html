@@ -28,17 +28,44 @@
         /*font "Prosto One" import*/
         @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
 
-
-        header{
+        body{
             width: 100%;
             min-height: 100vh;
+        }
+        body.night{
+            background-color: #000;
+            color: #fff;
+        }
+        body.night .logo{
+            color: #000;
+        }
+        body.night #nightBtn{
+            background-color: #cccccc;
+            color: #000;
+        }
+        header{
+            width: 100%;
+           height: 100vh;
             max-width: 1400px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
             gap: 0px;
-            background-color: rgba(231, 231, 231, 0.425);
+            animation-name: header;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes header{
+            0%{
+                scale: 0;
+            }
+            50%{
+                scale: 0;
+            }
+            100%{
+                scale: 1;
+            }
         }
         .header-nav{
             width: 95%;
@@ -47,7 +74,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #ffffff;
+            background-color: #f3f2f2;
         }
         .header-nav h2{
             font-family: "Prosto One", sans-serif;
@@ -104,31 +131,116 @@
             border-radius: 50%;
             background-color: black;
             color: #fff;
+            transition: transform 0.1s linear;
+        }
+        .right-nav button:hover{
+            transform: translateY(-3px);
         }
         .header-main-content{
             width: 95%;
             height: 85vh;
             border-radius: 25px;
+            position: relative;
+        }
+        .header-main-content img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            border-radius: 25px;
+        }
+        .main-content-header{
+            font-family: "Prosto One", sans-serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 50%;
+            color: #fff;
+        }
+        .main-content-footer{
+            position: absolute;
+            bottom: 2%;
+            width: 90%;
+            left: 4%;
+            height: 15vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .main-content-footer .details-btn{
+            background-color: rgba(255, 255, 255, 0.24);
+            color: #fff;
+            font-family: "Prosto One", sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            text-decoration: none;
+            padding: 25px;
+            width: 40%;
+            border-radius: 35px;
+            text-align: center;
+            transition: background-color 0.3s linear;
+            display: inline-flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .details-btn i{
+            transition: transform 0.3s ease;
+        }
+        .details-btn:hover i{
+            transform: translateY(10px);
+        }
+        .details-btn:hover{
+            background-color: #ffffff;
+            color: #000;
+        }
+        .main-content-footer .return-arrow{
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.24);
+            color: #ffffff;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s linear;
+        }
+        .return-arrow:hover{
+            background-color: #ffffff;
+            color: #000;
         }
     </style>
 </head>
-<body>
+<body id="night">
     <!--here starts the header-->
         <header>
             <div class="header-nav">
-                <h2>ArchForm</h2>
+                <h2 class="logo">ArchForm</h2>
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="index.html#features-bookmark">HOME</a></li>
                     <li><a href="">COLLECTION</a></li>
-                    <li><a href="">SUPPORT</a></li>
+                    <li><a href="index.html#support-bookmark">SUPPORT</a></li>
                 </ul>
                 <div class="right-nav">
                     <a href="">Get in Touch</a>
-                    <button><i class="ri-moon-fill"></i></button>
+                    <button id="nightBtn"><i class="ri-moon-fill"></i></button>
                 </div>
             </div>
             <div class="header-main-content">
+                <img src="images/mountain-houses-images/Small House.jpeg" alt="">
+                <div class="main-content-header">
+                    <h2>LIVE INSIDE YOUR DREAMS HOUSE</h2>
+                </div>
+                <div class="main-content-footer">
+                    <a class="details-btn" href="">SEE DETAILS<i class="ri-arrow-down-fill"></i></a>
+                    <a class="return-arrow" href=""><i class="ri-arrow-up-fill"></i></a>
+                </div>
             </div>
         </header>
+        <script>
+            const nightBtn = document.getElementById("nightBtn");
+
+            nightBtn.addEventListener("click", function(){
+                document.body.classList.toggle("night");
+            })
+        </script>
 </body>
 </html>
