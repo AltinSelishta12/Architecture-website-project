@@ -141,6 +141,7 @@
             height: 85vh;
             border-radius: 25px;
             position: relative;
+            margin: auto;
         }
         .header-main-content img{
             width: 100%;
@@ -165,7 +166,7 @@
             left: 4%;
             height: 15vh;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             
         }
@@ -195,17 +196,24 @@
             background-color: #ffffff;
             color: #000;
         }
-        .main-content-footer .return-arrow{
+        .main-content-footer .returnArrow{
             padding: 25px;
-            background-color: rgba(255, 255, 255, 0.24);
+            background-color: rgb(0, 0, 0);
             color: #ffffff;
             border-radius: 50%;
+            position: fixed;
+            right: 5%;
+            bottom: 3%;
             text-decoration: none;
             transition: background-color 0.3s linear;
+            display: none;
         }
-        .return-arrow:hover{
+        .returnArrow:hover{
             background-color: #ffffff;
             color: #000;
+        }
+        .small-menu{
+            display: none;
         }
         /*480px breakpoint*/
         @media(max-width:480px){
@@ -227,22 +235,25 @@
            .header-nav .right-nav{
             display: none;
            }
-           #menuBtn{
+            #menuBtn{
             border: none;
+            display: block;
             font-size: 1.2rem;
              position: relative;
            }
-           .small-menu-items{
+            .small-menu-items{
             width: 0%;
-            background-color: #000000a4;
+            background-color: #ffffff;
             position: absolute;
-            height: 100vh;
+            height: 85vh;
             left: 1%;
             z-index: 4;
             top: 15%;
             display: none;
            }
-
+           .small-menu{
+            display: block;
+           }
            /*#menuContent is the id of small-menu-items which was used for a JS classlist function */
 
            #menuContent.active{
@@ -257,7 +268,7 @@
             padding: 25% 0% 0%;
            }
            .small-menu-items ul li a{
-            color: #fff;
+            color: #000;
            }
            .right-small-nav{
             display: flex;
@@ -266,11 +277,11 @@
             padding-top: 15%;
            }
            .right-small-nav a{
-            color: #000000;
+            color: #ffffff;
             font-family: "Prosto One", sans-serif;
             font-size: 0.9rem;
             text-decoration: none;
-            background-color: #fff;
+            background-color: #000000;
             padding: 16px;
             border-radius: 25px;
            }
@@ -279,10 +290,10 @@
             height: 50px;
             border: none;
             border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-            color: #000000;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
            }
-           .header-main-content{
+            .header-main-content{
              z-index: 1;
            }
            .main-content-header{
@@ -290,6 +301,102 @@
            }
            .main-content-header h2{
             font-size: 2rem;
+           }
+           .returnArrow{
+            position: fixed;
+            right: 7%;
+            bottom: 3%;
+           }
+        }
+        @media(min-width:481px) and (max-width:600px){
+              .header-nav{
+            display: flex;
+            justify-content: space-around;
+            padding: 0%;
+           }
+           .header-nav h2{
+            font-size: 2.2rem;
+           }
+           .header-nav .middle-nav{
+            display: none;
+           }
+           .header-nav .right-nav{
+            display: none;
+           }
+            #menuBtn{
+            border: none;
+            display: block;
+            font-size: 1.8rem;
+             position: relative;
+           }
+            .small-menu-items{
+            width: 0%;
+            background-color: #ffffff;
+            position: absolute;
+            height: 85vh;
+            left: 1%;
+            z-index: 4;
+            top: 15%;
+            display: none;
+           }
+           .small-menu{
+            display: block;
+           }
+           /*#menuContent is for open close hamburger menu function*/
+           #menuContent.active{
+            display: block;
+            width: 100%;
+           }
+           .small-menu-items ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 25% 0% 0%;
+           }
+           .small-menu-items ul li a{
+            color: #000;
+           }
+           .right-small-nav{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding-top: 15%;
+           }
+           .right-small-nav a{
+            color: #ffffff;
+            font-family: "Prosto One", sans-serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            background-color: #000000;
+            padding: 16px;
+            border-radius: 25px;
+           }
+           .right-small-nav button{
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+           }
+            .header-main-content{
+             z-index: 1;
+           }
+           .header-main-content img{
+            z-index: 1;
+           }
+           .main-content-header{
+            width: 80%;
+           }
+           .main-content-header h2{
+            font-size: 2.7rem;
+           }
+           .returnArrow{
+            position: fixed;
+            right: 7%;
+            z-index: 999;
+            background-color: #000000;
            }
         }
     </style>
@@ -330,7 +437,7 @@
                 </div>
                 <div class="main-content-footer">
                     <a class="details-btn" href="">SEE DETAILS<i class="ri-arrow-down-fill"></i></a>
-                    <a class="return-arrow" href=""><i class="ri-arrow-up-fill"></i></a>
+                    <a id="returnarrow" class="returnArrow" href=""><i class="ri-arrow-up-fill"></i></a>
                 </div>
             </div>
         </header>
@@ -351,6 +458,19 @@
             const nightMode = document.getElementById("nightMode");
             nightMode.addEventListener("click", function(){
                 document.body.classList.toggle("night");
+            })
+
+            window.addEventListener("scroll", function(){
+                 const returnArrow = document.querySelector(".returnArrow");
+
+                 if(window.scrollY > 300){
+                    returnArrow.style.display = "block";
+                 }
+                 else{
+                    returnArrow.style.display = "none";
+                 }
+
+
             })
         </script>
 </body>
