@@ -34,6 +34,9 @@
             width: 100%;
             min-height: 100vh;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body.night{
             background-color: #000;
             color: #fff;
@@ -202,13 +205,14 @@
             padding: 25px;
             background-color: rgb(0, 0, 0);
             color: #ffffff;
-            border-radius: 50%;
             position: fixed;
             right: 5%;
+            z-index: 999;
             bottom: 3%;
             text-decoration: none;
             transition: background-color 0.3s linear;
             display: none;
+            border: 1px solid black;
         }
         .returnArrow:hover{
             background-color: #ffffff;
@@ -309,6 +313,7 @@
             position: fixed;
             right: 7%;
             bottom: 3%;
+            z-index: 999;
            }
         }
         @media(min-width:481px) and (max-width:600px){
@@ -492,6 +497,7 @@
             right: 7%;
             z-index: 999;
             background-color: #000000;
+            border: 1px solid black;
            }
            .main-content-footer .details-btn {
             width: 90%;
@@ -515,6 +521,9 @@
                 position: absolute;
                 left: 3%;
                 font-size: 1rem;
+            }
+            .returnArrow{
+                z-index: 999;
             }
         }
         @media(min-width:920px){
@@ -560,6 +569,198 @@
             transform: scaleX(0.6);
             transition: 0.2s ease-in;
         }
+        .first-collection{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            margin: 8% auto;
+            width: 75%;
+            height: 80vh;
+            animation-name: collection-1;
+            background-image: url(images/mountain-houses-images/collection-images/collection-1-1.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            animation-name: collection-1;
+            animation-duration: 4s;
+            z-index: 1;
+        }
+        .first-collection::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/mountain-houses-images/collection-images/collection-1-1.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: brightness(80%);
+            z-index: 1;
+            animation-name: collection-1;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes collection-1{
+            0%{
+                background-image: url(images/mountain-houses-images/collection-images/collection-1-1.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            25%{
+                background-image: url(images/mountain-houses-images/collection-images/collection-1-2.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            50%{
+                background-image: url(images/mountain-houses-images/collection-images/collection-1-3.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            75%{
+                background-image: url(images/mountain-houses-images/collection-images/collection-1-4.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            100%{
+                background-image: url(images/mountain-houses-images/collection-images/collection1-5.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .first-collection-header{
+            z-index: 2;
+            width: 100%;
+            text-align: left;
+        }
+        .first-collection-header h2{
+            padding-left: 4%;
+            font-family: "Libertinus Serif", serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3rem;
+            color: #ffffff;
+        }
+        .first-collection:hover .first-collection-header h2{
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+        .first-collection-btn{
+            z-index: 2;
+            padding: 12px;
+            width: 30%;
+            border: 2px solid white;
+            background-color: transparent;
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            color: #fff;
+        }
+        .first-collection-btn:hover{
+            background-color: #00000065;
+            transition: 0.4s;
+        }
+        .first-collection-icons{
+            z-index: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+        .first-collection-icons ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding-right: 2%;
+            list-style: none;
+        }
+        .first-collection-icons ul li:hover{
+            transform: rotate(360deg);
+            transition: 0.6s;
+        }
+        .first-collection-icons ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.7rem;
+            background-color: #afafaf57;
+            padding: 8px;
+        }
+        .detailsCard{
+            position: absolute;
+            z-index: 99;
+            left: 14%;
+            height: 80%;
+            display: none;
+            top: 10%;
+            background-color: rgb(255, 255, 255);
+            width: 70%;
+        }
+        #detailsCard.open{
+            display: block;
+        }
+        .details-card-header{
+            width: 100%;
+            text-align: center;
+        }
+        .details-card-header h2{
+            font-family: "Libertinus Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #000000;
+            font-size: 2rem;
+        }
+        .details-card-prg{
+            text-align: justify;
+            width: 80%;
+            margin: 13% auto;
+            font-family: "Libertinus Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .details-card-btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .details-card-btn button{
+            padding: 12px;
+            width: 7%;
+            background-color: transparent;
+            color: #000;
+            border: 1px solid black;
+        }
+        .details-card-btn button:hover{
+            transform: translateY(10px);
+            transition: 0.2s;
+        }
+        .phone-number{
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+            position: absolute;
+            bottom: 100%;
+            right: 2%;
+            padding: 4px;
+            width: 15%;
+            text-align: center;
+            display: none;
+        }
+        .phone-number p{
+            font-family: "Poppins", serif;
+            font-weight: 600;
+        }
+        #PhoneNumber.number{
+            display: block;
+        }
     </style>
 </head>
 <body id="night">
@@ -580,11 +781,11 @@
                         <button id="menuBtn"><i class="ri-menu-line"></i></button>
                      <div class="small-menu-items" id="menuContent">
                         <ul>
-                            <li><a href="">HOME</a></li>
-                            <li><a href="">COLLECTION</a></li>
-                            <li><a href="">SUPPORT</a></li>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#collection">COLLECTION</a></li>
+                            <li><a href="index.html#support-bookmark">SUPPORT</a></li>
                             <div class="right-small-nav">
-                                <a href="">Get in Touch</a>
+                                <a href="main-contact-form.html">Get in Touch</a>
                                 <button id="nightMode"><i class="ri-moon-fill"></i></button>
                             </div>
                         </ul>
@@ -606,12 +807,43 @@
         <!--==================================================-->
 
         <!--here starts collection section-->
-        <section class="collection">
+        <section id="collection" class="collection">
             <div class="collection-header">
                 <h2>EXPLORE OUR COLLECTION</h2>
             </div>
             <div class="first-collection">
-                sds
+                <div class="first-collection-header">
+                    <h2>Alpine Luxury Retreats</h2>
+                </div>
+                <div id="detailsCard" class="detailsCard">
+                    <div class="details-card-header">
+                        <h2>Alpine Luxury Retreats</h2>
+                    </div>
+                    <div class="details-card-prg">
+                        <p>These mountain houses are designed to blend modern luxury with the serenity of nature.
+                         Each residence features elegant architecture, expansive windows that open to breathtaking
+                          mountain views, and interiors crafted with premium materials. Perfectly situated for both
+                           comfort and privacy, they offer a retreat where sophistication meets the tranquility of
+                            the alpine landscape.</p>
+                    </div>
+                      <div class="details-card-btn">
+                        <button id="Closebtn"><i class="ri-close-large-line"></i></button>
+                      </div>
+                </div>
+                <!--this button opens the details-card-->
+                <button id="detailsBtn" class="first-collection-btn">Read Details</button>
+
+                <div class="first-collection-icons">
+                    <div id="PhoneNumber" class="phone-number">
+                        <p>+45556354</p>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="ri-instagram-line"></i></a></li>
+                        <li><a href=""><i class="ri-facebook-fill"></i></a></li>
+                        <li><a href=""><i class="ri-tiktok-line"></i></a></li>
+                        <li><a id="phonebtn" href=""><i class="ri-phone-line"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <!--here ends collection section-->
@@ -643,9 +875,29 @@
                  else{
                     returnArrow.style.display = "none";
                  }
-
-
             })
+            const detailsBtn = document.getElementById("detailsBtn");
+            const detailsCard = document.getElementById("detailsCard");
+            const Closebtn = document.getElementById("Closebtn");
+
+            //This function opens details card
+            detailsBtn.addEventListener("click", function(){
+                detailsCard.classList.toggle("open");
+            });
+
+            //This function closes details card
+            Closebtn.addEventListener("click", function(){
+                detailsCard.classList.remove("open");
+            });
+
+            const PhoneNumber = document.getElementById("PhoneNumber");
+            const phonebtn = document.getElementById("phonebtn");
+
+            phonebtn.addEventListener("click", function(event){
+                event.preventDefault();
+                PhoneNumber.classList.toggle("number");
+            })
+
         </script>
 </body>
 </html>
