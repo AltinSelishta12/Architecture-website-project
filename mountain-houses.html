@@ -331,14 +331,6 @@
             font-size: 2.3rem;
             position: relative;
           }
-          .Collection .collection-header h1::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 0;
-          }
           .collection{
             z-index: 1;
             position: relative;
@@ -400,6 +392,19 @@
             left: 50%;
             bottom: 100%;
             width: 40%;
+          }
+          .second-collection-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+          .second-collection .second-collection-icons ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-right: 12%;
           }
         }
         @media(min-width:481px) and (max-width:600px){
@@ -486,11 +491,85 @@
            .main-content-header h2{
             font-size: 2.7rem;
            }
-           .returnArrow{
+           .main-content-footer .returnArrow{
             position: fixed;
-            right: 7%;
+            right: 1%;
             z-index: 999;
-            background-color: #000000;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            font-size: 1.8rem;
+           }
+           .collection-header{
+            text-align: center;
+           }
+           .Collection .collection-header h1{
+            font-size: 2.5rem;
+           }
+           .collection .collection_header h2{
+            font-size: 2.7rem;
+           }
+           .collection .collection-btn{
+            width: 40%;
+           }
+           .collection-icons{
+            position: relative;
+           }
+           .collection-icons .phone-number{
+            position: absolute;
+            left: 55%;
+            width: 40%;
+           }
+           #second-collection{
+            width: 75%;
+           }
+           #second-collection .second-collection-header h2{
+            font-size: 2.3rem;
+            padding-left: 3%;
+           }
+           #second-collection .second-collection-btn{
+            width: 100%;
+           }
+           #second-collection .second-collection-btn button{
+            width: 40%;
+           }
+           .collection .detailsCard{
+            height: 70%;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+          }
+           .collection .detailsCard{
+            height: 80%;
+            width: 80%;
+          }
+           .second-collection-icons{
+            position: relative;
+           }
+           .detailsCard .details-card-btn{
+            width: 100%;
+          }
+          .detailsCard .details-card-btn button{
+            border: none;
+          }
+          .second-collection-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+          .second-collection .second-collection-icons ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 8%;
+            
+          }
+           .second-collection-icons #PhoneNumber{
+            position: absolute;
+            left: 45%;
+            bottom: 100%;
+            width: 50%;
            }
         }
         @media(min-width:601px) and (max-width:768px){
