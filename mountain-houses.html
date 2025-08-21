@@ -48,6 +48,12 @@
             background-color: #cccccc;
             color: #000;
         }
+        body.night .details-night-prg{
+            color: #000000;
+        }
+        body.night .night-phone-number{
+            color: #000;
+        }
         header{
             width: 100%;
            height: 100vh;
@@ -309,12 +315,92 @@
            .main-content-header h2{
             font-size: 2rem;
            }
-           .returnArrow{
+            .main-content-footer .returnArrow{
             position: fixed;
-            right: 7%;
-            bottom: 3%;
-            z-index: 999;
+            right: 0%;
+            bottom: 1%;
+            z-index: 99999;
+            background-color: #fff;
+            color: #000000;
+            border: none;
+            font-size: 2rem;
            }
+          .Collection .collection-header h1{
+            text-align: center;
+            padding-top: 0;
+            font-size: 2.3rem;
+            position: relative;
+          }
+          .Collection .collection-header h1::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+          }
+          .collection{
+            z-index: 1;
+            position: relative;
+          }
+          .collection::before{
+            content: "";
+            z-index: 1;
+          }
+           .collection .collection_header h2{
+            font-size: 2rem;
+          }
+          .collection .collection-btn{
+            width: 40%;
+          }
+          .collection .detailsCard{
+            height: 80%;
+            width: 80%;
+          }
+          .collection .collection-icons ul{
+            padding-right: 2%;
+          }
+          .detailsCard .details-card-btn{
+            width: 100%;
+          }
+          .detailsCard .details-card-btn button{
+            border: none;
+          }
+          .collection-icons{
+            position: relative;
+          }
+          .collection-icons .phone-number{
+            position: absolute;
+            left: 40%;
+            width: 50%;
+          }
+          .collection .detailsCard{
+            height: 70%;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+          }
+          #second-collection{
+            height: 80vh;
+            width: 75%;
+            z-index: 1;
+          }
+          #second-collection .second-collection-header h2{
+            font-size: 2.2rem;
+            text-align: center;
+          }
+          #second-collection .second-collection-btn{
+            width: 100%;
+          }
+          #second-collection .second-collection-btn button{
+            width: 40%;
+          }
+          .second-collection-icons #PhoneNumber{
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            width: 40%;
+          }
         }
         @media(min-width:481px) and (max-width:600px){
             .header-nav{
@@ -654,10 +740,7 @@
         .collection_header h2::before{
             content: "";
         }
-        .collection:hover{
-            transform: scale(0.98);
-            transition: 0.3s;
-        }
+        
         .collection:hover .collection_header h2{
             transform: scale(0.9);
             transition: 0.3s;
@@ -789,10 +872,6 @@
             animation-duration: 20s;
             animation-iteration-count: infinite;
         }
-        .second-collection:hover{
-            transform: scale(0.98) translateY(20px);
-            transition: 0.2s;
-        }
         .second-collection::before{
             content: '';
             position: absolute;
@@ -800,7 +879,7 @@
             bottom: 0;
             width: 100%;
             height: 100%;
-             background-image: url(images/mountain-houses-images/collection-2-1.jpeg);
+            background-image: url(images/mountain-houses-images/collection-2-1.jpeg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -815,31 +894,31 @@
                 background-image: url(images/mountain-houses-images/collection-2-1.jpeg);
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: cover;
             }
             25%{
                 background-image: url(images/mountain-houses-images/collection-2-2.jpeg);
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: cover;
             }
             50%{
                 background-image: url(images/mountain-houses-images/collection-2-3.jpeg);
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: cover;
             }
             75%{
                 background-image: url(images/mountain-houses-images/collection-2-4.jpeg);
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: cover;
             }
             100%{
                 background-image: url(images/mountain-houses-images/collection-2-5.jpeg);
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: cover;
             }
         }
         .second-collection-header{
@@ -944,7 +1023,7 @@
                             <li><a href="#collection">COLLECTION</a></li>
                             <li><a href="index.html#support-bookmark">SUPPORT</a></li>
                             <div class="right-small-nav">
-                               <li><a href="#">COLLECTION</a></li>
+                                <a href="main-contact-form.html">Get in Touch</a>
                                 <button id="nightMode"><i class="ri-moon-fill"></i></button>
                             </div>
                         </ul>
@@ -979,7 +1058,7 @@
                         <h2>Alpine Luxury Retreats</h2>
                     </div>
                     <div class="details-card-prg">
-                        <p>These mountain houses are designed to blend modern luxury with the serenity of nature.
+                        <p class="details-night-prg">These mountain houses are designed to blend modern luxury with the serenity of nature.
                          Each residence features elegant architecture, expansive windows that open to breathtaking
                           mountain views, and interiors crafted with premium materials. Perfectly situated for both
                            comfort and privacy, they offer a retreat where sophistication meets the tranquility of
@@ -994,7 +1073,8 @@
 
                 <div class="collection-icons">
                     <div id="phoneNumber" class="phone-number">
-                        <p>+45556354</p>
+                         <!--class="night-phone-number light/night mode-->
+                        <p class="night-phone-number">+45556354</p>
                     </div>
                     <ul>
                         <li><a href=""><i class="ri-instagram-line"></i></a></li>
@@ -1004,10 +1084,11 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <!--here ends first collection of mountain houses and starts the second one-->
-        <!--============================================================================-->
-            <div class="second-collection">
+
+             <!--here ends first collection of mountain houses and starts the second one-->
+            <!--============================================================================-->
+
+             <div id="second-collection" class="second-collection">
                 <div class="second-collection-header">
                     <h2>Small Space, Endless View.</h2>
                 </div>
@@ -1016,7 +1097,7 @@
                         <h2>Small Space, Endless View</h2>
                     </div>
                     <div class="details-card-prg">
-                        <p>Small mountain houses are cozy retreats designed to blend comfort with the beauty of nature. Though compact in size, they make clever use of space, often featuring large windows that open to breathtaking views of the surrounding peaks and valleys. Built with natural materials like wood and stone, they offer warmth, simplicity, and a sense of harmony with the landscape.</p>
+                        <p class="details-night-prg">Small mountain houses are cozy retreats designed to blend comfort with the beauty of nature. Though compact in size, they make clever use of space, often featuring large windows that open to breathtaking views of the surrounding peaks and valleys. Built with natural materials like wood and stone, they offer warmth, simplicity, and a sense of harmony with the landscape.</p>
                     </div>
                       <div class="details-card-btn">
                         <button id="SecondClosebtn"><i class="ri-close-large-line"></i></button>
@@ -1027,7 +1108,8 @@
                 </div>
                 <div class="second-collection-icons">
                     <div id="PhoneNumber" class="phone-number">
-                        <p>+45556354</p>
+                        <!--class="night-phone-number light/night mode-->
+                        <p class="night-phone-number">+45556354</p>
                     </div>
                     <ul>
                         <li><a href=""><i class="ri-instagram-line"></i></a></li>
@@ -1037,6 +1119,7 @@
                     </ul>
                 </div>
             </div>
+        </section>
         <!--here ends collection section-->
         <script>
             const nightBtn = document.getElementById("nightBtn");
