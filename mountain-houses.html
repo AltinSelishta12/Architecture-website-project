@@ -1113,7 +1113,7 @@
         .collaboration{
             background-color: rgb(0, 0, 0);
             margin-top: 3%;
-            min-height: 100vh;
+            min-height: 120vh;
             width: 100%;
             max-width: 1400px;
         }
@@ -1165,6 +1165,110 @@
             font-family: "Poppins", serif;
             font-weight: 300;
             font-size: 0.9rem;
+        }
+        .collaboration-options{
+            height: 75vh;
+            display: flex;
+            width: 100%;
+        }
+        .collaboration-options:hover .collaboration-img img{
+            transform: scale(0.98);
+            transition: 0.4s;
+        }
+        .collaboration-img{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .collaboration-options{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .collaboration-options-content{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            gap: 100px;
+        }
+        .first-option{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .first-option a{
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: transform 0.2s linear;
+        }
+        #arrow-option{
+            color: #fff;
+        }
+        .first-option a:hover{
+            transform: scale(1.1);
+        }
+        .first-option a:hover + #arrow-option{
+            transform: translateX(20px);
+            transition: 0.3s;
+        }
+        .option-text{
+            font-family: "Poppins", serif;
+            font-weight: 300;
+            color: #fff;
+            padding-right: 10%;
+        }
+        .second-option{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        .second-option a{
+             color: #000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: transform 0.2s linear;
+        }
+        .second-option a:hover{
+            transform: scale(1.1);
+        }
+        .second-option a:hover + #second-arrow-option{
+            transform: translateX(20px);
+            transition: 0.3s;
+        }
+        .third-option{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        .third-option a{
+            color: #000;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: transform 0.2s linear;
+        }
+        .third-option a:hover{
+            transform: scale(1.1);
+        }
+        .third-option a:hover + #third-arrow-option{
+            transform: translateX(20px);
+            transition: 0.3s;
         }
         /*Here ends collaboration section*/
     </style>
@@ -1297,9 +1401,33 @@
                 <h2>CREATE WITH US</h2>
             </div>
             <div class="collaboration-idea">
-                <a href=""><i class="ri-lightbulb-flash-fill"></i></a>
+                <a href=""><i class="ri-draft-line"></i></a>
               <span class="collaboration-arrow"><i class="ri-arrow-right-long-line"></i></span>
                 <p>Collaborate with us to create mountain houses and villas that combine elegance with functionality. Our team provides tailored solutions that respect nature and the beauty of the landscape, while ensuring quality and comfort in every detail. From concept to completion, you are part of the process of building spaces that inspire and endure over time.</p>
+            </div>
+            <div class="collaboration-options">
+                <div class="collaboration-img">
+                    <img src="images/mountain-houses-images/collaboration-house.jpeg" alt="" style="height: 95%; width: 75%;">
+                </div>
+                <div class="collaboration-options">
+                    <div class="collaboration-options-content">
+                        <div class="first-option">
+                        <a href=""><i class="ri-brain-line"></i></a>
+                        <i id="arrow-option" class="ri-arrow-right-long-fill"></i>
+                        <p class="option-text">EXPRESS YOUR IDEA WITH US</p>
+                    </div>
+                    <div class="second-option">
+                        <a href=""><i class="ri-alarm-warning-line"></i></a>
+                        <i id="second-arrow-option" class="ri-arrow-right-long-fill"></i>
+                        <p class="option-text">REPORT ANY PROBLEM</p>
+                    </div>
+                    <div class="third-option">
+                        <a href=""><i class="ri-money-dollar-circle-line"></i></a>
+                        <i id="third-arrow-option" class="ri-arrow-right-long-fill"></i>
+                        <p class="option-text">MAKE AN OFFER</p>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--here ends collaboration section-->
