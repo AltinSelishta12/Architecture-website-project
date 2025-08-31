@@ -1,0 +1,37 @@
+/*Here goes main page design (style)*/
+
+/*Here are the CSS variables*/
+
+:root{
+    --background-color-green: #2f4f4f;
+    --background-color-white: #ffffff;
+    --background-color-darkgray: #353839;
+    --text-color-green: #2f4f4f;
+    --text-color-white: #ffffff;
+    --text-color-black: #000000;
+    --button-border-radius: 25px;
+    --text-font-size-extraSmall: 0.8rem;
+    --text-font-size-small: 1rem;
+    --text-font-medium: 2rem;
+    --text-font-size-middle: 3rem;
+    --text-font-large: 4rem;
+}
+/*This is Aboreto Regular font*/
+@font-face {
+    font-family: 'Aboreto';
+    src: url('../website-fonts/Aboreto/Aboreto-Regular.ttf') format('truetype');
+}
+/*This is Poppins Regular font*/
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../website-fonts/Poppins/Poppins-Regular.ttf') format(truetype);
+}
+/*This is Poppins Bold font*/
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(../website-fonts/Poppins/Poppins-Bold.ttf) format(truetype);
+}
+h2{
+    font-family: 'Poppins';
+    color: red;
+}
