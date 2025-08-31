@@ -31,7 +31,123 @@
     font-family: 'Poppins Bold';
     src: url(../website-fonts/Poppins/Poppins-Bold.ttf) format(truetype);
 }
-h2{
-    font-family: 'Poppins';
-    color: red;
+/*Here starts website style*/
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+}
+.main-nav{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--background-color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    box-shadow: 4px 4px 4px darkgray;
+    position: sticky;
+    z-index: 99;
+}
+.logo{
+    font-family: 'Aboreto';
+    font-size: var(--text-font-medium);
+}
+.logo span{
+    color: var(--text-color-green);
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.nav-links ul li a{
+    color: #2f4f4f;
+    font-family: 'Aboreto';
+    padding: 16px;
+    position: relative;
+}
+.nav-links .active{
+    border-bottom: 2px solid var(--text-color-green);
+}
+.nav-links .active:hover{
+    border-bottom: 0px;
+}
+.nav-links ul li a::before{
+    content: '';
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--background-color-green);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.nav-links ul li a:hover::before{
+    width: 70%;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: 0.3s linear;
+}
+.main-content{
+    background-image: url(../website-images/header-images/ArchForm-header-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.main-content::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../website-images/header-images/ArchForm-header-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(75%);
+}
+.main-content .main-title{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45vh;
+    width: 70%;
+    padding-left:5%;
+    font-size: 3.5rem;
+    font-family: 'Aboreto';
+    color: var(--text-color-white);
+}
+
+
+
+
+
