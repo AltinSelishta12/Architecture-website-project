@@ -51,6 +51,76 @@ body{
     height: 90vh;
     display: flex;
     border-radius: 10px;
+    position: relative;
+}
+.opinion{
+    position: absolute;
+    top: 5%;
+    width: 50%;
+    background-color: #182929;
+    left: 25%;
+    height: 90%;
+    z-index: 999;
+    display: none;
+    border-radius: 25px;
+}
+#opinion.opinion-open{
+    display: block;
+}
+.opinion-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4%;
+}
+.opinion-header h2{
+    color: var(--text-color-white);
+    font-family: "Poppins Regular";
+}
+.opinion-header span{
+    color: var(--text-color-white);
+    font-size: var(--text-font-size-medium);
+}
+.opinion-input{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opinion-input form  {
+    width: 85%;
+    height: 85%;
+    background-color: transparent;
+    color: var(--text-color-white);
+    border: 1px solid var(--text-color-white);
+}
+.opinion-input form textarea{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.opinion-input textarea::placeholder{
+    color: darkgray;
+    padding: 2% 2%;
+    font-family: "Poppins Regular";
+}
+.opinion-input textarea:focus{
+    color: var(--text-color-white);
+    padding: 2% 2%;
+    font-family: "Poppins Regular";
+}
+.opinion-input button{
+    background-color: red;
+    width: 100%;
+    padding: 12px;
+    font-family: "Poppins Regular";
+    border: none;
+    background-color: var(--background-color-white);
+}
+.opinion-input button:hover{
+    background-color: #ffffff98;
+    transition: 0.3s;
 }
 .forms-info{
     width: 50%;
@@ -244,6 +314,16 @@ body{
     .forms-info-footer ul{
         display: flex;
         gap: 5px;
+    }
+    .offers-form{
+        position: relative;
+    }
+    .opinion{
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        height: 40%;
     }
 }
 @media(min-width:481px) and (max-width:768px){

@@ -14,13 +14,25 @@
 </head>
 <body>
     <div class="offers-form">
+        <div id="opinion" class="opinion">
+            <div class="opinion-header">
+                <h2>Share your Opinion</h2>
+                <span id="closeBtn"><i class="ri-close-line"></i></span>
+            </div>
+            <div class="opinion-input">
+                <form id="messageForm" action="https://formspree.io/f/xkgvvddg" method="POST">
+                    <textarea name="message" id="Message" placeholder="Share your idea..."></textarea>
+                    <button id="sendBtn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
         <div class="forms-info">
             <div class="forms-info-header">
                 <h2>ARCH<span>FORM</span></h2>
             </div>
             <div class="forms-info-body">
                 <p>Find the perfect solution for your project. Fill out the form below and receive personalized offers tailored to your needs.</p>
-                <a href="">Share Your opinion <span class="arrow-icon"><i class="ri-arrow-right-down-long-fill"></i></span></a>
+                <a id="openBtn" href="">Share Your opinion <span class="arrow-icon"><i class="ri-arrow-right-down-long-fill"></i></span></a>
             </div>
             <div class="forms-info-footer">
                 <ul>
@@ -90,7 +102,37 @@
         else{
 
         }
-       })
+       });
+       // Here goes the input where users can share ideas, opinions ext.
+
+       const closeBtn = document.getElementById("closeBtn");
+       const openBtn = document.getElementById("openBtn");
+       const sendBtn = document.getElementById("sendBtn");
+       const messageForm = document.getElementById("messageForm");
+       const Message = document.getElementById("Message");
+       const opinion = document.getElementById("opinion");
+
+       //Open message form function
+       openBtn.addEventListener("click", function(e){
+         e.preventDefault();
+         opinion.classList.add("opinion-open");
+       });
+       //Close message form function
+       closeBtn.addEventListener("click", function(){
+        opinion.classList.remove("opinion-open");
+       });
+
+
+       //Validation function is added to message form
+       messageForm.addEventListener("submit", function(e){
+         if(Message.value.trim() === ""){
+            e.preventDefault();
+            alert("Please fill the required field");
+         }
+         else{
+            alert("Thank you for the message");
+         }
+       });
     </script>
 </body>
 </html>
