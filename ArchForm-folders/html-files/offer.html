@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchForm: Make an Offer</title>
+    <link rel="stylesheet" href="../css-files/offer.css">
+     <!--Icons external links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Animations external link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="offers-form">
+        <div class="forms-info">
+            <div class="forms-info-header">
+                <h2>ARCH<span>FORM</span></h2>
+            </div>
+            <div class="forms-info-body">
+                <p>Find the perfect solution for your project. Fill out the form below and receive personalized offers tailored to your needs.</p>
+                <a href="">Share Your opinion <span class="arrow-icon"><i class="ri-arrow-right-down-long-fill"></i></span></a>
+            </div>
+            <div class="forms-info-footer">
+                <ul>
+                    <li><a href=""><i class="ri-instagram-line"></i></a></li>
+                    <li><a href=""><i class="ri-facebook-box-fill"></i></a></li>
+                    <li><a href="../html-files/index.html"><i class="ri-home-4-line"></i></a></li>
+                    <li><a href=""><i class="ri-shield-user-line"></i></a></li>
+                </ul>
+                <ul id="rate-icons">
+                    <li><a class="star" href=""><i class="ri-star-fill"></i></a></li>
+                    <li><a class="star" href=""><i class="ri-star-fill"></i></a></li>
+                    <li><a class="star" href=""><i class="ri-star-fill"></i></a></li>
+                    <li><a class="star" href=""><i class="ri-star-fill"></i></a></li>
+                    <li><a class="star" href=""><i class="ri-star-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="formular">
+            <div class="formular-header">
+                <h2>Request a Proposal</h2>
+            </div>
+            <form action="https://formspree.io/f/xldwwrgn" method="POST">
+                <input type="text" id="name" name="name" placeholder="FullName..." autocomplete="off">
+                <input type="email" id="email" name="email" placeholder="Email..." autocomplete="off">
+                <input type="tel" id="phone-number" name="number" placeholder="Phone Number..." autocomplete="off">
+                <input type="text" id="Project" name="Project" placeholder="Project Title..." autocomplete="off">
+                <input type="text" id="Budget" name="Budget" placeholder="Budget (Optional)..." autocomplete="off">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+         const stars = document.querySelectorAll(".star");
+
+       stars.forEach((star) =>{
+        star.addEventListener("click", function(e){
+            e.preventDefault();
+            star.classList.toggle("active");
+        });
+       });
+    </script>
+</body>
+</html>
