@@ -38,14 +38,15 @@
                 </ul>
             </div>
         </div>
-        <div class="formular">
+        <!--id="Formular" is created to work the validation animation-->
+        <div id="Formular" class="formular">
             <div class="formular-header">
                 <h2>Request a Proposal</h2>
             </div>
-            <form action="https://formspree.io/f/xldwwrgn" method="POST">
+            <form id="form" action="https://formspree.io/f/xldwwrgn" method="POST">
                 <input type="text" id="name" name="name" placeholder="FullName..." autocomplete="off">
-                <input type="email" id="email" name="email" placeholder="Email..." autocomplete="off">
-                <input type="tel" id="phone-number" name="number" placeholder="Phone Number..." autocomplete="off">
+                <input type="text" id="email" name="email" placeholder="Email..." autocomplete="off">
+                <input type="tel" id="phoneNumber" name="number" placeholder="Phone Number..." autocomplete="off">
                 <input type="text" id="Project" name="Project" placeholder="Project Title..." autocomplete="off">
                 <input type="text" id="Budget" name="Budget" placeholder="Budget (Optional)..." autocomplete="off">
                 <button type="submit">Submit</button>
@@ -62,6 +63,34 @@
             star.classList.toggle("active");
         });
        });
+       //Here goes the validation function of the form
+       //Formular is the for the validation function
+       //form is the parent of the inputs
+       const Formular = document.getElementById("Formular");
+       const form = document.getElementById("form");
+       const name = document.getElementById("name")
+       const email = document.getElementById("email");
+       const phoneNumber = document.getElementById("phoneNumber");
+       const Project = document.getElementById("Project");
+       const Budget = document.getElementById("Budget")
+
+       form.addEventListener("submit", function(e){
+        if(name.value.trim() === "" || email.value.trim() === "" || phoneNumber.value.trim() === "" || Project.value.trim() === "" || Budget.value.trim() === ""){
+            e.preventDefault();
+            Formular.style.border = "1px solid red";
+
+            setTimeout(() =>{
+                Formular.style.border = "1px solid #182929";
+            }, 2000);
+        } 
+        else if(!email.value.includes("@") || !email.value.includes(".")){
+            e.preventDefault();
+            alert("Please write a valid email");
+        }
+        else{
+
+        }
+       })
     </script>
 </body>
 </html>
