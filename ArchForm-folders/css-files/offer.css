@@ -224,7 +224,7 @@ body{
 @media(max-width:480px){
     body{
         width: 100%;
-        min-height: 170vh;
+        min-height: 180vh;
     }
     .offers-form{
         display: flex;
@@ -244,6 +244,27 @@ body{
     .forms-info-footer ul{
         display: flex;
         gap: 5px;
+    }
+}
+@media(min-width:481px) and (max-width:768px){
+    .offers-form{
+        width: 95%;
+    }
+    .forms-info-footer{
+        display: flex;
+        flex-direction: column;
+    }
+   .forms-info-footer ul{
+    display: flex;
+    gap: 5px;
+   }
+}
+@media(min-width:769px){
+    .offers-form{
+        width: 95%;
+    }
+    .forms-info-body a:hover{
+        width: 35%;
     }
 }
 
