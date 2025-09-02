@@ -325,6 +325,9 @@ body{
         top: 5%;
         height: 40%;
     }
+    .opinion-input button{
+        color: #000000;
+    }
 }
 @media(min-width:481px) and (max-width:768px){
     .offers-form{
@@ -338,6 +341,17 @@ body{
     display: flex;
     gap: 5px;
    }
+   .offers-form{
+    position: relative;
+   }
+   .opinion{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+   }
+   .opinion-input button{
+        color: #000000;
+    }
 }
 @media(min-width:769px){
     .offers-form{
@@ -345,6 +359,9 @@ body{
     }
     .forms-info-body a:hover{
         width: 35%;
+    }
+    .opinion-input button{
+        color: #000000;
     }
 }
 
