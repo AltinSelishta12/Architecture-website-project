@@ -47,6 +47,21 @@
 
         <!--here goes main-content-->
         <div class="main-content">
+            <div id="emergencyChat" class="emergency-chat">
+                <div class="emergency-chat-header">
+                     <h2>Chat with us</h2>
+                     <span><i id="CloseBtn" class="ri-close-large-line"></i></span>
+                </div>
+                <div class="emergency-chat-form">
+                    <form id="emergencyForm" action="https://formspree.io/f/xpwjyvkd" method="POST">
+                        <input type="text" id="Name" name="name" autocomplete="off" placeholder="Name">
+                        <input type="tel" id="TelNumber" name="TelNumber" autocomplete="off" placeholder="Phone Number">
+                        <input type="text" id="Email" name="Email" autocomplete="off" placeholder="Email">
+                        <textarea name="Message" id="MsgInput" placeholder="Share your concern"></textarea>
+                        <button type="submit">Send</button>
+                </form>
+                </div>
+            </div>
             <div class="main-title">
                 <h2>Build <span>Your</span> Dream Home <span>With Us.</span></h2>
             </div>
@@ -55,7 +70,7 @@
             </div>
             <!--footer-btn is inside the main-content-->
             <div class="footer-btn">
-                <a href=""><i class="ri-contacts-book-3-fill"></i></a>
+                <a href=""><i id="OpenBtn" class="ri-chat-1-line"></i></a>
             </div>
         </div>
     </header>
