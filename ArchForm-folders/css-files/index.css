@@ -285,6 +285,12 @@ header{
 .emergency-chat-form form textarea{
     width: 60%;
     height: 35%;
+    padding: 2%;
+    font-family: "Poppins Regular";
+}
+.emergency-chat-form form textarea:focus{
+    font-family: "Poppins Regular";
+    padding: 2% 2%;
 }
 .emergency-chat-form form button{
     width: 60%;
@@ -299,6 +305,123 @@ header{
     box-shadow: 4px 4px 4px darkgray;
     transition: 0.3s;
 }
+/*Here ends the header design of the main page*/
+
+/*Here starts Features section design*/
+ .Features{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+    margin-top: 10%;
+ }
+ .Features-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    font-family: 'Aboreto';
+    color: var(--background-color-green);
+    font-size: var(--text-font-size-middle);
+ }
+.Features-header h2{
+    position: relative;
+}
+.Features-header h2::before{
+    content: '';
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    width: 30%;
+    height: 3px;
+    background-color: var(--background-color-green);
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 25px;
+}
+.Features:hover .Features-header h2::before{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+.Features-body{
+    margin-top: 2%;
+    height: 90vh;
+}
+.Features-boxes{
+    height: 65vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.box{
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+.box-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(to top, #2f4f4fad, #ffffff41);
+}
+.box:hover .box-content{
+    opacity: 1;
+    transition: 0.3s linear;
+}
+.box-content-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Aboreto';
+    padding: 4% 4%;
+    color: var(--text-color-white);
+    font-size: 1.9rem;
+}
+.box-content-btn{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background-color: var(--background-color-green);
+    padding: 16px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+@keyframes arrow-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(225deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.box-content-btn:hover{
+     animation: arrow-rotate 1s;
+}
+.box-content-btn a{
+    color: var(--text-color-white);
+}
+.Features-text{
+    margin: 5% auto;
+    width: 70%;
+    font-size: var(--text-font-size-extraSmall);
+    text-align: center;
+    font-family: "Poppins Regular";
+}
+/*Here ends Feaures section design*/
+
 /*Here goes the responsive design for the ArchForm's website header*/
 @media(max-width:480px){
     .nav-links{
@@ -428,6 +551,7 @@ header{
     }
     .main-content{
         z-index: 1;
+        position: relative;
     }
     .main-content .main-title{
         width: 100%;
@@ -456,6 +580,12 @@ header{
      #menuContent.active{
         display: block;
         height: 100vh;
+    }
+    .emergency-chat{
+        height: 90%;
+        width: 80%;
+        position: absolute;
+        left: 10%;
     }
 }
 @media(max-width:850px){
@@ -498,6 +628,7 @@ header{
     }
     .main-content{
         z-index: 1;
+        position: relative;
     }
      #menuContent.active{
         display: block;
@@ -519,6 +650,12 @@ header{
         bottom: 3%;
         padding: 25px;
     }
+    .emergency-chat{
+        height: 90%;
+        width: 80%;
+        position: absolute;
+        left: 10%;
+    }
 }
 @media(min-width:851px){
     .main-nav{
@@ -529,6 +666,9 @@ header{
     .nav-links ul{
         display: flex;
         gap: 0;
+    }
+    .main-content{
+        position: relative;
     }
     .main-content .main-title{
         width: 100%;
