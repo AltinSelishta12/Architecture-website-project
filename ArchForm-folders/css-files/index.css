@@ -212,7 +212,6 @@ header{
     font-size: var(--text-font-size-small);
     position: fixed;
     z-index: 99;
-    border: 1px solid var(--text-color-green);
 }
 
 .footer-btn a::before{
@@ -241,7 +240,7 @@ header{
 }
 .emergency-chat{
     background-color: var(--background-color-white);
-    position: fixed;
+    position: absolute;
     z-index: 100;
     left: 25%;
     top: 5%;
@@ -447,13 +446,11 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 50%;
         margin: auto;
     }
     .main-content .main-btn a{
         height: 100%;
-        width: 100%;
-        padding: 23px;
     }
     .main-content .footer-btn a{
         position: fixed;
@@ -505,43 +502,35 @@ header{
     .emergency-chat{
         height: 90%;
         width: 80%;
-        position: absolute;
+        position: fixed;
         left: 10%;
     }
     .Features{
-        min-height: 200vh;
+        min-height: 100vh;
     }
-    .Features .Features-body{
-        height: 60vh;
+    .Features-body{
+        width: 80%;
+        height: 50%;
+        margin: auto;
     }
     .Features-body .Features-boxes{
         display: flex;
-        height: 150vh;
+        height: 100%;
         width: 100%;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
     }
     .Features-body .Features-boxes .box{
-        width: 90%;
-        height: 33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .Features-boxes .box img{
         width: 100%;
-        height: 100%;
+        height: 60%;
     }
     .box-content{
         opacity: 1;
     }
     .Features-text{
-        width: 90%;
+        width: 100%;
     }
-        
 }
-@media(max-width:650px){
+@media(min-width:481px) and (max-width:650px){
     .nav-links{
         display: none;
     }
@@ -611,6 +600,7 @@ header{
         right: 5%;
         bottom: 3%;
         padding: 25px;
+        border: 1px solid #2f4f4f;
     }
      #menuContent.active{
         display: block;
@@ -619,12 +609,37 @@ header{
     .emergency-chat{
         height: 90%;
         width: 80%;
-        position: absolute;
+        position: fixed;
         left: 10%;
     }
+     .Features{
+        min-height: 100vh;
+    }
+    .Features-body{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+    }
+    .Features-body .Features-boxes{
+        display: flex;
+        height: 100%;
+        width: 70%;
+        flex-direction: column;
+        margin: auto;
+    }
+    .Features-body .Features-boxes .box{
+        width: 100%;
+        height: 20%;
+    }
+    .box-content{
+        opacity: 1;
+    }
+    .Features-text{
+        width: 100%;
+    }
 }
-@media(max-width:850px){
-    .nav-links{
+@media(min-width:651px) and (max-width:850px){
+     .nav-links{
         display: none;
     }
     .menu-btn{
@@ -684,14 +699,33 @@ header{
         right: 5%;
         bottom: 3%;
         padding: 25px;
+        border: 1px solid #2f4f4f;
     }
     .emergency-chat{
         height: 90%;
         width: 80%;
-        position: absolute;
+        position: fixed;
         left: 10%;
     }
+    .Features{
+        min-height: 70vh;
+    }
+    .Features-boxes{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .Features .Features-body .Features-boxes{
+        height: 60%;
+        width: 100%;
+    }
+    .Features .Features-boxes .box{
+        width: 30%;
+    }
+    .box-content{
+        opacity: 1;
+    }
 }
+
 @media(min-width:851px){
     .main-nav{
         display: flex;
@@ -715,7 +749,22 @@ header{
         position: fixed;
         right: 5%;
         padding: 35px;
+        border: 1px solid #2f4f4f;
         font-size: var(--text-font-size-medium);
+    }
+    .Features .Features-body{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .Features .Features-body .Features-boxes{
+        height: 75%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+    .Features .Features-boxes .box{
+        width: 30%;
     }
 }
 @media(min-width:1188px){
@@ -732,6 +781,7 @@ header{
         padding: 25px;
         position: fixed;
         right: 1%;
+        border: 1px solid #2f4f4f;
     }
 }
 
