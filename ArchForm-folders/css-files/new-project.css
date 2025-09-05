@@ -174,3 +174,13 @@ header::before{
     transform: scale(1.1);
     
 }
+#second-house-type{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#third-house-type{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
