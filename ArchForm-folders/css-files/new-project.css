@@ -104,5 +104,73 @@ header::before{
     font-family: "Poppins Regular";
     font-weight: 100;
     font-size: var(--text-font-size-middle);
+}
+/*Here ends the style of new-project style*/
 
+/*Here starts the style about house types*/
+
+.house-types{
+    margin: 5% 0%;
+    width: 100%;
+    min-height: 80vh;
+    max-width: 1400px;
+}
+.house-type-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.house-type-img{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.house-type-img img{
+    width: 70%;
+    height: 90%;
+}
+.house-type-img-text{
+    position: absolute;
+    bottom: 6%;
+    right: 16%;
+    color: var(--text-color-white);
+    font-family: 'Poppins Regular';
+    font-size: var(--text-font-size-middle);
+    background-color: var(--background-color-darkgray);
+    padding: 8px;
+}
+.house-type-info{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.house-type-info-header{
+    font-family: 'Poppins Regular';
+    font-size: 1.8rem;
+    color:var(--background-color-darkgray);
+}
+.house-type-info-text{
+    width: 80%;
+    font-size: var(--text-font-size-extraSmall);
+    font-family: 'Poppins Regular';
+    color: var(--background-color-darkgray);
+}
+.house-type-info-btn{
+    background-color: var(--background-color-darkgray);
+    padding: 18px;
+    transition: transform 0.1s linear;
+}
+.house-type-info-btn a{
+    color: var(--text-color-white);
+    font-family: 'Poppins Regular';
+}
+.house-type-info-btn:hover{
+    transform: scale(1.1);
+    
 }
