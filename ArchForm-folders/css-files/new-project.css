@@ -344,3 +344,86 @@ Footer::before{
     font-family: 'Poppins Regular';
  }
 /*Here ends Footer*/
+
+/*Here starts the responsive design*/
+
+@media(max-width:480px){
+    header{
+        background-image: url(../website-images/Features-images/new-project-images/new-project-header-img.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .house-type-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .house-type-content .house-type-img{
+        width: 80%;
+    }
+    .house-type-img img{
+        width: 100%;
+    }
+    .house-type-img-text{
+        position: absolute;
+        right: 3%;
+        bottom: 8%;
+    }
+    .house-type-info{
+        width: 80%;
+    }
+    .house-type-info-header{
+        padding-left: 12%;
+        font-size: 1.4rem;
+    }
+    .house-type-info-text{
+        width: 100%;
+    }
+    #second-house-type{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #second-house-type .house-type-info{
+        width: 90%;
+    }
+    #second-house-type .house-type-info-header{
+        width: 100%;
+    }
+    #third-house-type{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #third-house-type .house-type-info{
+        width: 100%;
+    }
+    #third-house-type .house-type-info-header{
+        width: 100%;
+        padding-left: 6%;
+    }
+    #third-house-type .house-type-info-text{
+        width: 90%;
+    }
+    Footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Footer-left{
+        width: 100%;
+    }
+    .message-box{
+        width: 70%;
+    }
+    .Footer-right{
+        width: 100%;
+    }
+}
