@@ -229,6 +229,7 @@ Footer{
     margin-top: 5%;
     min-height: 100vh;
     position: relative;
+    display: flex;
 }
 Footer::before{
     content: '';
@@ -263,16 +264,19 @@ Footer::before{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    transition: 0.3s linear;
 }
 /*ClassList add function for the first box message*/
 #messageBOX.open{
     height: 40vh;
+    transition: 0.3s linear;
 }
 #msgText.open{
     display: block;
 }
 #MessageBox.open{
     height: 40vh;
+    transition: 0.3s linear;
 }
 #MsgText.open{
     display: block;
@@ -289,4 +293,54 @@ Footer::before{
     margin: auto;
     display: none;
 }
+/*Here ends Footer left side*/
+
+/*Here starts Footer right side*/
+ .Footer-right{
+    position: relative;
+    z-index: 3;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+ }
+ .footer-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    height: 60vh;
+ }
+ .footer-nav h3{
+    font-family: 'Aboreto';
+    color: var(--text-color-white);
+    font-size: 2.3rem;
+ }
+ .footer-nav span{
+    color: #2f4f4f;
+ }
+ .footer-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .footer-nav ul li:hover{
+    transform: translateY(5px);
+    transition: 0.2s;
+ }
+ .footer-nav ul li a{
+    color: var(--text-color-white);
+    font-family: 'Poppins Regular';
+ }
+ .author-rights{
+    color: var(--text-color-white);
+    padding-bottom: 3%;
+    font-size: 1.2rem;
+    font-family: 'Poppins Regular';
+ }
 /*Here ends Footer*/
