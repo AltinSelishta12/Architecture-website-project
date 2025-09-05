@@ -16,7 +16,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header-bookmark">
         <div class="header-content">
                 <div class="stats">
                     <div class="stats-header">
@@ -44,6 +44,9 @@
                         <h4>MODERN</h4>
                     </div>
                 </div>
+        </div>
+        <div id="returnArrow" class="return-arrow">
+            <a href="#header-bookmark"><i class="ri-arrow-up-long-fill"></i></a>
         </div>
     </header>
     <!--here ends the header-->
@@ -118,5 +121,86 @@
     </section>
 
     <!--here ends the section of house-types-->
+
+    <hr>
+    <!--here starts the footer-->
+    <Footer>
+        <div class="Footer-left">
+            <div id="messageBOX" class="message-box">
+                    <div class="message-header">
+                        <h4>Are Houses modern ?</h4>
+                        <div class="arrows">
+                            <i id="openMsg" class="ri-arrow-down-s-line"></i>
+                            <i id="closeMsg" class="ri-arrow-up-s-line"></i>
+                        </div>
+                    </div>
+                    <div id="msgText" class="message-text">
+                        <p>Many houses today are modern, with open spaces, large windows, and simple designs. They are built to be comfortable, practical, and often include smart features.</p>
+                    </div>
+                </div>
+                    <div id="MessageBox" class="message-box">
+                        <div class="message-header">
+                            <h4>Are they comfortable ?</h4>
+                            <div class="arrows">
+                                <i id="OpenMsg" class="ri-arrow-down-s-line"></i>
+                                <i id="CloseMsg" class="ri-arrow-up-s-line"></i>
+                            </div>
+                      </div>
+                      <div id="MsgText" class="message-text">
+                        <p>Yes, modern houses are usually very comfortable. They have spacious rooms, cozy living areas, and well-planned layouts that make daily life easier and more enjoyable for families.</p>
+                    </div>
+                    </div>
+        </div>
+        <div class="Footer-right">
+            sds
+        </div>
+    </Footer>
+    <!--here ends the footer-->
+
+    <script>
+        const returnArrow = document.getElementById("returnArrow");
+
+        window.addEventListener("scroll", function(){
+            if(window.scrollY > 500){
+                returnArrow.classList.add("active")
+            }
+            else{
+                returnArrow.classList.remove("active");
+            }
+        });
+
+        // Open/Close box messages function
+
+        const openMsg = document.getElementById("openMsg");
+        const closeMsg = document.getElementById("closeMsg");
+        const messageBOX = document.getElementById("messageBOX");
+        const msgText = document.getElementById("msgText");
+
+        openMsg.addEventListener("click", function(){
+            messageBOX.classList.add("open");
+            msgText.classList.add("open");
+        })
+        closeMsg.addEventListener("click", function(){
+            messageBOX.classList.remove("open");
+            msgText.classList.remove("open");
+        })
+
+        //Open/Close second box message function
+
+        const OpenMsg = document.getElementById("OpenMsg");
+        const CloseMsg = document.getElementById("CloseMsg");
+        const MessageBox = document.getElementById("MessageBox");
+        const MsgText = document.getElementById("MsgText");
+
+        OpenMsg.addEventListener("click", function(){
+            MessageBox.classList.add("open");
+            MsgText.classList.add("open");
+        })
+
+        CloseMsg.addEventListener("click", function(){
+            MessageBox.classList.remove("open");
+            MsgText.classList.remove("open");
+        })
+    </script>
 </body>
 </html>
