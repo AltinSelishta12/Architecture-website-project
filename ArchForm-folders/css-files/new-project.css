@@ -379,7 +379,7 @@ Footer::before{
         width: 80%;
     }
     .house-type-info-header{
-        padding-left: 12%;
+        padding-left: 17%;
         font-size: 1.4rem;
     }
     .house-type-info-text{
@@ -406,7 +406,7 @@ Footer::before{
     }
     #third-house-type .house-type-info-header{
         width: 100%;
-        padding-left: 6%;
+        padding-left: 15%;
     }
     #third-house-type .house-type-info-text{
         width: 90%;
@@ -426,4 +426,70 @@ Footer::before{
     .Footer-right{
         width: 100%;
     }
+}
+/*481px-650px responsive breakpoint*/
+
+@media(min-width:481px) and (max-width:650px){
+    .header-content{
+        display: flex;
+        flex-direction: column;
+    }
+   .house-type-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+   }
+   .house-type-img{
+        margin: auto;
+        width: 100%;
+   }
+   .house-type-img img{
+        width: 80%;
+   }
+   .house-type-img-text{
+    position: absolute;
+    right: 12%;
+   }
+   .house-type-info{
+    width: 100%;
+   }
+   .house-type-info-header{
+    font-size: 2.1rem;
+    padding-left: 10%;
+   }
+   #second-house-type{
+    display: flex;
+    flex-direction: column;
+   }
+   #second-house-type .house-type-info-header{
+    padding-left: 5%;
+   }
+   #second-house-type .house-type-info-text{
+    padding-left: 5%;
+   }
+   #third-house-type{
+    display: flex;
+    flex-direction: column;
+   }
+   #third-house-type .house-type-info-header{
+    text-align: center;
+    font-size: 2.1rem;
+    padding-left: 0%;
+   }
+   #third-house-type .house-type-info-text{
+    padding-left: 3%;
+   }
+   footer{
+    display: flex;
+    flex-direction: column;
+   }
+   .Footer-left{
+    width: 100%;
+   }
+   .Footer-left .message-box{
+    width: 80%;
+   }
+   .Footer-right{
+    width: 100%;
+   }
 }
