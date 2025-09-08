@@ -64,3 +64,20 @@ emergencyForm.addEventListener("submit", function(Event){
         }, 2000)
     }
 })
+
+// Open/Close cards function
+   const card = document.getElementById("card");
+    const cardContent = document.getElementById("cardContent");
+    const openCard = document.getElementById("openCard");
+    const closeCard = document.getElementById("closeCard");
+
+    //First card open/close function
+    openCard.addEventListener("click", function(){
+        card.classList.add("cardopen");
+        cardContent.classList.add("text");
+    })
+
+    closeCard.addEventListener("click", function(){
+        card.classList.remove("cardopen");
+        cardContent.classList.remove("text");
+    })
