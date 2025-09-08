@@ -81,3 +81,37 @@ emergencyForm.addEventListener("submit", function(Event){
         card.classList.remove("cardopen");
         cardContent.classList.remove("text");
     })
+
+    //Second card open/close function
+
+    const SecondCard = document.getElementById("SecondCard");
+    const SecondOpenBtn = document.getElementById("SecondOpenBtn");
+    const SecondCloseBtn = document.getElementById("SecondCloseBtn");
+    const SecondCardContent = document.getElementById("SecondCardContent");
+
+    SecondOpenBtn.addEventListener("click", function(){
+        SecondCard.classList.add("cardopen");
+        SecondCardContent.classList.add("text");
+    })
+
+    SecondCloseBtn.addEventListener("click", function(){
+        SecondCard.classList.remove("cardopen");
+        SecondCardContent.classList.remove("text");
+    })
+
+    // Third card open/close function
+
+    const thirdCard = document.getElementById("thirdCard");
+    const ThirdOpenCard = document.getElementById("ThirdOpenCard");
+    const ThirdCloseCard = document.getElementById("ThirdCloseCard");
+    const ThirdCardContent = document.getElementById("ThirdCardContent");
+
+    ThirdOpenCard.addEventListener("click", function(){
+        thirdCard.classList.add("cardopen");
+        ThirdCardContent.classList.add("text");
+    })
+
+    ThirdCloseCard.addEventListener("click", function(){
+        thirdCard.classList.remove("cardopen");
+        ThirdCardContent.classList.remove("text");
+    })

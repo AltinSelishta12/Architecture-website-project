@@ -198,6 +198,8 @@ header::before{
 .house-type-info-btn{
     background-color: var(--background-color-darkgray);
     padding: 18px;
+    width: 30%;
+    text-align: center;
     transition: transform 0.1s linear;
 }
 .house-type-info-btn a{
@@ -348,12 +350,6 @@ Footer::before{
 /*Here starts the responsive design*/
 
 @media(max-width:480px){
-    header{
-        background-image: url(../website-images/Features-images/new-project-images/new-project-header-img.jpeg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     .header-content{
         display: flex;
         flex-direction: column;
@@ -376,14 +372,22 @@ Footer::before{
         bottom: 8%;
     }
     .house-type-info{
-        width: 80%;
+        width: 100%;
     }
     .house-type-info-header{
-        padding-left: 17%;
+        padding-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         font-size: 1.4rem;
+        text-align: center;
     }
     .house-type-info-text{
-        width: 100%;
+        width: 90%;
+    }
+    .house-type-info-btn{
+        width: 40%;
     }
     #second-house-type{
         display: flex;
@@ -395,6 +399,10 @@ Footer::before{
     }
     #second-house-type .house-type-info-header{
         width: 100%;
+        padding-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #third-house-type{
         display: flex;
@@ -406,7 +414,10 @@ Footer::before{
     }
     #third-house-type .house-type-info-header{
         width: 100%;
-        padding-left: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
     }
     #third-house-type .house-type-info-text{
         width: 90%;
@@ -492,4 +503,37 @@ Footer::before{
    .Footer-right{
     width: 100%;
    }
+}
+@media(min-width:651px) and (max-width:850px){
+    .header-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .house-type-info-header{
+        padding-left: 20%;
+    }
+    .house-type-info-btn{
+        width: 40%;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .Footer-left{
+        width: 100%;
+    }
+    .Footer-right{
+        width: 100%;
+    }
+}
+@media(min-width:851px){
+    .message-box{
+        width: 90%;
+    }
+    .message-header{
+        font-size: 1.4rem;
+    }
+    .message-text{
+        font-size: 1.1rem;
+    }
 }
