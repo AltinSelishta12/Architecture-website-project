@@ -871,6 +871,51 @@ header{
     .Features-text{
         width: 100%;
     }
+    /*Here starts responsive design 481-650px breakpoint of highlight section*/
+
+    .highlights-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .highlights-header{
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .highlights-body{
+        height: 120vh;
+    }
+    .highlights-left{
+        width: 100%;
+    }
+    .highlights-img{
+        width: 90%;
+        height: 80%;
+    }
+    .highlights-img img{
+        transform: translateX(0px);
+    }
+    .highlights-img p{
+        position: absolute;
+        top: 69%;
+        left: 10%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .highlights-right{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .highlights-right-title{
+        padding-top: 0%;
+        margin-top: 0%;
+    }
 }
 @media(min-width:651px) and (max-width:850px){
      .nav-links{
