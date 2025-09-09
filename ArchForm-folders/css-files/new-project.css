@@ -350,6 +350,20 @@ Footer::before{
 /*Here starts the responsive design*/
 
 @media(max-width:480px){
+    header{
+        background-image: url(../website-images/Features-images/new-project-images/new-project-header-img.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: none;
+        position: relative;
+    }
+    header::before{
+        content: '';
+        position: absolute;
+        background-image: url(../website-images/Features-images/new-project-images/new-project-header-img.jpeg);
+        background-attachment: scroll;
+    }
     .header-content{
         display: flex;
         flex-direction: column;
