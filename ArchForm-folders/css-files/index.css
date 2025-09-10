@@ -342,11 +342,11 @@ header{
     transform: scaleX(0);
     transform-origin: left;
     border-radius: 25px;
+    transition: 0.3s;
 }
 .Features:hover .Features-header h2::before{
     transform: scaleX(1);
     transform-origin: right;
-    transition: 0.3s;
     border-radius: 25px;
 }
 .Features-body{
@@ -1306,6 +1306,43 @@ header{
         padding-top: 0%;
         margin-top: 0%;
     }
+    .About-us-header{
+        font-size: 2.5rem;
+    }
+    .intro-text{
+        width: 90%;
+    }
+    .aboutUs-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .info-content-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .stats-content{
+        width: 100%;
+        height: 70%;
+    }
+    .aboutUs-body{
+        position: relative;
+        animation-range: entry 40% exit 0%;
+        animation-name: hr-line;
+    }
+    @keyframes hr-line{
+        0%{
+            height: 5%;
+        }
+        100%{
+            height: 35%;
+        }
+    }
+    .aboutUs-body::before{
+        content: '';
+        position: absolute;
+        height: 40%;
+    }
 }
 
 @media(min-width:851px){
@@ -1402,6 +1439,9 @@ header{
     }
     .card{
         width: 80%;
+    }
+    .stats-content{
+        height: 90%;
     }
 }
 @media(min-width:1188px){
