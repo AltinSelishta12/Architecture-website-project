@@ -9,6 +9,7 @@
     --text-color-green: #2f4f4f;
     --text-color-white: #ffffff;
     --text-color-black: #000000;
+    --text-color-gray: #353839;
     --button-border-radius: 25px;
     --text-font-size-extraSmall: 0.8rem;
     --text-font-size-small: 1rem;
@@ -591,6 +592,130 @@ header{
 }
 /*Here ends highlights section*/
 
+/*Here starts about-us section*/
+
+.About-us{
+    margin-top: 5%;
+    min-height: 130vh;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+}
+.About-us-header{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aboreto';
+    font-size: var(--text-font-large);
+    color: var(--text-color-gray);
+    animation-name: aboutUs-header;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+@keyframes aboutUs-header{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.intro-text{
+    width: 50%;
+    margin: auto;
+    font-family: 'Poppins Regular';
+    color: var(--text-color-gray);
+    font-size: var(--text-font-size-extraSmall);
+    padding-top: 3%;
+    text-align: justify;
+}
+.aboutUs-body{
+    width: 90%;
+    height: 100vh;
+    margin: 3% auto;
+    display: flex;
+    position: relative;
+}
+.aboutUs-body::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 1%;
+    height: 5%;
+    background-color: var(--background-color-darkgray);
+    animation-name: hr-line;
+    animation-timeline: view();
+    animation-range: entry 40% exit 100%;
+}
+@keyframes hr-line{
+    0%{
+        height: 5%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.info-content-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info-content{
+    width: 100%;
+    height: 50%;
+}
+.info-content-header{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5% 10%;
+    height: 15vh;
+    align-items: center;
+}
+.info-content-header h3{
+    position: relative;
+    font-family: 'Aboreto';
+    color: var(--text-color-gray);
+    font-size: var(--text-font-medium);
+    position: relative;
+}
+.info-content-header h3::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    border-radius: 55px;
+    width: 10%;
+    height: 4px;
+    transition: 0.3s linear;
+    background-color: var(--background-color-darkgray);
+}
+.info-content-container:hover .info-content-header h3::before{
+    width: 100%;
+}
+.info-content-text{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-content-text p{
+    width: 80%;
+    font-family: 'Poppins Regular';
+    font-size: var(--text-font-size-extraSmall);
+    color: var(--text-color-gray);
+}
+.stats-content{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
+/*Here ends about-us section*/
+
 /*Here goes the responsive design for the ArchForm's website header*/
 @media(max-width:480px){
     .nav-links{
@@ -1119,9 +1244,7 @@ header{
         justify-content: space-evenly;
         gap: 15px;
     }
-    .box-content{
-        opacity: 1;
-    }
+    
     .Features .Features-boxes .box{
         width: 30%;
     }
