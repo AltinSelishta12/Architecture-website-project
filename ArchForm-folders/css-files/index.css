@@ -616,7 +616,7 @@ header{
 }
 @keyframes aboutUs-header{
     0%{
-        opacity: 0.5;
+        opacity: 0;
     }
     100%{
         opacity: 1;
@@ -710,9 +710,44 @@ header{
     color: var(--text-color-gray);
 }
 .stats-content{
-    background-color: blue;
+    background-color: red;
     width: 50%;
     height: 100%;
+    position: relative;
+}
+.stats-content img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.stats{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    background: linear-gradient(to top, #353839b4, #ffffff31);
+    padding: 3% 4%;
+}
+.stat-value{
+    width: 100%;
+    padding-left: 3%;
+}
+.stat-value h5{
+    font-family: 'Poppins Bold';
+    color: #ffffff;
+    font-size: var(--text-font-large);
+}
+.stat-value p{
+    font-family: 'Poppins Bold';
+    font-size: 1.3rem;
+    position: absolute;
+    top: 93%;
+    color: var(--text-color-white);
+    padding-left: 4%;
+    padding-top: 1%;
 }
 /*Here ends about-us section*/
 
