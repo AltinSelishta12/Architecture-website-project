@@ -658,7 +658,7 @@ header{
         height: 5%;
     }
     100%{
-        height: 100%;
+        height: 80%;
     }
 }
 .info-content-container{
@@ -759,7 +759,118 @@ header{
     padding-left: 17%;
 }
 /*Here ends about-us section*/
-
+/*Here starts footer section*/
+footer{
+    background-image: url(../website-images/footer-images/footer-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin-top: 3%;
+    position: relative;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../website-images/footer-images/footer-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    filter: brightness(30%);
+}
+.footer-left{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    height: 100vh;
+}
+.footer-content{
+    width: 100%;
+    height: 100%;
+}
+.footer-header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10% 3%;
+    font-size: var(--text-font-size-middle);
+    font-family: 'Aboreto';
+    color: var(--text-color-white);
+}
+.footer-nav{
+    background-color: #d9d9d928;
+    border-radius: 15px;
+    width: 90%;
+    height: 25%;
+    margin-left: 6%;
+}
+.footer-nav-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins Bold';
+    color: var(--text-color-white);
+    font-size: 1.3rem;
+    padding-top: 1%;
+}
+.footer-nav-items{
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 5%;
+}
+.footer-nav-links{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.footer-nav-links ul li{
+    transition: transform 0.3s linear;
+}
+.footer-nav-links ul li:hover{
+    transform: translateY(10px);
+}
+.footer-nav-links ul li a{
+    color: var(--text-color-white);
+    font-size: 1.8rem;
+}
+.footer-nav-btn{
+    background-color: #00000057;
+    padding: 12px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in;
+}
+.footer-nav-btn:hover{
+    background-color: #ffffff3a;
+}
+.footer-nav-btn a{
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+}
+/*Here ends footer section*/
 /*Here goes the responsive design for the ArchForm's website header*/
 @media(max-width:480px){
     .nav-links{

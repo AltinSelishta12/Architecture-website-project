@@ -98,10 +98,10 @@ header::before{
     background-color: var(--background-color-white);
     width: 20%;
     height: 4px;
+    transition: 0.3s ease-in;
 }
 .header-content:hover .stats-header h2::before{
     width: 50%;
-    transition: 0.3s ease-in;
 }
 .stat h4{
     color: var(--text-color-white);
