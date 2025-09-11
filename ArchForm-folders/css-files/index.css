@@ -870,6 +870,99 @@ footer::before{
     color: #ffffff;
     font-family: 'Poppins Regular';
 }
+.footer-help-center{
+    background-color: #d9d9d928;
+    margin-top: 5%;
+    height: 20%;
+    width: 90%;
+    border-radius: 15px;
+    margin-left: 6%;
+    display: flex;
+}
+.help-center-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 3% 0%;
+}
+.help-center-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.help-center-title h4{
+    font-family: 'Poppins Bold';
+    color: var(--text-color-white);
+    font-size: 1.3rem;
+}
+.help-center-btn{
+    padding: 12px;
+    width: 80%;
+    border-radius: 35px;
+    background-color: #00000057;
+     transition: background-color, scale, 0.2s ease-in-out;
+}
+.help-center-btn a{
+    font-family: 'Poppins Regular';
+    color: var(--text-color-white);
+    padding-left: 1%;
+}
+.help-center-btn  i{
+    background-color: #00000088;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 7%;
+    font-size: 1.1rem;
+}
+.help-center-btn:hover{
+    background-color: #d9d9d928;
+    transform: scale(1.05);
+}
+.social-icons{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.social-icons a{
+    background-color: #00000080;
+    padding: 5px;
+    width: 70%;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color-white);
+    transition: transform 0.3s linear;
+}
+.social-icons a:hover{
+    transform: scaleX(1.1);
+}
+.footer-info-elements{
+    width: 100%;
+    margin-left: 6%;
+    margin-top: 3%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px; 
+}
+.phone-number{
+    display: flex;
+    gap: 15px;
+}
+.footer-info-elements p{
+    font-family: 'Poppins Regular';
+    color: var(--text-color-white);
+    font-size: 1rem;
+}
 /*Here ends footer section*/
 /*Here goes the responsive design for the ArchForm's website header*/
 @media(max-width:480px){
