@@ -115,3 +115,50 @@ emergencyForm.addEventListener("submit", function(Event){
         thirdCard.classList.remove("cardopen");
         ThirdCardContent.classList.remove("text");
     })
+
+    //Here goes the formular of the contact section
+
+    const contactForm = document.getElementById("contactForm");
+    const NameInput = document.getElementById("NameInput");
+    const telNumber = document.getElementById("telNumber");
+    const EmailAddress = document.getElementById("EmailAddress");
+    const Message = document.getElementById("Message");
+    const SubmitBtn = document.getElementById("SubmitBtn");
+    const FooterRight = document.getElementById("FooterRight");
+    contactForm.addEventListener("submit", function(stop){
+        if(NameInput.value.trim() === "" || telNumber.value.trim() === "" || EmailAddress.value.trim() === "" || Message.value.trim() === ""){
+            stop.preventDefault();
+            alert("Please Fill the required fields");
+            return;
+        }
+        if(NameInput.value.length  < 6 ){
+            stop.preventDefault();
+            alert("Name Input must have more than 6 characters");
+            NameInput.focus();
+            return;
+        }
+        if(telNumber.value.length > 11){
+            stop.preventDefault();
+            alert("Phone number input must contain 11 numbers");
+            telNumber.focus();
+            return;
+        }
+        if(!telNumber.value.startsWith("+383")){
+            stop.preventDefault();
+            alert("Thhe number must start with the + symbol");
+            telNumber.focus();
+            return;
+        }
+        if(!EmailAddress.value.includes("@") || !EmailAddress.value.includes(".")){
+            stop.preventDefault();
+            alert("Please put a valid Email");
+            EmailAddress.focus();
+            return;
+        }
+        if(Message.value.length !== 11){
+            stop.preventDefault();
+            alert("Message input must contain more than 11 characters");
+            Message.focus();
+            return;
+        }
+    })
