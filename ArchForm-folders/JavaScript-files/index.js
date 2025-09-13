@@ -131,21 +131,21 @@ emergencyForm.addEventListener("submit", function(Event){
             alert("Please Fill the required fields");
             return;
         }
-        if(NameInput.value.length  < 6 ){
+        if(NameInput.value.length  <= 2 ){
             stop.preventDefault();
-            alert("Name Input must have more than 6 characters");
+            alert("Name Input must have more than 2 characters");
             NameInput.focus();
             return;
         }
-        if(telNumber.value.length > 11){
+        if(telNumber.value.length > 12){
             stop.preventDefault();
-            alert("Phone number input must contain 11 numbers");
+            alert("Phone number input must contain 12 numbers");
             telNumber.focus();
             return;
         }
         if(!telNumber.value.startsWith("+383")){
             stop.preventDefault();
-            alert("Thhe number must start with the + symbol");
+            alert("Thhe number must start with the +383 symbol");
             telNumber.focus();
             return;
         }
@@ -155,7 +155,7 @@ emergencyForm.addEventListener("submit", function(Event){
             EmailAddress.focus();
             return;
         }
-        if(Message.value.length !== 11){
+        if(Message.value.length <= 6){
             stop.preventDefault();
             alert("Message input must contain more than 11 characters");
             Message.focus();
