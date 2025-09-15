@@ -1891,7 +1891,7 @@ footer::before{
     .footer-right form{
         height: 75vh;
     }
-     .formular-inputs .submit-btn{
+    .formular-inputs .submit-btn{
         width: 15%;
         position: relative;
     }
@@ -1937,7 +1937,7 @@ footer::before{
         left: 0;
         height: 0vh;
         display: none;
-        padding: 35% 43%;
+        padding: 25% 43%;
         width: 100%;
         z-index: 999;
         background-color: var(--background-color-green);
@@ -2025,6 +2025,32 @@ footer::before{
     .footer-header{
         font-size: 2rem;
     }
+    .footer-nav{
+        height: 15vh;
+    }
+    .footer-nav-items{
+        margin: 0% 1%;
+        width: 100%;
+    }
+    .footer-help-center{
+        height: 15vh;
+    }
+    .help-center-left{
+        width: 70%;
+    }
+    .help-center-btn{
+        width: 90%;
+    }
+    .social-icons{
+        width: 30%;
+    }
+    .formular-inputs .submit-btn{
+        width: 70%;
+        position: relative;
+    }
+    .formular-inputs .submit-btn button{
+        width: 20%;
+    }
 }
 @media(min-width:1188px){
     .nav-links{
@@ -2053,6 +2079,10 @@ footer::before{
         width: 70%;
         position: fixed;
         left: 15%;
+    }
+    .help-center-btn{
+        width: 90%;
+        margin-left: 4%;
     }
 }
 
