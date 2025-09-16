@@ -1,7 +1,9 @@
 /*Here goes services page style*/
 
-/*Here are the CSS variables*/
+/*font type import from browse fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
 
+/*Here are the CSS variables*/
 :root{
     --background-color-green: #2f4f4f;
     --background-color-white: #ffffff;
@@ -50,7 +52,7 @@ nav{
     position: fixed;
     z-index: 999;
     right: 0;
-    top: 35%;
+    top: 45%;
     width: 1%;
     height: 15%;
     display: flex;
@@ -137,5 +139,158 @@ nav{
 }
 #closeArrow.arrow{
     display: block;
+}
 
+/*Here starts interior section style*/
+
+.Interior{
+    min-height: 600vh;
+    width: 100%;
+    max-width: 1400px;
+}
+.Interior-header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4% 3%;
+}
+.Interior-header h2{
+    font-family: 'Poppins Regular';
+    font-size: var(--text-font-large);
+}
+.Interior-body{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+.Interior-img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.interior-img-container{
+    width: 60%;
+    height: 90%;
+}
+.interior-img-container img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.interior-img-container h3{
+    position: absolute;
+    top: 10%;
+    left: 69%;
+    height: 80%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.342);
+    backdrop-filter: blur(15px);
+    color: var(--text-color-white);
+    font-size: 2rem;
+    padding-top: 6%;
+    animation-name: img-text;
+    animation-timeline: scroll();
+    animation-range: 0% 10%;
+    transform: scale(1) translateY(0px);
+    transition: transform, backdrop-filter 0.3s linear;
+}
+@keyframes img-text{
+    0%{
+        transform: scale(1) translateY(0px);
+        backdrop-filter: blur(15px);
+    }
+    50%{
+        transform: scale(1.1) translateY(20px);
+        backdrop-filter: blur(0px);
+    }
+    100%{
+        transform: scale(1) translateY(0px);
+        backdrop-filter: blur(15px);
+    }
+}
+.Interior-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.interior-info-content{
+    width: 60%;
+    height: 45%;
+}
+.interior-info-content h2{
+    font-family: 'Poppins Regular';
+    color: var(--text-color-black);
+    font-size: 3rem;
+    position: relative;
+}
+.interior-info-content h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 10%;
+    height: 5px;
+    background-color: black;
+}
+.interior-info-content p{
+    font-family: 'Poppins Regular';
+    font-size: 0.9rem;
+    line-height: 20px;
+    text-align: left;
+}
+.interior-info-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interior-info-btn a{
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+.interior-info-btn a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 10%;
+    height: 1.5px;
+    background-color: #000000;
+    transition: width 0.4s ease-in-out;
+}
+.interior-info-btn a:hover::before{
+    width: 100%;
+}
+.interior-info-btn a:hover + i{
+    animation: arrow 0.5s forwards;
+}
+@keyframes arrow{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(30px);
+    }
+}
+.interior-info-btn i{
+    margin-left: 5%;
+    font-size: 1.3rem;
 }
