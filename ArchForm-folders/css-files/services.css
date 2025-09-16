@@ -1,0 +1,141 @@
+/*Here goes services page style*/
+
+/*Here are the CSS variables*/
+
+:root{
+    --background-color-green: #2f4f4f;
+    --background-color-white: #ffffff;
+    --background-color-darkgray: #353839;
+    --text-color-green: #2f4f4f;
+    --text-color-white: #ffffff;
+    --text-color-black: #000000;
+    --text-color-gray: #353839;
+    --button-border-radius: 25px;
+    --text-font-size-extraSmall: 0.8rem;
+    --text-font-size-small: 1rem;
+    --text-font-medium: 2rem;
+    --text-font-size-middle: 3rem;
+    --text-font-large: 4rem;
+}
+/*This is Aboreto Regular font*/
+@font-face {
+    font-family: 'Aboreto';
+    src: url('../website-fonts/Aboreto/Aboreto-Regular.ttf') format('truetype');
+}
+/*This is Poppins Regular font*/
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../website-fonts/Poppins/Poppins-Regular.ttf') format(truetype);
+}
+/*This is Poppins Bold font*/
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(../website-fonts/Poppins/Poppins-Bold.ttf) format(truetype);
+}
+/*Here starts services page style*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.918);
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 35%;
+    width: 1%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    transition: width 0.3s;
+}
+#nav.active{
+    width: 30%;
+    height: 15%;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.nav-icons{
+    width: 70%;
+    height: 80%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-icons ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+.nav-icons ul li a{
+    color: var(--text-color-black);
+    background-color: var(--background-color-white);
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    transition: transform, background-color, color, 0.3s ease-out;
+}
+.nav-icons ul li a:hover{
+    transform: scale(1.05);
+    background-color: #000000;
+    color: var(--text-color-white);
+    border: 1px solid white;
+}
+.nav-btn a{
+    color: var(--text-color-white);
+    border: 1px solid white;
+    background-color: #000000;
+    padding: 12px;
+    font-family: 'Poppins Regular';
+    transition: padding 0.1s linear;
+}
+.nav-btn a:hover{
+    padding: 15px;
+}
+#navIcons.hide{
+    display: flex;
+}
+.open-arrow{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+    color: #ffffff;
+    position: relative;
+}
+#OpenArrow{
+    position: absolute;
+    left: 0%;
+}
+#OpenArrow.ARROW{
+    display: none;
+}
+#closeArrow{
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: 42.5%;
+}
+#closeArrow.arrow{
+    display: block;
+
+}

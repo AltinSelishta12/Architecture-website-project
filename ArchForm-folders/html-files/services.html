@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchForm; Services Page</title>
+    <link rel="stylesheet" href="../css-files/services.css">
+     <!--Icons external links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Animations external link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-content">
+            <div class="open-arrow">
+                <i id="OpenArrow" class="ri-arrow-left-wide-line"></i>
+                <i id="closeArrow" class="ri-arrow-right-wide-line"></i>
+            </div>
+            <div id="navIcons" class="nav-icons">
+                <ul>
+                    <li><a href=""><i class="ri-home-4-line"></i></a></li>
+                    <li><a href=""><i class="ri-arrow-down-long-fill"></i></a></li>
+                </ul>
+                <div class="nav-btn">
+                <a href="">REACH US</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const nav = document.getElementById("nav");
+        const OpenArrow = document.getElementById("OpenArrow");
+        const closeArrow = document.getElementById("closeArrow");
+        const navIcons = document.getElementById("navIcons");
+
+        OpenArrow.addEventListener("click", function(){
+            nav.classList.add("active");
+            closeArrow.classList.toggle("arrow");
+            OpenArrow.classList.toggle("ARROW");
+            navIcons.classList.add("hide");
+        })
+        closeArrow.addEventListener("click", function(){
+            nav.classList.remove("active"); 
+            OpenArrow.classList.toggle("ARROW");
+            closeArrow.classList.remove("arrow");
+            navIcons.classList.remove("hide")
+        })
+    </script>
+</body>
+</html>
