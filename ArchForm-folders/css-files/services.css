@@ -402,3 +402,28 @@ nav{
         margin-top: 6%;
     }
 }
+@media(min-width:651px) and (max-width:850px){
+    nav{
+        width: 3%;
+    }
+    #nav.active{
+        width: 80%;
+    }
+    .Interior-img{
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .interior-img-container{
+        width: 80%;
+    }
+    .interior-img-container h3{
+        position: absolute;
+        left: 2%;
+    }
+    .interior-img-container img{
+        width: 100%;
+    }
+}
