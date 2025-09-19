@@ -65,6 +65,10 @@ nav{
     width: 30%;
     height: 15%;
 }
+#nav.mode{
+    color: #000;
+    background-color: var(--background-color-white);
+}
 .nav-content{
     display: flex;
     justify-content: space-between;
@@ -128,6 +132,9 @@ nav{
     position: absolute;
     left: 0%;
 }
+#OpenArrow.mode{
+    color: #000;
+}
 #OpenArrow.ARROW{
     display: none;
 }
@@ -140,7 +147,9 @@ nav{
 #closeArrow.arrow{
     display: block;
 }
-
+#closeArrow.mode{
+    color: var(--text-color-black);
+}
 /*Here starts interior section style*/
 
 .Interior{
@@ -298,7 +307,7 @@ nav{
 .services{
     background-color: #141414;
     margin-top: 2%;
-    min-height: 300vh;
+    min-height: 350vh;
 }
 .services-header{
     width: 100%;
@@ -470,6 +479,97 @@ nav{
     font-size: var(--text-font-size-extraSmall);
     color: var(--text-color-white);
     width: 60%;
+}
+.third-services{
+    margin-top: 8%;
+    min-height: 110vh;
+}
+.third-services-header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins Regular';
+    color: var(--text-color-white);
+    font-size: 2.5rem;
+}
+.third-services-header h2{
+    position: relative;
+}
+.third-services-header h2::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    height: 4px;
+    width: 0%;
+    background-color: var(--background-color-white);
+    border-radius: 25px;
+    transition: width 0.3s linear;
+}
+.third-services-header h2:hover::before{
+    width: 100%;
+}
+.third-services:hover .third-services-header h2::before{
+    width: 100%;
+}
+.third-services-cards{
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    width: 30%;
+    height: 80%;
+}
+.card:nth-child(1){
+    background-image: url(../website-images/services-images/landscape-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.2s linear;
+}
+.card:nth-child(1):hover{
+    transform: scale(0.97);
+}
+.card-name{
+    font-family: 'Poppins Regular';
+    color: var(--text-color-white);
+    font-size: 2.5rem;
+    width: 100%;
+    height: 0%;
+    padding-left: 4%;
+    transition: height 0.3s linear;
+    background-color: #0000003d;
+}
+.card:nth-child(1):hover .card-name{
+    height: 100%;
+}
+.card:nth-child(2){
+    background-image: url(../website-images/services-images/restauratopn-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card:nth-child(2):hover{
+    transform: scale(0.97);
+}
+.card:nth-child(2):hover .card-name{
+    height: 100%;
+}
+.card:nth-child(3){
+    background-image: url(../website-images/services-images/urban-space.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card:nth-child(3):hover{
+    transform: scale(0.97);
+}
+.card:nth-child(3):hover .card-name{
+    height: 100%;
 }
 @media(max-width:480px){
     body{

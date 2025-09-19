@@ -98,6 +98,30 @@
                 </div>
             </div>
         </div>
+
+        <!--Other services-->
+        <div class="third-services">
+            <div class="third-services-header">
+                <h2>OTHER SERVICES</h2>
+            </div>
+            <div class="third-services-cards">
+                <div class="card">
+                    <div class="card-name">
+                        <h3>LANDSCAPE</h3>
+                    </div>
+                </div>
+                <div class="card">
+                     <div class="card-name">
+                        <h3>RENOVATION</h3>
+                    </div>
+                </div>
+                <div class="card">
+                     <div class="card-name">
+                        <h3>URBAN SPACE</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <script>
         const nav = document.getElementById("nav");
@@ -116,6 +140,18 @@
             OpenArrow.classList.toggle("ARROW");
             closeArrow.classList.remove("arrow");
             navIcons.classList.remove("hide")
+        })
+        window.addEventListener("scroll", function(){
+            if(window.scrollY > 305){
+                nav.classList.add("mode");
+                OpenArrow.classList.add("mode");
+                closeArrow.classList.add("mode");
+            }
+            else{
+                nav.classList.remove("mode")
+                OpenArrow.classList.remove("mode");
+                closeArrow.classList.remove("mode");
+            }
         })
     </script>
 </body>
