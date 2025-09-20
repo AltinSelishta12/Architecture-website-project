@@ -422,8 +422,9 @@ nav{
     position: relative;
     animation-name: second-service-body;
     animation-timeline: scroll();
-    animation-range: 60% 70%;
+    animation-range: 30% 70%;
     animation-fill-mode: forwards;
+    transition: width, opacity, 0.3s linear;
 }
 @keyframes second-service-body{
     0%{
@@ -624,6 +625,75 @@ nav{
     }
     .interior-info-content p{
         padding-top: 2%;
+    }
+    /*Services section*/
+    .services{
+        min-height: 320vh;
+    }
+    .services-header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-header h2{
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    .first-service{
+        height: auto;
+    }
+    .first-service-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-service-img{
+        width: 95%;
+        margin: auto;
+    }
+    .first-service-info{
+        width: 100%;
+    }
+    .first-service .first-service-info h3{
+        width: 90%;
+        font-size: 2.3rem;
+    }
+    .first-service-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .second-service{
+        height: auto;
+    }
+    .second-service-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .service-body-content{
+        width: 90%;
+        position: absolute;
+        left: 5%;
+    }
+    .title h3{
+        font-size: 1.7rem;
+    }
+    .service-body-text{
+        width: 90%;
+    }
+    .third-services{
+        margin-top: 18%;
+    }
+    .third-services-header{
+        font-size: 2rem;
+    }
+    .third-services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card{
+        height: 80%;
+        width: 90%;
     }
 }
 /* media (481-650px)*/
