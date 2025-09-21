@@ -342,22 +342,10 @@ nav{
 }
 .first-service-img{
     width: 50%;
-    height: 0%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-name: service-img;
-    animation-timeline: scroll();
-    animation-range: 30% 50%;
-    animation-fill-mode: forwards;
-}
-@keyframes service-img{
-    0%{
-        height: 0%;
-    }
-    100%{
-        height: 100%;
-    }
 }
 .first-service-img img{
     width: 80%;
@@ -371,22 +359,6 @@ nav{
     align-items: center;
     flex-direction: column;
     gap: 45px;
-    animation-name: service-info;
-    animation-timeline: scroll();
-    animation-range: 30% 50%;
-    transform: translateX(650px);
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-@keyframes service-info{
-    0%{
-         transform: translateX(450px);
-         opacity: 0;
-    }
-    100%{
-         transform: translateX(0px);
-         opacity: 1;
-    }
 }
 .first-service-info h3{
     font-family: 'Poppins Regular';
@@ -417,24 +389,8 @@ nav{
     background-size: cover;
     margin-top: 4%;
     height: 80vh;
-    width: 0%;
-    opacity: 0;
+    width: 100%;
     position: relative;
-    animation-name: second-service-body;
-    animation-timeline: scroll();
-    animation-range: 30% 70%;
-    animation-fill-mode: forwards;
-    transition: width, opacity, 0.3s linear;
-}
-@keyframes second-service-body{
-    0%{
-        width: 0%;
-        opacity: 0;
-    }
-    100%{
-        width: 100%;
-        opacity: 1;
-    }
 }
 .second-service-body::before{
     content: '';
@@ -509,11 +465,22 @@ nav{
     border-radius: 25px;
     transition: width 0.3s linear;
 }
-.third-services-header h2:hover::before{
-    width: 100%;
-}
 .third-services:hover .third-services-header h2::before{
-    width: 100%;
+    animation: hr-line 3s forwards;
+}
+@keyframes hr-line{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 100%;
+    }
+    75%{
+        width: 0%;
+    }
+    100%{
+        width: 10%;
+    }
 }
 .third-services-cards{
     height: 90vh;
@@ -540,13 +507,23 @@ nav{
     color: var(--text-color-white);
     font-size: 2.5rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     height: 0%;
+    opacity: 0;
     padding-left: 4%;
-    transition: height 0.3s linear;
+    transition: height, opacity 0.3s linear;
     background-color: #0000003d;
+}
+.card-name p{
+    font-family: 'Poppins Regular';
+    font-size: var(--text-font-size-extraSmall);
+    padding-bottom: 1%;
 }
 .card:nth-child(1):hover .card-name{
     height: 100%;
+    opacity: 1;
 }
 .card:nth-child(2){
     background-image: url(../website-images/services-images/restauratopn-img.jpeg);
@@ -559,6 +536,7 @@ nav{
 }
 .card:nth-child(2):hover .card-name{
     height: 100%;
+    opacity: 1;
 }
 .card:nth-child(3){
     background-image: url(../website-images/services-images/urban-space.jpeg);
@@ -571,6 +549,7 @@ nav{
 }
 .card:nth-child(3):hover .card-name{
     height: 100%;
+    opacity: 1;
 }
 @media(max-width:480px){
     body{
@@ -694,6 +673,10 @@ nav{
     .card{
         height: 80%;
         width: 90%;
+    }
+    .card-name{
+        height: 100%;
+        opacity: 1;
     }
 }
 /* media (481-650px)*/
