@@ -682,12 +682,18 @@ nav{
 /* media (481-650px)*/
 
 @media(min-width:481px) and (max-width:650px){
+
+    /*Navigation*/
+
     nav{
         width: 5%;
     }
     #nav.active{
         width: 80%;
     }
+
+    /*Interior section (incoming section)*/
+
     .Interior{
         min-height: 140vh;
     }
@@ -729,6 +735,73 @@ nav{
     }
     .interior-info-btn{
         margin-top: 6%;
+    }
+
+    /*services Section*/
+
+    .services{
+        min-height: 320vh;
+    }
+    .services-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-header h2{
+        font-size: 2.5rem;
+        padding-left: 0%;
+    }
+
+    /*first service*/
+
+    .first-service-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-service-img{
+        width: 90%;
+        margin: auto;
+    }
+    .first-service-img img{
+        width: 100%;
+    }
+    .first-service-info{
+        width: 100%;
+    }
+    .first-service-info h3{
+        font-size: 2rem;
+    }
+
+    /*second-service*/
+
+    .service-body-content{
+        width: 90%;
+        height: 25%;
+        left: 5%;
+        top: 85%;
+    }
+    .service-body-text{
+        width: 90%;
+    }
+
+    /*Other services (Last section of services page)*/
+    .third-services{
+        margin-top: 15%;
+    }
+    .third-services-header h2{
+        font-size: 2.5rem;
+    }
+    .third-services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card{
+        width: 90%;
+    }
+    .card-name{
+        height: 100%;
+        opacity: 1;
     }
 }
 @media(min-width:651px) and (max-width:850px){
