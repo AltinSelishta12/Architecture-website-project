@@ -828,4 +828,75 @@ nav{
     .interior-img-container img{
         width: 100%;
     }
+
+    /*services section*/
+
+    .services{
+        min-height: 320vh;
+    }
+
+    /*first-service*/
+
+    .first-service-img{
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .first-service-info h3{
+        font-size: 2rem;
+        width: 90%;
+    }
+
+    /*Second-service*/
+
+    .service-body-text{
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    /*third-service*/
+
+    .third-services-cards{
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+    }
+    .card{
+        width: 90%;
+    }
+    .card-name{
+        opacity: 1;
+        height: 100%;
+    }
+}
+@media(min-width:851px) and (max-width:1187px){
+
+    .services{
+        min-height: 300vh;
+    }
+    .first-service-info h3{
+        font-size: 2.5rem;
+        width: 90%;
+    }
+    .service-body-text{
+        width: 90%;
+    }
+    .third-services-cards{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       place-items: center;
+    }
+    .card{
+        width: 90%;
+        height: 90%;
+    }
+    .card-name{
+        opacity: 1;
+        height: 100%;
+    }
+    .third-services-cards > div:nth-child(3){
+        grid-column: 1 / -1;
+        width: 95%;
+    }
 }
