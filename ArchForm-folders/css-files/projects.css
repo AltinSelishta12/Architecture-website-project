@@ -1,0 +1,177 @@
+/*Projects page style code*/
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima:wght@400;700&family=Anta&family=Audiowide&family=Bebas+Neue&family=Bungee&family=Content:wght@400;700&family=Convergence&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Darker+Grotesque:wght@300..900&family=Geostar+Fill&family=Gidugu&family=Great+Vibes&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Italiana&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lobster&family=Manrope:wght@200..800&family=New+Amsterdam&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rationale&family=Red+Rose:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Russo+One&family=Smooch&family=Sora:wght@100..800&family=Syncopate:wght@400;700&family=Train+One&family=WDXL+Lubrifont+TC&family=Zen+Tokyo+Zoo&display=swap');
+
+:root{
+    --background-color-green: #2f4f4f;
+    --background-color-white: #ffffff;
+    --background-color-darkgray: #353839;
+    --text-color-green: #2f4f4f;
+    --text-color-white: #ffffff;
+    --text-color-black: #000000;
+    --text-color-gray: #353839;
+    --button-border-radius: 25px;
+    --text-font-size-extraSmall: 0.8rem;
+    --text-font-size-small: 1rem;
+    --text-font-medium: 2rem;
+    --text-font-size-middle: 3rem;
+    --text-font-large: 4rem;
+}
+/*This is Aboreto Regular font*/
+@font-face {
+    font-family: 'Aboreto';
+    src: url('../website-fonts/Aboreto/Aboreto-Regular.ttf') format('truetype');
+}
+/*This is Poppins Regular font*/
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../website-fonts/Poppins/Poppins-Regular.ttf') format(truetype);
+}
+/*This is Poppins Bold font*/
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(../website-fonts/Poppins/Poppins-Bold.ttf) format(truetype);
+}
+
+
+/*Here starts projects page style*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+}
+.projects-title{
+    height: 35vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3%;
+    width: 100%;
+    opacity: 0;
+    animation-name: projects-title;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes projects-title{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.projects-title h1{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 6rem;
+    text-align: left;
+}
+.projects-header{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+}
+.header-left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-left-img{
+    width: 80%;
+    height: 90%;
+    border-radius: 25px;
+}
+.header-left-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.header-right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.header-right-title{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 5%;
+}
+.header-right-title h3{
+    font-family: 'Poppins Regular';
+    font-size: 1.5rem;
+}
+.header-right-text{
+    width: 80%;
+    font-family: 'Poppins Regular';
+    font-size: var(--text-font-size-extraSmall);
+    text-align: justify;
+}
+.header-right-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 8%;
+    width: 100%;
+}
+.btn{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn a{
+    background-color: #e2e2e2;
+    color: #000000;
+    font-family: 'Poppins Regular';
+    padding: 10px;
+    width: 85%;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.3s linear;
+}
+.btn a:hover{
+    background-color: var(--text-color-black);
+    color: var(--text-color-white);
+}
+.icon-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.icon-links a{
+    color: var(--text-color-black);
+    background-color: #e2e2e2;
+    padding: 16px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+.icon-links a:hover{
+    background-color: var(--text-color-black);
+    color: var(--text-color-white);
+
+}
+
