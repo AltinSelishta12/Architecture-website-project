@@ -172,6 +172,78 @@ header{
 .icon-links a:hover{
     background-color: var(--text-color-black);
     color: var(--text-color-white);
-
 }
 
+.navigation{
+    min-height: 30vh;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-content{
+    width: 90%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 70px;
+    box-shadow: 2px 2px 6px  #969696;
+    padding: 0% 2%;
+}
+.nav-content-links{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-content-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    height: 100%;
+}
+.nav-content-links ul li a{
+    color: var(--text-color-black);
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+}
+.nav-content-links a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: rgb(0, 0, 0);
+    height: 4px;
+    width: 0%;
+    border-radius: 25px;
+    transition: width 0.5s ease;
+}
+.nav-content-links a:hover::before{
+    width: 100%;
+}
+.nav-content-btn{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav-content-btn a {
+    background-color: #ffffff;
+    color: var(--text-color-black);
+    padding: 20px;
+    border-radius: 35px;
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+}
+.nav-content-btn a:hover{
+    transform: scale(1.1);
+}
