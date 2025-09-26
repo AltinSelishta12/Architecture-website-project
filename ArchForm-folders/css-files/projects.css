@@ -247,3 +247,17 @@ header{
 .nav-content-btn a:hover{
     transform: scale(1.1);
 }
+#gallery{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+.gallery-img{
+    transition: transform 0.3s linear;
+}
+.gallery-img:hover{
+    transform: scale(0.98);
+}
