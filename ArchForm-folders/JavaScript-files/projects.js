@@ -74,3 +74,12 @@ UrbanSpace.addEventListener("click", function(event){
 
     gallery.innerHTML = URBANSPACE;
 })
+
+    const smallTitle = document.getElementById("smallTitle");
+    const navContent = document.getElementById("navContent");
+    const smallMenuBtn = document.getElementById("smallMenuBtn");
+
+    smallMenuBtn.addEventListener("click", function(){
+        navContent.classList.toggle("active");
+        smallTitle.classList.toggle("hide")
+    })

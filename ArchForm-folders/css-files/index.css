@@ -1082,6 +1082,7 @@ footer::before{
         background-color: transparent;
         border: none;
         position: relative;
+        color: var(--text-color-black);
     }
     .menu-content{
         position: absolute;
