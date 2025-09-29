@@ -268,11 +268,20 @@ header{
     display: none;
 }
 /*here goes responsive design breakpoints*/
-
+#smallBtn{
+    display: none;
+}
 @media(max-width:480px){
+    .projects-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     .projects-title h1{
         font-size: 2.5rem;
         width: 90%;
+        text-align: center;
     }
     .projects-header{
         display: flex;
@@ -354,5 +363,162 @@ header{
     #gallery{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(min-width:481px) and (max-width:650px){
+
+    .projects-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .projects-title h1{
+        font-size: 2.5rem;
+        width: 90%;
+        text-align: center;
+    }
+    .projects-header{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-left{
+        width: 100%;
+    }
+    .header-right{
+        width: 100%;
+    }
+      .header-right-title{
+        width: 90%;
+    }
+    .header-right-title h3{
+        font-size: 2rem;
+    }
+    .header-right-text{
+        margin-top: 3%;
+    }
+    .header-right-text p{
+        font-size: 0.9rem;
+    }
+    .header-right-buttons{
+        margin-top: 5%;
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 3%;
+        position: relative;
+    }
+    .nav-content{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 45vh;
+        width: 00%;
+        border-radius: 0px;
+        flex-direction: column;
+    }
+    #navContent.active{
+        display: flex;
+        width: 70%;
+    }
+    .nav-content-links a::before{
+        content: "";
+        width: 0%;
+        height: 0%;
+    }
+    .nav-content-links ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-content-btn{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .small-menu{
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 160px;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: none;
+        color: #000000;
+        box-shadow: 2px 2px 6px  #969696;
+    }
+    .small-menu-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        box-shadow: 2px 2px 6px  #969696;
+        font-family: "Kodchasan", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 80px;
+        width: 75%;
+        border-radius: 55px;
+    }
+    #smallTitle.hide{
+        display: none;
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(min-width:651px) and (max-width:850px){
+    .projects-title h1{
+        font-size: 3.5rem;
+        padding-left: 4%;
+    }
+    .projects-header{
+        display: flex;
+        min-height: 70vh;
+        flex-direction: column;
+    }
+    .header-left{
+        width: 100%;
+    }
+    .header-right{
+        width: 100%;
+    }
+    .header-right-title{
+        width: 90%;
+    }
+    .header-right-text{
+        margin-top: 3%;
+    }
+    .header-right-buttons{
+        margin-top: 5%;
+    }
+    .nav-content{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .nav-content-links{
+        width: 100%;
+    }
+    .nav-content-links ul{
+        display: flex;
+        gap: 15px;
+    }
+    .nav-content-btn{
+        width: 20%;
+    }
+    .offer-btn{
+        display: none;
+    }
+    #smallBtn{
+        display: block;
+        background-color: #000000;
+        color: var(--text-color-white);
     }
 }
