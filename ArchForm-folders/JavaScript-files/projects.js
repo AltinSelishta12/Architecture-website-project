@@ -70,7 +70,7 @@ UrbanSpace.addEventListener("click", function(event){
 
     event.preventDefault();
     const urbanSpaces = images.filter(img => img.category === "UrbanSpace");
-    const URBANSPACE = urbanSpaces.map(img => `<img class="gallery-img" src="${img.src}" alt="${img.alt}" style="width:98%; height:98%; border-radius: 15px;">`).join("");
+    const URBANSPACE = urbanSpaces.map(img => `<img id="UrbanSpace" class="gallery-img" src="${img.src}" alt="${img.alt}" style="width:98%; height:98%; border-radius: 15px;">`).join("");
 
     gallery.innerHTML = URBANSPACE;
 })
