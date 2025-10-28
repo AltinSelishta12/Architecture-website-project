@@ -1,0 +1,21 @@
+/*This file will contain the design of index.html*/
+
+@font-face{
+    font-family: 'Unbounded';
+    src: url(../fonts-folder/Unbounded/static/Unbounded-Regular.ttf) format(truetype);
+}
+
+:root{
+    --main-color: #fff;
+    --text-color: #000;
+    --background-color: #000;
+    --max-width: 1400px;
+    --min-width: 350px;
+    --extra-small-font: 0.8rem;
+    --small-font: 1.4rem;
+    --medium-font: 2.5rem;
+    --large-font: 4rem;
+    --extra-large-font: 5.3rem;
+    --circle-border: 50%;
+    --medium-border-radius: 25px;
+}
