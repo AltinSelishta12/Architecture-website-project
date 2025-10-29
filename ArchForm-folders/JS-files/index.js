@@ -6,7 +6,21 @@ const nav = document.querySelector(".nav-items ul")
 nav.addEventListener("mouseover", function(){
     nav.classList.add("addShadow")
 })
+
 //This code removes that CSS class that has been used in the upper part of the code so when we move the cursor out the <ul> the animation will be removed
 nav.addEventListener("mouseout", function(){
     nav.classList.remove("addShadow");
+})
+
+const MainMenu = document.querySelector("#MainMenu")
+const OpenMenu = document.querySelector("#OpenMenu")
+const CloseMenu = document.querySelector("#CloseMenu")
+
+OpenMenu.addEventListener("click", function(e){
+    e.preventDefault();
+    MainMenu.classList.add("menu");
+})
+
+CloseMenu.addEventListener("click", function(){
+    MainMenu.classList.remove("menu");
 })

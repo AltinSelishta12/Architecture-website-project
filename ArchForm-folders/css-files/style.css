@@ -48,6 +48,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
 }
 
 header::before{
@@ -172,7 +173,7 @@ header::before{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1; /*This property was used to make sure that hero-section will not be on the big menu*/
+    z-index: 1;
 }
 
 .hero-section-left{
@@ -194,6 +195,7 @@ header::before{
     flex-direction: column;
     justify-content: space-around;
     padding-left: 2%;
+    z-index: 1;
 }
 
 .hero-section-text h2{
@@ -228,6 +230,7 @@ header::before{
     place-items: center;
     position: fixed;
     right: 5%;
+    bottom: 5%;
     background-color: #6879a075;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -262,10 +265,16 @@ header::before{
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 100%;
+    width: 0%;
     height: 100%;
-    z-index: 2;
+    z-index: 999;
     background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity, width 0.3s linear;
+}
+.main-menu.menu{
+    opacity: 1;
+    width: 100%;
 }
 
 .main-menu-header{
@@ -307,74 +316,11 @@ header::before{
     height: 70vh;
     width: 80%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.support{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
-.support-header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 3% 3%;
-    width: 100%;
-    height: 10%;
-}
 
-.support-header h4{
-    font-family: 'Unbounded Light';
-    color: var(--text-color);
-    font-weight: 400;
-}
-
-.support-input{
-    width: 100%;
-    height: 90%;
-    display: flex;
-}
-.support-input form{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-.support-input form textarea{
-    width: 75%;
-    height: 75%;
-    border: 1px solid #d9d9d9;
-    background-color: transparent;
-    font-family: 'Unbounded Light';
-    padding: 2% 2%;
-}
-.support-input form textarea:focus{
-    font-family: 'Unbounded Light';
-    padding: 2% 2%;
-    border: 1px solid #d9d9d9;
-    box-shadow: 1px 1px 9px #d9d9d9;
-    outline: none;
-}
-.support-input form button{
-    width: 75%;
-    height: 15%;
-    font-family: 'Unbounded Light';
-    background-color: transparent;
-    border: 1px solid #d9d9d9;
-}
-.support-input form button:hover{
-    background-color: #bbbaba3d;
-}
-.support-input form button:active{
-    background-color: #9797973d;
-}
 
