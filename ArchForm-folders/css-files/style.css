@@ -312,15 +312,77 @@ header::before{
     border: 1px solid black;
 }
 
-.main-menu-sections{
-    height: 70vh;
+.main-menu-items{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
     width: 80%;
     margin: auto;
+}
+
+.box{
+    border: 1px solid black;
+    width: 100%;
+    height: 40vh
+}
+#contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-header{
+    height: 10vh;
+    font-family: 'Unbounded Light';
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2% 2%;
+    font-size: var(--extra-small-font);
+}
+.contact-input{
+    height: 30vh;
+    width: 100%;
+}
+.contact-input form{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    gap: 25px;
 }
-
-
+.contact-input form input{
+    width: 60%;
+    height: 7vh;
+}
+.contact-input form input::placeholder{
+    font-family: 'Unbounded';
+    color: #858585;
+    font-size: var(--extra-small-font);
+    padding-left: 2%;
+}
+.contact-input form input:focus{
+    font-size: var(--extra-small-font);
+    padding-left: 2%;
+    color: var(--text-color);
+    border: none;
+    box-shadow: 2px 2px 15px #818181;
+    outline: none;
+}
+.contact-input form button{
+    width: 25%;
+    height: 7vh;
+    background-color: transparent;
+    color: #000;
+    font-family: 'Unbounded Light';
+    border: 1px solid black;
+    transition: transform 0.3s linear;
+}
+.contact-input form button:hover{
+    transform: scale(0.98);
+}
 
