@@ -322,17 +322,20 @@ header::before{
 }
 
 .box{
-    border: 1px solid black;
     width: 100%;
     height: 40vh
 }
+
 #contact-box{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
-.contact-header{
+
+.box-header{ /*This style is applicable for each one box-header*/
     height: 10vh;
     font-family: 'Unbounded Light';
     font-weight: 400;
@@ -343,10 +346,12 @@ header::before{
     padding: 2% 2%;
     font-size: var(--extra-small-font);
 }
+
 .contact-input{
     height: 30vh;
     width: 100%;
 }
+
 .contact-input form{
     width: 100%;
     height: 100%;
@@ -355,24 +360,29 @@ header::before{
     align-items: center;
     gap: 25px;
 }
+
 .contact-input form input{
     width: 60%;
     height: 7vh;
 }
+
 .contact-input form input::placeholder{
     font-family: 'Unbounded';
     color: #858585;
     font-size: var(--extra-small-font);
     padding-left: 2%;
 }
+
 .contact-input form input:focus{
     font-size: var(--extra-small-font);
     padding-left: 2%;
     color: var(--text-color);
+    font-family: 'Unbounded Light';
     border: none;
-    box-shadow: 2px 2px 15px #818181;
+    box-shadow: 2px 2px 8px #818181;
     outline: none;
 }
+
 .contact-input form button{
     width: 25%;
     height: 7vh;
@@ -382,7 +392,35 @@ header::before{
     border: 1px solid black;
     transition: transform 0.3s linear;
 }
+
 .contact-input form button:hover{
     transform: scale(0.98);
+}
+#services-box{
+    border-bottom: 1px solid black;
+}
+.services-items{
+    height: 28vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    align-content: center;
+}
+.services-items button{
+    background-color: #d9d9d9;
+    padding: 10px;
+    border: none;
+}
+.services-items a{
+    font-family: 'Unbounded Light';
+    font-size: var(--extra-small-font);
+    color: #000;
+}
+.services-items button:hover{
+    background-color: #d9d9d993;
+    transform: scale(.98);
+    transition: 0.3s linear;
 }
 
