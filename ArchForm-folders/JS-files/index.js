@@ -46,4 +46,26 @@ CloseMenu.addEventListener("click", function(){
         email.value = "";
  })
 
+ //Support textrea validation goes here
+ const SupportForm = document.querySelector("#SupportForm");
+ const textarea = document.querySelector("#SupportInput")
+ const SendMessageBtn = document.querySelector("#sendMessageBtn");
+
+ SupportForm.addEventListener("submit", function(stop){
+    stop.preventDefault();
+
+    if(textarea.value.trim() === ""){
+        alert("Please fill the empty input");
+        return;
+    }
+    else if(textarea.value.length < 12){
+        alert("This input must contain at least 12 charachters");
+        textarea.value = "";
+    }
+    else{
+        alert("Thank you for cooperating with us we will reach you soon");
+        textarea.value = "";
+    }
+ })
+
  
