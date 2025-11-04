@@ -24,3 +24,26 @@ OpenMenu.addEventListener("click", function(e){
 CloseMenu.addEventListener("click", function(){
     MainMenu.classList.remove("menu");
 })
+
+
+//Send Email input validation goes here
+ const sendEmailForm = document.querySelector("#sendEmailForm");
+ const email = document.querySelector("#email");
+ const emailBtn = document.querySelector("#emailBtn");
+
+ sendEmailForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(email.value.trim() === ""){
+        alert("Please fill the empty input");
+        return;
+    }
+    else if(!email.value.includes("@") || !email.value.includes(".")) {  //else if(!email.value.includes("@")) this controlls if there is not used @ and stops the form
+        alert("Please use valid symbols");
+        email.value = "";
+        return;
+    }
+    alert("We will contact you as soon as we can.");
+        email.value = "";
+ })
+
+ 
