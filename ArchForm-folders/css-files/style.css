@@ -36,6 +36,10 @@ body{
     min-height: 100vh;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     background-image: url(../images-folder/header-images/archForm-header-img.jpg);
     background-position: center;
@@ -156,14 +160,14 @@ header::before{
     align-items: center;
 }
 
-.hero-left{
+.hero-content{
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hero-left h2{
+.hero-content h2{
     font-family: 'Unbounded Light';
     color: var(--main-color);
     font-size: 3rem;
@@ -181,3 +185,43 @@ header::before{
         opacity: 1;
     }
 }
+
+.main-buttons{
+    position: fixed;
+    z-index: 2;
+    bottom: 5%;
+    opacity: 0;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+    border-radius: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 0.5%;
+    background-color: #6879a075;
+   
+}
+.main-buttons a{
+    color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6879a075;
+    backdrop-filter: blur(15px);
+    border-radius: 50%;
+    transition: box-shadow 0.3s linear;
+}
+.main-buttons a:hover{
+    border: 2px solid #3a46619a;
+    box-shadow: inset 3px 3px 15px #3a46619a;
+}
+#mainButtons{
+    transition: opacity 0.5s linear;
+}
+#mainButtons.active{
+    opacity: 1;
+}
+

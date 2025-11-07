@@ -7,12 +7,14 @@
     <!--This link will connect index.html with style.css-->
     <link rel="stylesheet" href="../css-files/style.css">
 
+     <script data-id="cmhpdemq4000nl404z4hve9jd" src="https://tinychat.ai/tinychat.js" async defer></script>
+
     <!--icons link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
         <!--here goes the html structure for the ArchForm website main page-->
-    <header>
+    <header id="returnTop">
         <div class="nav">
             <div class="title">
                 <h2>ARCHFORM<span>STUDIO</span></h2>
@@ -31,11 +33,25 @@
     
         <!--here goes header's footer-->
         <div class="hero-section">
-            <div class="hero-left">
+            <div class="hero-content">
                 <h2>INSPIRED BY DESIGN DRIVEN BY CREATIVITY</h2>
             </div>
         </div>
+        <div id="mainButtons" class="main-buttons">
+            <a href="#returnTop"><i class="ri-arrow-up-long-fill"></i></a>
+            <a href=""><i class="ri-eye-line"></i></a>
+        </div>
     </header>
     <script src="../JS-files/index.js"></script>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="PsswJYLm-HxOj3zP8kGJT";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    const crypto = require('crypto');
+
+    const secret = '•••••••••'; // Your verification secret key
+    const userId = current_user.id // A string UUID to identify your user
+
+    const hash = crypto.createHmac('sha256', secret).update(userId).digest('hex');
+    </script>
 </body>
 </html>
