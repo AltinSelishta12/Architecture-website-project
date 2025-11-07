@@ -33,7 +33,7 @@
 
 body{
     width: 100%;
-    min-height: 100vh;
+    min-height: 140vh;
 }
 
 header{
@@ -41,6 +41,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     max-width: var(--max-width);
     width: 100%;
     min-height: 100vh;
@@ -62,6 +63,7 @@ header::before{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     z-index: 1;
     filter: brightness(82%);
 }
@@ -79,7 +81,7 @@ header::before{
 .title{
     width: 40%;
     height: 100%;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -109,7 +111,7 @@ header::before{
     justify-content: center;
     align-items: center;
     gap: 35px;
-    width: 70%;
+    width: 60%;
     padding: 15px;
     background-color: #6879a075;
     backdrop-filter: blur(15px);
@@ -145,27 +147,6 @@ header::before{
     width: 100%;
 }
 
-.other-services-btn{
-    background-color: #6879a075;
-    backdrop-filter: blur(15px);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--circle-border);
-    transition: box-shadow 0.3s linear;
-}
-
-.other-services-btn a{
-    color: var(--main-color);
-}
-
-.other-services-btn:hover{
-    border: 2px solid #3a46619a;
-    box-shadow: inset 3px 3px 15px #3a46619a;
-}
-
 .hero-section{
     position: relative;
     z-index: 2;
@@ -173,335 +154,5 @@ header::before{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
 }
 
-.hero-section-left{
-    width: 70%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 5%;
-}
-
-.hero-section-text{
-    width: 80%;
-    background-color: #6879a075;
-    backdrop-filter: blur(15px);
-    border-radius: var(--medium-border-radius);
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 2%;
-    z-index: 1;
-}
-
-.hero-section-text h2{
-    font-family: 'Unbounded';
-    color: var(--main-color);
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.hero-section-text p{
-    width: 90%;
-    text-align: justify;
-    font-family: 'Unbounded';
-    font-size: var(--extra-small-font);
-    color: var(--main-color);
-    font-weight: 200;
-}
-
-.hero-section-right{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5%;
-}
-.hero-section-buttons{
-    width: 10%;
-    height: 30%;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    background-color: #6879a075;
-    grid-template-columns: repeat(2, 1fr);
-}
-.hero-section-buttons a{
-    background-color: #6879a075;
-    backdrop-filter: blur(15px);
-    color: var(--main-color);
-    padding: 15px;
-    border-radius: 15px;
-    transition: box-shadow 0.3s linear;
-}
-.hero-section-buttons a:hover{
-    border: 2px solid #3a46619a;
-    box-shadow: inset 3px 3px 15px #3a46619a;
-}
-.our-work{
-    width: 85%;
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column-reverse;
-    font-family: 'Unbounded';
-    font-weight: 400;
-    padding: 0px;
-    text-align: center;
-    font-size: 0.7rem;
-    transition: transform 0.3s linear;
-}
-
-/*here goes big-menu style*/
-
-.main-menu{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 0%;
-    height: 100%;
-    z-index: 999;
-    background-color: rgb(255, 255, 255);
-    opacity: 0;
-    transition: opacity, width 0.3s linear;
-}
-.main-menu.menu{
-    opacity: 1;
-    width: 100%;
-}
-
-.main-menu-header{
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0% 5%;
-}
-
-.main-menu-header h2{
-    font-family: 'Unbounded';
-    color: var(--text-color);
-    font-weight: 400;
-    font-size: var(--medium-font);
-}
-
-.main-menu-header span{
-    font-size: var(--small-font);
-    font-family: 'Unbounded Light';
-}
-
-.main-menu-header button{
-    padding: 15px;
-    background-color: transparent;
-    border: 1px solid black;
-    font-size: var(--small-font);
-    transition: transform 0.3s linear;
-}
-
-.main-menu-header button:hover{
-    background-color: #0000000a;
-    transform: scale(0.98);
-    border: 1px solid black;
-}
-
-.main-menu-items{
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    width: 80%;
-    margin: auto;
-}
-
-.box{
-    width: 100%;
-    height: 40vh
-}
-
-#contact-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.box-header{ /*This style is applicable for each one box-header*/
-    height: 10vh;
-    font-family: 'Unbounded Light';
-    font-weight: 400;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2% 2%;
-    font-size: var(--extra-small-font);
-}
-
-.contact-input{
-    height: 30vh;
-    width: 100%;
-}
-
-.contact-input form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.contact-input form input{
-    width: 60%;
-    height: 7vh;
-}
-
-.contact-input form input::placeholder{
-    font-family: 'Unbounded';
-    color: #858585;
-    font-size: var(--extra-small-font);
-    padding-left: 2%;
-}
-
-.contact-input form input:focus{
-    font-size: var(--extra-small-font);
-    padding-left: 2%;
-    color: var(--text-color);
-    font-family: 'Unbounded Light';
-    border: none;
-    box-shadow: 2px 2px 8px #818181;
-    outline: none;
-}
-
-.contact-input form button{
-    width: 25%;
-    height: 7vh;
-    background-color: transparent;
-    color: #000;
-    font-family: 'Unbounded Light';
-    border: 1px solid black;
-    transition: transform 0.3s linear;
-}
-
-.contact-input form button:hover{
-    transform: scale(0.98);
-}
-
-#services-box{
-    border-bottom: 1px solid black;
-}
-
-.services-items{
-    height: 28vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 25px;
-    align-content: center;
-}
-
-.services-items button{
-    background-color: #d9d9d9;
-    padding: 10px;
-    border: none;
-}
-
-.services-items a{
-    font-family: 'Unbounded Light';
-    font-size: var(--extra-small-font);
-    color: #000;
-}
-
-.services-items button:hover{
-    background-color: #d9d9d993;
-    transform: scale(.98);
-    transition: 0.3s linear;
-}
-
-.support-form{
-    height: 30vh;
-    width: 100%;
-    display: flex;
-}
-
-.support-form form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-#SupportInput{
-    width: 80%;
-    height: 80%;
-    font-family: "Unbounded Light";
-    font-weight: 400;
-    font-size: var(--extra-small-font);
-    padding: 1% 1%;
-}
-
-#SupportInput:focus{
-     font-family: "Unbounded Light";
-    font-weight: 400;
-    font-size: var(--extra-small-font);
-    border: 1px solid #818181;
-    outline: none;
-    padding: 1% 1%;
-}
-
-.support-form form button{
-    width: 10%;
-    height: 80%;
-    font-family: 'Unbounded Light';
-    background-color: transparent;
-    border: 1px solid #3a46619a;
-}
-
-.support-form form button:hover{
-    background-color: #5f5f5f54;
-    border: 1px solid #3a46619a;
-    transition: 0.3s linear;
-}
-
-#nav-box{
-    border-left: 1px solid black;
-}
-
-.box-main-nav{
-    height: 30vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.box-main-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-.box-main-nav ul li a{
-    color: var(--text-color);
-    font-family: 'Unbounded Light';
-    font-weight: 400;
-    font-size: var(--extra-small-font);
-}
-.box-main-nav ul li:hover{
-    transform: scale(1.04);
-    transition: 0.3s linear;
-}
