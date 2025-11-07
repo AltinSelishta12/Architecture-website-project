@@ -33,7 +33,7 @@
 
 body{
     width: 100%;
-    min-height: 140vh;
+    min-height: 100vh;
 }
 
 header{
@@ -156,3 +156,28 @@ header::before{
     align-items: center;
 }
 
+.hero-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-left h2{
+    font-family: 'Unbounded Light';
+    color: var(--main-color);
+    font-size: 3rem;
+    width: 70%;
+    opacity: 0;
+    animation-name: showText;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes showText{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
