@@ -28,7 +28,16 @@
                 </ul>
             </div>
             <div class="small-menu">
-                <div class="menu-btn"><i class="ri-menu-line"></i></div>
+                <div id="MenuBtn" class="menu-btn"><i class="ri-menu-line"></i></div>
+                <div id="smallMenuItems" class="small-menu-items">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">STUDIO</a></li>
+                        <li><a href="">PROJECTS</a></li>
+                        <li><a href="">OUR COMPANY</a></li>
+                    </ul>
+
+                </div>
             </div>
         </div>
         <!--here ends header's navigation-->
@@ -36,8 +45,14 @@
     
         <!--here goes header's footer-->
         <div class="hero-section">
-            <div class="hero-content">
+            <div class="hero-text">
                 <h2>INSPIRED BY DESIGN DRIVEN BY CREATIVITY</h2>
+            </div>
+            <div class="hero-btn">
+                <a href="">
+                    <span class="BtnText">Explore Projects</span>
+                    <i class="ri-arrow-right-long-fill"></i>
+                </a>
             </div>
         </div>
         <div id="mainButtons" class="main-buttons">
@@ -47,14 +62,7 @@
     </header>
     <script src="../JS-files/index.js"></script>
 
-    <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="PsswJYLm-HxOj3zP8kGJT";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-    const crypto = require('crypto');
 
-    const secret = '•••••••••'; // Your verification secret key
-    const userId = current_user.id // A string UUID to identify your user
-
-    const hash = crypto.createHmac('sha256', secret).update(userId).digest('hex');
-    </script>
+</script>
 </body>
 </html>

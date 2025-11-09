@@ -24,8 +24,8 @@
 }
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -131,10 +131,12 @@ header::before{
     position: relative;
     padding-bottom: 10px;
 }
+
 .nav-items ul.addShadow{
     border: 2px solid #3a46619a;
     box-shadow: inset 3px 3px 15px #3a46619a;
 }
+
 .nav-items ul li a::before{
     content: '';
     position: absolute;
@@ -160,14 +162,15 @@ header::before{
     align-items: center;
 }
 
-.hero-content{
+.hero-text{
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hero-content h2{
+
+.hero-text h2{
     font-family: 'Unbounded Light';
     color: var(--main-color);
     font-size: 3rem;
@@ -175,8 +178,10 @@ header::before{
     opacity: 0;
     animation-name: showText;
     animation-duration: 2s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
 @keyframes showText{
     0%{
         opacity: 0;
@@ -184,6 +189,46 @@ header::before{
     100%{
         opacity: 1;
     }
+}
+
+.hero-btn{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 5%;
+    padding-right: 5%;
+}
+
+.hero-btn a{
+    background-color: #6879a075;
+    width: 45%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    border-radius: 65px;
+    color: var(--main-color);
+    font-family: 'Unbounded Light';
+    transition: transform 0.1s linear;
+}
+
+.hero-btn a:hover{
+    transform: scale(0.98);
+}
+
+.hero-btn i{
+    transform: rotate(45deg);
+    transition: transform 0.2s linear;
+    padding: 15px;
+    background-color: #495674c7;
+    border-radius: 50%;
+}
+
+.hero-btn a:hover i{
+     transform: rotate( 330deg);
 }
 
 .main-buttons{
@@ -200,8 +245,8 @@ header::before{
     align-items: center;
     padding: 0% 0.5%;
     background-color: #6879a075;
-   
 }
+
 .main-buttons a{
     color: var(--main-color);
     width: 50px;
@@ -214,19 +259,24 @@ header::before{
     border-radius: 50%;
     transition: box-shadow 0.3s linear;
 }
+
 .main-buttons a:hover{
     border: 2px solid #3a46619a;
     box-shadow: inset 3px 3px 15px #3a46619a;
 }
+
 #mainButtons{
     transition: opacity 0.5s linear;
 }
+
 #mainButtons.active{
     opacity: 1;
 }
+
 .small-menu{
     display: none;
 }
+
 /*480px max-width responsive design*/
 
 @media(max-width:480px){
@@ -240,7 +290,8 @@ header::before{
     }
 
     .title h2{
-        font-size: clamp(1.7rem, 2rem, 2.3rem);
+        font-size: clamp(0.9rem, 1.7rem, 2rem);
+        z-index: 2;
     }
 
     nav{
@@ -260,19 +311,69 @@ header::before{
     .menu-btn{
         font-size: clamp(1.7rem, 2rem, 2.2rem);
         color: var(--main-color);
+        z-index: 2;
+    }
+
+    .small-menu-items{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.336);
+        backdrop-filter: blur(10px);
+        top: 0;
+        left: 0;
+        height: 0vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity, height 0.3s linear;
+    }
+    
+    .small-menu-items.ShowMenu{
+        opacity: 1;
+        height: 100vh;
+    }
+
+    .small-menu-items ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .small-menu-items ul li a{
+        color: var(--text-color);
+        font-size: clamp(1.3rem, 1.5rem, 1.7rem);
+        font-family: 'Unbounded Light';
+        color: var(--main-color);
     }
 
     .hero-section{
         z-index: 1;
+        display: flex;
+        flex-direction: column;
     }
 
-    .hero-content{
+    .hero-text{
         width: 100%;
+        padding-right: 5%;
     }
-    .hero-content h2{
+
+    .hero-text h2{
         width: 80%;
         text-align: center;
-        font-size: clamp(1.7rem, 2rem, 2.2rem);
+        font-size: clamp(1.7rem, 1.8rem, 2.2rem);
+    }
+
+    .hero-btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-btn a{
+        width: 65%;
     }
 }
 

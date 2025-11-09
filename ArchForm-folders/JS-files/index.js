@@ -25,3 +25,21 @@ nav.addEventListener("mouseout", function(){
         mainButtons.classList.remove("active")
     }
  })
+
+//Responsive design open/close menu function
+
+const MenuBtn = document.querySelector("#MenuBtn");
+
+MenuBtn.addEventListener("click", function(){
+    smallMenuItems.classList.toggle("ShowMenu")
+})
+
+//Mouseover and out animation added to the hero section btn
+const BtnText = document.querySelector(".BtnText");
+
+BtnText.addEventListener("mouseover", function(){
+    BtnText.textContent = "View Projects";
+})
+BtnText.addEventListener("mouseout", function(){
+    BtnText.textContent = "Explore Projects";
+})
