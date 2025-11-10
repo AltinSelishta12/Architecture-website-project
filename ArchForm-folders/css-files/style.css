@@ -579,4 +579,50 @@ header::before{
     }
 }
 
+/*921- 1120px breakpoint*/
+
+@media(min-width:921px) and (max-width:1120px){
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title{
+        width: 50%;
+    }
+
+    .nav-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-items ul{
+        width: 90%;
+    }
+
+    .hero-text{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 5%;
+    }
+    .hero-text h2{
+        font-size: clamp(1.7rem, 2.5rem, 2.7rem);
+        width: 90%;
+        padding-left: 4%;
+    }
+    .hero-btn{
+        width: 50%;
+    }
+    .hero-btn a{
+        width: 70%;
+        height: 30%;
+    }
+    
+}
+
 
