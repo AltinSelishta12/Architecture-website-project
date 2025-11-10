@@ -277,6 +277,30 @@ header::before{
     display: none;
 }
 
+.gallery{
+    min-height: 110vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+.gallery-title{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gallery-title h2{
+    font-family: 'Unbounded Light';
+    font-size: var(--large-font);
+    width: 60%;
+    padding: 4% 4%;
+   
+}
+
 /*480px max-width responsive design*/
 
 @media(max-width:480px){
