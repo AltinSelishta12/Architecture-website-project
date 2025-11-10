@@ -377,3 +377,102 @@ header::before{
     }
 }
 
+/*Breakpoint 481-720px*/
+
+@media(min-width:481px) and (max-width:720px){
+    .nav-items{
+        display: none;
+    }
+
+    .title{
+        width: 80%;
+    }
+
+    .title h2{
+        font-size: clamp(0.9rem, 1.7rem, 2rem);
+        z-index: 2;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .small-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+    }
+
+    .menu-btn{
+        font-size: clamp(1.7rem, 2rem, 2.2rem);
+        color: var(--main-color);
+        z-index: 2;
+    }
+
+    .small-menu-items{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.336);
+        backdrop-filter: blur(10px);
+        top: 0;
+        left: 0;
+        height: 0vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity, height 0.3s linear;
+    }
+    
+    .small-menu-items.ShowMenu{
+        opacity: 1;
+        height: 100vh;
+    }
+
+    .small-menu-items ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .small-menu-items ul li a{
+        color: var(--text-color);
+        font-size: clamp(1.3rem, 1.5rem, 1.7rem);
+        font-family: 'Unbounded Light';
+        color: var(--main-color);
+    }
+
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .hero-text{
+        width: 100%;
+    }
+    .hero-text h2{
+        font-size: clamp(1.4rem, 2.5rem, 2.6rem);
+    }
+    .hero-btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-btn a{
+        width: clamp(55%, 55%, 60%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        padding: 5% 5%;
+    }
+}
+
