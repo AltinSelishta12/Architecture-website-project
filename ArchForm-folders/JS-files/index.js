@@ -43,3 +43,4 @@ BtnText.addEventListener("mouseover", function(){
 BtnText.addEventListener("mouseout", function(){
     BtnText.textContent = "Explore Projects";
 })
+
