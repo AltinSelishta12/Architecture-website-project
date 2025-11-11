@@ -18,11 +18,11 @@ nav.addEventListener("mouseout", function(){
  const mainButtons = document.querySelector("#mainButtons");
 
  window.addEventListener("scroll", function(){
-    if(this.window.scrollY > 100){
-        mainButtons.classList.add("active")
+    if(this.scrollY > 100){
+        mainButtons.classList.add('active')
     }
     else{
-        mainButtons.classList.remove("active")
+        mainButtons.classList.remove('active')
     }
  })
 

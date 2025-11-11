@@ -182,8 +182,8 @@ header::before{
     animation-fill-mode: forwards;
     animation-timeline: view();
     animation-range: 5% 100%;
-    scroll-behavior: smooth;
 }
+
 @keyframes showText{
     0%{
         opacity: 1;
@@ -194,6 +194,7 @@ header::before{
         transform: scale(0);
     }
 }
+
 .hero-btn{
     width: 50%;
     height: 100%;
@@ -276,7 +277,6 @@ header::before{
 #mainButtons.active{
     opacity: 1;
 }
-
 .small-menu{
     display: none;
 }
@@ -306,7 +306,6 @@ header::before{
     animation-timeline: view();
     animation-range: 0% 100%;
     opacity: 0;
-    backdrop-filter: blur(15)
 }
 
 @keyframes gallery-title{
@@ -488,8 +487,25 @@ header::before{
         width: 80%;
         text-align: center;
         font-size: clamp(1.7rem, 1.8rem, 2.2rem);
+        opacity: 0;
+        animation-name: showText;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range: 15% 100%;
     }
 
+    @keyframes showText{
+        0%{
+            opacity: 1;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
     .hero-btn{
         width: 100%;
         display: flex;
@@ -498,6 +514,89 @@ header::before{
     }
     .hero-btn a{
         width: 65%;
+    }
+
+    /*Here ends header responsive 480px breakpoint*/
+
+    /*Here starts gallery section responsive design for 480px screensize*/
+
+    #mainButtons{
+        width: 30%;
+        height: 8%;
+        position: fixed;
+        bottom: 15px; 
+        right: 15%;
+    }
+    
+    .gallery{
+        min-height: 100vh;
+    }
+    .gallery-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-title h2{
+        font-size: 2.3rem;
+        animation: gallery-title both;
+        animation-timeline: view();
+        animation-range: 0% 50%;
+        opacity: 0;
+        padding: 0%;
+        width: clamp(40%, 85%, 90%);
+        text-align: center;
+    }
+
+    @keyframes gallery-title{
+        0%{
+            opacity: 0;
+            backdrop-filter: blur(15);
+            transform: scale(0);
+        }
+        100%{
+            opacity: 1;
+            backdrop-filter: blur(0px);
+            transform: scale(1);
+        }
+    }
+
+    .gallery-body{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column-reverse;
+        min-height: 70vh;
+    }
+
+    .gallery-image{
+        width: 100%;
+    }
+
+    .gallery-info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .gallery-info-title h2{
+        font-size: 1.6rem;
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        position: relative;
+    }
+    .gallery-info-title h2::before{
+        content: '';
+        position: absolute;
+        left: 40%;
+    }
+    .gallery-info-text p{
+        text-align: center;
+        width: 80%;
+        margin: 5% auto;
     }
 }
 
