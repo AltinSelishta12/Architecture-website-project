@@ -506,12 +506,14 @@ header::before{
             transform: scale(0);
         }
     }
+
     .hero-btn{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .hero-btn a{
         width: 65%;
     }
@@ -531,6 +533,7 @@ header::before{
     .gallery{
         min-height: 100vh;
     }
+
     .gallery-title{
         display: flex;
         justify-content: center;
@@ -588,18 +591,20 @@ header::before{
         text-align: center;
         position: relative;
     }
+
     .gallery-info-title h2::before{
         content: '';
         position: absolute;
         left: 40%;
     }
+
     .gallery-info-text p{
         text-align: center;
         width: 80%;
         margin: 5% auto;
     }
 
-    header #mainButtons{
+    #mainButtons{
         position: fixed;
         left: 35%;
     }
@@ -787,7 +792,7 @@ header::before{
         margin: 5% auto;
     }
 
-    header #mainButtons{
+    #mainButtons{
         width: 30%;
         height: 8%;
         position: fixed;
@@ -957,7 +962,7 @@ header::before{
         width: 35%;
     }
 
-    header #mainButtons{
+    #mainButtons{
         position: fixed;
         z-index: 3;
         width: 20%;
@@ -968,6 +973,7 @@ header::before{
     .gallery-info .gallery-info-text p{
         font-size: 1.1rem;
         width: 90%;
+        padding-left: 10%;
     }
 }
 
@@ -1002,19 +1008,126 @@ header::before{
         align-items: flex-end;
         padding-bottom: 5%;
     }
+
     .hero-text h2{
         font-size: clamp(1.7rem, 2.5rem, 2.7rem);
         width: 90%;
         padding-left: 4%;
+        opacity: 0;
+        animation-name: showText;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range: 0% 80%;
     }
+
+     @keyframes showText{
+        0%{
+            opacity: 1;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+
     .hero-btn{
         width: 50%;
     }
+
     .hero-btn a{
         width: 70%;
         height: 30%;
     }
+
+    .gallery-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .gallery-info-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .gallery-info-title h2{
+        line-height: 45px;
+    }
+
+    .gallery-info-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .gallery-info-text p{
+        font-size: 1.1rem;
+        width: 90%;
+        
+    }
+
+    #mainButtons{
+        width: 15%;
+        height: 8%;
+        position: fixed;
+        left: 43%;
+    }
     
+}
+
+/*Here goes responsive design > 1121px */
+@media(min-width:1121px){
+
+    .nav-items ul{
+        width: clamp(65%, 70%, 80%);
+    }
+
+    .hero-btn{
+        width: 70%;
+    }
+
+    .gallery-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .gallery-info-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .gallery-info-title h2{
+        line-height: 45px;
+    }
+
+    .gallery-info-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .gallery-info-text p{
+        font-size: 1.1rem;
+        width: 90%;
+        
+    }
+
+    #mainButtons{
+        width: 15%;
+        height: 8%;
+        position: fixed;
+    }
+
 }
 
 
