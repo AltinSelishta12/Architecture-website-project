@@ -598,6 +598,11 @@ header::before{
         width: 80%;
         margin: 5% auto;
     }
+
+    header #mainButtons{
+        position: fixed;
+        left: 35%;
+    }
 }
 
 /*Breakpoint 481-720px*/
@@ -782,9 +787,11 @@ header::before{
         margin: 5% auto;
     }
 
-    .main-buttons{
+    header #mainButtons{
         width: 30%;
         height: 8%;
+        position: fixed;
+        left: 35%;
     }
 }
 
@@ -870,6 +877,24 @@ header::before{
     .hero-text h2{
         font-size: clamp(1.7rem, 2.4rem, 2.6rem);
         width: 80%;
+        opacity: 0;
+        animation-name: showText;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range: 0% 80%;
+    }
+
+     @keyframes showText{
+        0%{
+            opacity: 1;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: scale(0);
+        }
     }
 
     .hero-btn{
@@ -885,6 +910,64 @@ header::before{
 
     .hero-btn span{
         display: none;
+    }
+
+    /*Here ends header responsive design 721-920px*/
+
+    /*Here starts gallery section responsive design 721-920px*/
+
+    .gallery-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .gallery-title h2{
+        font-size: clamp(2rem, 3rem, 4rem);
+        width: 85%;
+    }
+
+    .gallery-body{
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: 50vh;
+    }
+
+    .gallery-image{
+        width: 100%;
+    }
+
+    .gallery-info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 30vh;
+    }
+
+    .gallery-info-title h2{
+        font-size: 2.2rem;
+    }
+
+    .gallery-info-title h2::before{
+        content: '';
+        position: absolute;
+        left: 0%;
+        width: 35%;
+    }
+
+    header #mainButtons{
+        position: fixed;
+        z-index: 3;
+        width: 20%;
+        height: 8%;
+        left: 35%;
+    }
+
+    .gallery-info .gallery-info-text p{
+        font-size: 1.1rem;
+        width: 90%;
     }
 }
 
